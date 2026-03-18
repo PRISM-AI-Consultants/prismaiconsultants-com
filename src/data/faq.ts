@@ -4,7 +4,7 @@ export const faqItems: FAQItem[] = [
   {
     question: "How much does AI consulting cost?",
     answer:
-      "PRISM AI Consultants offers engagements starting at $1,500 for an Activation package, which includes 3 strategy sessions and a flagship AI build. Ongoing retainers start at $2,500 per month for continuous AI system development and strategy. Every engagement is designed to deliver measurable ROI, often within the first build.",
+      "PRISM AI Consultants offers Momentum Sprints starting at $4,500 for a 90-day accelerator with multiple AI systems deployed. Ongoing Core retainers start at $2,500 per month for continuous AI system development and strategy. Enterprise custom builds start at $25,000. Every engagement is designed to deliver measurable ROI, often within the first build.",
   },
   {
     question: "What does an AI consultant actually do?",
@@ -66,17 +66,17 @@ export const faqItems: FAQItem[] = [
   {
     question: "What does the monthly retainer include?",
     answer:
-      "The Core Retainer at $2,500 per month includes 4 monthly strategy sessions with Dr. Jeff, continuous AI system development and deployment, a dedicated execution team, and monthly progress reviews. We focus on one priority at a time so nothing stalls. The Scale Retainer at $5,000 per month doubles the session count and adds parallel builds for faster delivery.",
+      "Core at $2,500 per month includes weekly strategy sessions with Dr. Jeff, continuous AI system development and deployment, a dedicated execution team, unlimited team access, and monthly progress reviews. Scale at $5,000 per month adds accelerated parallel builds, complex multi-system projects, and priority support for faster delivery.",
   },
   {
     question: "Is AI consulting only for large enterprises?",
     answer:
-      "Absolutely not. Most of PRISM's clients are small businesses, solo practitioners, and mid-size organizations. Our Activation package starts at $1,500, which is accessible for businesses of nearly any size. Small businesses often see the biggest relative impact because AI can give a 5-person team the output capacity of a 15-person team.",
+      "Absolutely not. Most of PRISM's clients are small businesses, solo practitioners, and mid-size organizations. Our Momentum Sprint starts at $4,500, and our Core partnership is $2,500 per month. Small businesses often see the biggest relative impact because AI can give a 5-person team the output capacity of a 15-person team.",
   },
   {
     question: "How do I get started with AI consulting?",
     answer:
-      "Book an introductory call through our Calendly link. The call is a real strategy session, not a sales pitch. We will discuss your business, identify where AI fits, and outline a first build. If there is a fit, we can start with the $1,500 Activation package and have your first system built within days.",
+      "Book an introductory call through our Calendly link. The call is a real strategy session, not a sales pitch. We will discuss your business, identify where AI fits, and outline a first build. If there is a fit, we can start with a Momentum Sprint and have your first systems built within weeks.",
   },
   {
     question: "What kinds of AI systems does PRISM build?",

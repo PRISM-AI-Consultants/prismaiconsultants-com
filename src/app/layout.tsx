@@ -93,7 +93,7 @@ const organizationSchema = {
     "https://www.linkedin.com/company/prismaiconsultants",
     "https://www.skool.com/prism-ai-consultants",
   ],
-  priceRange: "$1,500 - $5,000/month",
+  priceRange: "$2,500 - $25,000+/month",
   serviceType: [
     "AI Consulting",
     "AI Systems Architecture",

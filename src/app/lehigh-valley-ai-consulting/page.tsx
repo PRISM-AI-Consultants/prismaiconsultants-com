@@ -62,7 +62,7 @@ const localBusinessSchema = {
     "@type": "Person",
     name: "Dr. Jeff Bullock",
   },
-  priceRange: "$1,500 - $5,000/month",
+  priceRange: "$2,500 - $25,000+/month",
 };
 
 const reasons = [
@@ -82,7 +82,7 @@ const reasons = [
     icon: "\u{1F4B0}",
     title: "Transparent Pricing",
     description:
-      "From a $1,500 Activation package to $5,000 per month Scale Retainer, our pricing is published publicly. No hidden fees, no discovery phases that never end.",
+      "From our Momentum Sprint to Scale retainers and enterprise custom builds, our pricing is published publicly. No hidden fees, no discovery phases that never end.",
   },
   {
     icon: "\u{1F91D}",
