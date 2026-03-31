@@ -159,14 +159,14 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: "game-portfolio",
-    name: "Game Portfolio (6 Games)",
+    name: "Game Portfolio",
     client: "PRISM Internal",
     category: "games",
     description:
-      "Pharmageddon, District Zero, Objection Blaster, Max the Flying Chicken, Triple Threat, FLIQ Runner. Six fully deployed browser games showcasing AI-assisted game development, from concept to deployment.",
+      "A growing library of fully deployed browser games showcasing AI-assisted game development. Pharmageddon, First Cut, The Breadman, District Zero, ReceptorDefense, Objection Blaster, and more.",
     stack: "JavaScript + HTML5 Canvas + Game Design + AI Art",
-    liveUrl: "https://game.srv1030637.hstgr.cloud",
-    marketValue: "$50,000-$75,000",
+    liveUrl: "https://prismstudios.app",
+    marketValue: "$75,000-$100,000",
     clientPaid: "Internal build",
   },
 ];

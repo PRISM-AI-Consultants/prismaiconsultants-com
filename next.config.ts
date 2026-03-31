@@ -264,42 +264,42 @@ const nextConfig: NextConfig = {
       // ===========================
       {
         source: "/prism-game",
-        destination: "https://game.srv1030637.hstgr.cloud",
+        destination: "https://prismstudios.app",
         permanent: true,
       },
       {
         source: "/pharmageddon",
-        destination: "https://game.srv1030637.hstgr.cloud",
+        destination: "https://prismstudios.app/pharmageddon",
         permanent: true,
       },
       {
         source: "/pharmageddon-game",
-        destination: "https://game.srv1030637.hstgr.cloud",
+        destination: "https://prismstudios.app/pharmageddon",
         permanent: true,
       },
       {
         source: "/games",
-        destination: "https://game.srv1030637.hstgr.cloud",
+        destination: "https://prismstudios.app",
         permanent: true,
       },
       {
         source: "/games/:path*",
-        destination: "https://game.srv1030637.hstgr.cloud",
+        destination: "https://prismstudios.app",
         permanent: true,
       },
       {
         source: "/district-zero",
-        destination: "https://game.srv1030637.hstgr.cloud",
+        destination: "https://prismstudios.app/district-zero",
         permanent: true,
       },
       {
         source: "/objection-blaster",
-        destination: "https://game.srv1030637.hstgr.cloud",
+        destination: "https://prismstudios.app/objection-blaster",
         permanent: true,
       },
       {
         source: "/fliq-runner",
-        destination: "https://game.srv1030637.hstgr.cloud",
+        destination: "https://prismstudios.app/fliq-runner",
         permanent: true,
       },
 

@@ -46,11 +46,11 @@ const games = [
     badge: "Game",
   },
   {
-    title: "Pharmageddon",
+    title: "PRISM Studios Game Portfolio",
     description:
-      "A fast-paced browser game built with AI-assisted development. Survive the pharmaceutical apocalypse.",
-    url: "https://pharmageddon-game.prismaiconsultants.com",
-    badge: "Game",
+      "Six fully deployed browser games showcasing AI-assisted game development. Pharmageddon, District Zero, Objection Blaster, and more.",
+    url: "https://prismstudios.app",
+    badge: "Games",
   },
 ];
 
