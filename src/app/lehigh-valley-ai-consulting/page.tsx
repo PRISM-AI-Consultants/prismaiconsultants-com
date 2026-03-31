@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title:
       "AI Consulting & Systems Architecture in the Lehigh Valley | PRISM AI Consultants",
     description:
-      "Production AI systems for Lehigh Valley businesses. 34 autonomous agents built. $350K+ in systems delivered. Based in Allentown, PA.",
+      "Production AI systems for Lehigh Valley businesses. 34 autonomous agents built. $350K-$700K+ in systems delivered. Based in Allentown, PA.",
   },
 };
 
@@ -76,7 +76,7 @@ const reasons = [
     icon: "\u{2699}\uFE0F",
     title: "Production Systems, Not Slide Decks",
     description:
-      "34 autonomous agents built. $350K+ in AI systems delivered. Every engagement produces working software that runs in your business, not a PDF with recommendations.",
+      "34 autonomous agents built. $350K-$700K+ in AI systems delivered. Every engagement produces working software that runs in your business, not a PDF with recommendations.",
   },
   {
     icon: "\u{1F4B0}",

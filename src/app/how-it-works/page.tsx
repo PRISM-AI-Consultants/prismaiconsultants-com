@@ -133,6 +133,66 @@ export default function HowItWorksPage() {
         </Container>
       </Section>
 
+      {/* Not Sure Where to Start? */}
+      <Section className="border-t border-border bg-accent/5">
+        <Container size="md">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-extrabold tracking-tight md:text-3xl">
+              Not Sure Where to Start?
+            </h2>
+          </div>
+          <div className="space-y-4">
+            <Card>
+              <CardContent>
+                <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6">
+                  <div className="flex-1">
+                    <p className="font-bold text-foreground">
+                      &ldquo;I have never used AI in my business.&rdquo;
+                    </p>
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      Start with a <span className="text-accent font-semibold">Momentum Sprint</span>. In 90 days, you will have multiple working systems and know exactly what AI can do for you.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent>
+                <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6">
+                  <div className="flex-1">
+                    <p className="font-bold text-foreground">
+                      &ldquo;I use some tools but need more built and connected.&rdquo;
+                    </p>
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      <span className="text-accent font-semibold">Core</span> is your fit. Weekly strategy sessions with Dr. Jeff, continuous builds, and a team shipping for you every week.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent>
+                <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6">
+                  <div className="flex-1">
+                    <p className="font-bold text-foreground">
+                      &ldquo;I need everything built fast, in parallel, with priority.&rdquo;
+                    </p>
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      <span className="text-accent font-semibold">Scale</span> gives you maximum velocity. Multiple systems building at once, priority support, and accelerated delivery.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+          <div className="mt-6 text-center">
+            <p className="text-sm text-muted-foreground">
+              Still unsure? <a href="/ai-readiness-scorecard" className="text-accent hover:underline font-medium">Take the 2-minute AI Readiness Scorecard</a> and we will tell you.
+            </p>
+          </div>
+        </Container>
+      </Section>
+
       {/* Pricing Table */}
       <Section className="border-t border-border bg-muted/30">
         <Container>
@@ -201,12 +261,34 @@ export default function HowItWorksPage() {
         </Container>
       </Section>
 
-      {/* Pricing Note */}
-      <Section className="py-8 md:py-12 border-t border-border bg-muted/30">
-        <Container size="md">
-          <p className="text-center text-sm text-muted-foreground">
-            Rates adjust quarterly based on demand and capacity.
-          </p>
+      {/* The PRISM Method */}
+      <Section className="border-t border-border bg-muted/30">
+        <Container>
+          <div className="mb-12 text-center">
+            <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">
+              The PRISM Method
+            </h2>
+            <p className="mt-3 text-lg text-muted-foreground">
+              Every engagement follows the same proven process.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-5">
+            {[
+              { step: "1", name: "Discover", desc: "Map your workflows, pain points, and revenue levers in a strategy session." },
+              { step: "2", name: "Design", desc: "Architect the AI systems that solve real problems, not hypothetical ones." },
+              { step: "3", name: "Build", desc: "Deploy production systems in days, not months. You see working software fast." },
+              { step: "4", name: "Integrate", desc: "Connect to your CRM, email, calendar, and existing tools. No rip-and-replace." },
+              { step: "5", name: "Optimize", desc: "Measure results, tune performance, and expand. Your systems get smarter over time." },
+            ].map((item) => (
+              <div key={item.step} className="text-center">
+                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-accent text-lg font-bold text-accent-foreground">
+                  {item.step}
+                </div>
+                <h3 className="mt-4 text-lg font-bold text-foreground">{item.name}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{item.desc}</p>
+              </div>
+            ))}
+          </div>
         </Container>
       </Section>
 

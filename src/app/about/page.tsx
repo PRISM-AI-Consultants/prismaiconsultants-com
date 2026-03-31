@@ -54,20 +54,12 @@ const communityInvolvements = [
     org: "African American Business Leaders' Chamber (AABLC)",
   },
   {
-    role: "Board Member",
-    org: "Allentown School District Board",
+    role: "Active in the Community",
+    org: "Allentown, PA",
   },
   {
     role: "Active Big Brother",
     org: "Big Brothers Big Sisters",
-  },
-  {
-    role: "External Reviewer",
-    org: "Ben Franklin Technology Partners",
-  },
-  {
-    role: "Task Force Member",
-    org: "LVEDC AI Task Force",
   },
   {
     role: "Chapter Launch Coach",
@@ -113,6 +105,16 @@ export default function AboutPage() {
                   agents, dashboards, and automations that run Jeff&rsquo;s
                   business are the same architecture his clients receive.
                 </p>
+                <p className="mt-2">
+                  <a
+                    href="https://drjeffbullock.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent hover:underline font-medium"
+                  >
+                    Learn more about Dr. Jeff Bullock &rarr;
+                  </a>
+                </p>
               </div>
             </div>
             <div className="md:col-span-2">
@@ -137,11 +139,10 @@ export default function AboutPage() {
         <Container>
           <StatsBar
             stats={[
-              { value: "2", label: "AI Companies" },
-              { value: "10", label: "Books" },
-              { value: "34", label: "Autonomous Agents" },
-              { value: "54", label: "Module AI Platform" },
-              { value: "2,500+", label: "Songs Composed" },
+              { value: "18", label: "Years in Operations Leadership" },
+              { value: "2", label: "AI Companies Founded" },
+              { value: "34", label: "AI Systems Built" },
+              { value: "200+", label: "Professionals Trained" },
             ]}
           />
         </Container>
@@ -159,8 +160,8 @@ export default function AboutPage() {
               11 builds the systems we architect together.
             </p>
             <p className="text-lg">
-              Every deliverable includes at least one AI-enhanced element. 40
-              hours of our execution equals 80+ hours of traditional work
+              Every deliverable includes at least one AI-enhanced element. Our
+              execution delivers 2x the output of traditional approaches
               because every team member uses AI tools.
             </p>
             <p>
@@ -168,6 +169,76 @@ export default function AboutPage() {
               quality for every dollar invested. This is not theory. It is how
               we operate every day.
             </p>
+          </div>
+        </Container>
+      </Section>
+
+      {/* The Team */}
+      <Section className="border-t border-border bg-muted/20">
+        <Container>
+          <h2 className="text-3xl font-bold tracking-tight">
+            The Team
+          </h2>
+          <p className="mt-4 max-w-2xl text-muted-foreground">
+            Strategy from Jeff. Execution from a team that ships every week.
+          </p>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <Card>
+              <CardContent>
+                <div className="flex flex-col items-center text-center">
+                  <div className="h-20 w-20 rounded-full bg-accent/20 flex items-center justify-center mb-4">
+                    <span className="text-2xl font-bold text-accent">JB</span>
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground">Dr. Jeff Bullock</h3>
+                  <p className="text-sm text-accent font-medium">CEO &amp; AI Systems Architect</p>
+                  <p className="mt-2 text-xs text-muted-foreground">
+                    PharmD. 18 years CVS Health. Builds the architecture, leads strategy sessions, owns every client relationship.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent>
+                <div className="flex flex-col items-center text-center">
+                  <div className="h-20 w-20 rounded-full bg-accent/20 flex items-center justify-center mb-4">
+                    <span className="text-2xl font-bold text-accent">SM</span>
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground">Saleem</h3>
+                  <p className="text-sm text-accent font-medium">Lead Developer</p>
+                  <p className="mt-2 text-xs text-muted-foreground">
+                    Full-stack engineering. Builds the dashboards, automations, and integrations that run in client environments.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent>
+                <div className="flex flex-col items-center text-center">
+                  <div className="h-20 w-20 rounded-full bg-accent/20 flex items-center justify-center mb-4">
+                    <span className="text-2xl font-bold text-accent">JM</span>
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground">James</h3>
+                  <p className="text-sm text-accent font-medium">Chief of Staff</p>
+                  <p className="mt-2 text-xs text-muted-foreground">
+                    Operations, scheduling, and campaign execution. Keeps the machine running while Jeff builds.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent>
+                <div className="flex flex-col items-center text-center">
+                  <div className="h-20 w-20 rounded-full bg-accent/20 flex items-center justify-center mb-4">
+                    <span className="text-2xl font-bold text-accent">+8</span>
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground">Execution Team</h3>
+                  <p className="text-sm text-accent font-medium">Specialists</p>
+                  <p className="mt-2 text-xs text-muted-foreground">
+                    Content, design, research, QA, and VA support. Every team member uses AI tools daily to deliver 2x output.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </Container>
       </Section>

@@ -226,23 +226,27 @@ export default function SpeakingPage() {
         </Container>
       </Section>
 
-      {/* Speaker Reel Placeholder */}
+      {/* Full Speaker Portfolio Link */}
       <Section className="border-y border-border bg-muted/30">
         <Container size="md">
-          <div className="mb-8">
+          <div className="text-center">
             <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">
-              Speaker Reel
+              Full Speaker Portfolio
             </h2>
+            <p className="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">
+              View the complete speaker profile with video demos, detailed topic breakdowns, and event photos.
+            </p>
+            <div className="mt-6">
+              <a
+                href="https://speaker.prismaiconsultants.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-12 items-center justify-center rounded-[var(--radius-md)] border-2 border-accent bg-transparent px-6 text-base font-medium text-accent transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              >
+                View Speaker Portfolio
+              </a>
+            </div>
           </div>
-          <Card className="bg-muted">
-            <CardContent>
-              <div className="flex aspect-video items-center justify-center">
-                <p className="text-lg font-medium text-muted-foreground">
-                  Speaker Reel Coming Soon
-                </p>
-              </div>
-            </CardContent>
-          </Card>
         </Container>
       </Section>
 

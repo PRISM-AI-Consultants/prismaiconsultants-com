@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title:
     "PRISM AI Consultants | AI Systems Architect, Business Partner, Builder",
   description:
-    "We build production AI systems that run live in your business. Agents, dashboards, automations, and integrations. 34 autonomous agents built. $350K+ in AI systems delivered. Allentown, PA.",
+    "We build production AI systems that run live in your business. Agents, dashboards, automations, and integrations. 34 autonomous agents built. $350K-$700K+ in AI systems delivered. Allentown, PA.",
   keywords: [
     "AI consultant Allentown",
     "AI systems architect",
@@ -31,7 +31,15 @@ export const metadata: Metadata = {
   openGraph: {
     title: "PRISM AI Consultants | AI Systems Architect. Business Partner. Builder.",
     description:
-      "We build production AI systems that run live in your business. 34 autonomous agents. $350K+ in systems delivered.",
+      "We build production AI systems that run live in your business. 34 autonomous agents. $350K-$700K+ in systems delivered.",
+    images: [
+      {
+        url: "https://prismaiconsultants.com/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Dr. Jeff Bullock - AI Systems Architect & Speaker",
+      },
+    ],
   },
 };
 
@@ -41,10 +49,10 @@ const AGENT_INTAKE_URL = "https://agent-intake.prismaiconsultants.com";
 const SKOOL_URL = "https://www.skool.com/prism-ai-consultants";
 
 const stats = [
-  { value: "34", label: "Autonomous Agents Built" },
-  { value: "$350K+", label: "AI Systems Delivered" },
-  { value: "200+", label: "Professionals Trained" },
+  { value: "15+", label: "Hours Saved Per Client Weekly" },
+  { value: "Days", label: "Not Months to Deploy" },
   { value: "2-5x", label: "Avg. Client ROI" },
+  { value: "200+", label: "Professionals Trained" },
 ];
 
 const steps = [
@@ -90,14 +98,14 @@ export default function HomePage() {
             {/* Text column */}
             <div className="flex-1 animate-fade-in-up">
               <h1 className="text-5xl font-extrabold tracking-tight md:text-7xl">
-                <span className="text-foreground">AI Systems Architect.</span>
+                <span className="text-foreground">Your team is stuck doing</span>
                 <br />
-                <span className="gradient-text">Business Partner. Builder.</span>
+                <span className="gradient-text">work that software should handle.</span>
               </h1>
               <p className="mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
-                We build production AI systems that run live in your business.
-                Agents, dashboards, automations, and integrations. Not decks. Not
-                demos. Real systems.
+                We build the AI systems that give you your time back.
+                Dashboards that show what matters. Automations that eliminate busywork.
+                Tools your competitors wish they had. Deployed in days, not months.
               </p>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
                 <a
@@ -106,24 +114,14 @@ export default function HomePage() {
                   rel="noopener noreferrer"
                   className="inline-flex h-12 items-center justify-center rounded-[var(--radius-md)] bg-accent px-6 text-base font-medium text-accent-foreground transition-colors hover:bg-accent/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                 >
-                  Book a Strategy Call
+                  Book a Free Strategy Call
                 </a>
-                <a
-                  href={AGENT_INTAKE_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/ai-readiness-scorecard"
                   className="inline-flex h-12 items-center justify-center rounded-[var(--radius-md)] border border-border bg-transparent px-6 text-base font-medium text-foreground transition-colors hover:bg-muted hover:border-accent/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                 >
-                  Tell Us What Agent You Need
-                </a>
-                <a
-                  href={SKOOL_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex h-12 items-center justify-center rounded-[var(--radius-md)] bg-transparent px-6 text-base font-medium text-foreground transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                >
-                  Join PRISM AI University
-                </a>
+                  Take the 2-Minute Scorecard
+                </Link>
               </div>
             </div>
             {/* Hero image column */}
@@ -148,6 +146,56 @@ export default function HomePage() {
       <Section className="py-12 md:py-16 border-y border-border bg-muted/30">
         <Container>
           <StatsBar stats={stats} />
+        </Container>
+      </Section>
+
+      {/* Is This You? */}
+      <Section>
+        <Container>
+          <div className="mb-10 text-center">
+            <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">
+              Sound Familiar?
+            </h2>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                pain: "You spend hours every week on tasks a system should handle",
+                fix: "We automate the busywork so you focus on revenue",
+              },
+              {
+                pain: "Your tools don't talk to each other and data falls through the cracks",
+                fix: "We connect everything into one intelligent workflow",
+              },
+              {
+                pain: "You're making decisions on gut feel because you can't see the numbers",
+                fix: "We build dashboards that show what matters in real time",
+              },
+              {
+                pain: "Onboarding new clients takes days when it should take minutes",
+                fix: "We build intake systems that do the heavy lifting automatically",
+              },
+              {
+                pain: "You know AI could help but you don't know where to start",
+                fix: "We figure that out for you and build it in the first week",
+              },
+              {
+                pain: "You've been burned by consultants who deliver slide decks, not results",
+                fix: "We deliver working software. Every engagement. No exceptions.",
+              },
+            ].map((item) => (
+              <Card key={item.pain}>
+                <CardContent>
+                  <p className="text-sm font-medium text-foreground">
+                    {item.pain}
+                  </p>
+                  <p className="mt-3 text-sm text-accent font-medium">
+                    {item.fix}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </Container>
       </Section>
 
@@ -267,6 +315,84 @@ export default function HomePage() {
                 metric={t.metric}
               />
             ))}
+          </div>
+        </Container>
+      </Section>
+
+      {/* Video Testimonials */}
+      <Section className="border-t border-border bg-muted/20">
+        <Container>
+          <div className="mb-10 text-center">
+            <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">
+              Hear It Directly
+            </h2>
+            <p className="mt-3 text-lg text-muted-foreground">
+              Real clients. Real results. Unscripted.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="space-y-3">
+              <div className="relative overflow-hidden rounded-xl border border-border">
+                <div className="aspect-video">
+                  <iframe
+                    src="https://www.youtube.com/embed/Wcnn2-b_iQQ"
+                    title="Client Testimonial: Financial Services"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  />
+                </div>
+              </div>
+              <p className="text-sm font-medium text-foreground">Financial Services</p>
+              <p className="text-xs text-muted-foreground">Professional and personal impact from AI systems</p>
+            </div>
+            <div className="space-y-3">
+              <div className="relative overflow-hidden rounded-xl border border-border">
+                <div className="aspect-video">
+                  <iframe
+                    src="https://www.youtube.com/embed/c-mkT74bbvk"
+                    title="AI Expo Testimonials"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  />
+                </div>
+              </div>
+              <p className="text-sm font-medium text-foreground">Live Event</p>
+              <p className="text-xs text-muted-foreground">What attendees said after an AI live demo</p>
+            </div>
+          </div>
+          <div className="mt-8 text-center">
+            <Link
+              href="/results"
+              className="inline-flex items-center gap-2 text-accent font-medium transition-colors hover:text-accent/80"
+            >
+              See All Client Results
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </Container>
+      </Section>
+
+      {/* Lead Magnet */}
+      <Section className="border-t border-border bg-accent/5">
+        <Container size="md">
+          <div className="text-center">
+            <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">
+              Not Ready for a Call Yet?
+            </h2>
+            <p className="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">
+              Take the free AI Readiness Scorecard. Five questions. Two minutes.
+              Find out where AI can save you the most time and money.
+            </p>
+            <div className="mt-8">
+              <a
+                href="/ai-readiness-scorecard"
+                className="inline-flex h-12 items-center justify-center rounded-[var(--radius-md)] border-2 border-accent bg-transparent px-6 text-base font-medium text-accent transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              >
+                Take the AI Readiness Scorecard
+              </a>
+            </div>
           </div>
         </Container>
       </Section>

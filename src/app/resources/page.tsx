@@ -124,19 +124,86 @@ export default function ResourcesPage() {
         </Container>
       </Section>
 
-      {/* Games */}
+      {/* AI-Generated Music */}
       <Section className="border-t border-border">
         <Container>
-          <h2 className="text-3xl font-extrabold tracking-tight">Games</h2>
+          <h2 className="text-3xl font-extrabold tracking-tight">
+            AI-Generated Music
+          </h2>
           <p className="mt-3 max-w-2xl text-muted-foreground">
-            Interactive experiences built with AI-assisted development.
-            Playable in your browser.
+            Every track written, produced, and mixed using AI tools we build for
+            clients. 2,500+ songs composed. These are a few favorites.
           </p>
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            <div className="space-y-3">
+              <div className="relative overflow-hidden rounded-xl border border-border">
+                <div className="aspect-video">
+                  <iframe
+                    src="https://www.youtube.com/embed/Ibzr1ISmsF8"
+                    title="ROI From AI - PRISM AI Consultants"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  />
+                </div>
+              </div>
+              <h3 className="text-sm font-bold text-foreground">ROI From AI</h3>
+              <p className="text-xs text-muted-foreground">
+                Business automation turned into a song.
+              </p>
+            </div>
+            <div className="space-y-3">
+              <div className="relative overflow-hidden rounded-xl border border-border">
+                <div className="aspect-video">
+                  <iframe
+                    src="https://www.youtube.com/embed/dEURY8SA4mM"
+                    title="I Built an AI Agent and Gave It a Theme Song"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  />
+                </div>
+              </div>
+              <h3 className="text-sm font-bold text-foreground">I Built an AI Agent and Gave It a Theme Song</h3>
+              <p className="text-xs text-muted-foreground">
+                What happens when your AI agent gets its own soundtrack.
+              </p>
+            </div>
+            <div className="space-y-3">
+              <div className="relative overflow-hidden rounded-xl border border-border">
+                <div className="aspect-video">
+                  <iframe
+                    src="https://www.youtube.com/embed/QW2ViZlS2WU"
+                    title="Did It Get Done Though"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  />
+                </div>
+              </div>
+              <h3 className="text-sm font-bold text-foreground">Did It Get Done Though</h3>
+              <p className="text-xs text-muted-foreground">
+                The only question that matters. Execution over everything.
+              </p>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* Interactive Demos */}
+      <Section className="border-t border-border bg-muted/10">
+        <Container>
+          <h2 className="text-3xl font-extrabold tracking-tight">
+            Interactive Demos
+          </h2>
+          <p className="mt-3 max-w-2xl text-muted-foreground">
+            AI-built applications you can try right now. Every line of code assisted by the same tools we deploy for clients.
+          </p>
+          <div className="mt-8 grid gap-6 md:grid-cols-2 max-w-2xl">
             {games.map((game) => (
               <Card key={game.title} href={game.url}>
                 <CardHeader>
-                  <Badge variant="outline">{game.badge}</Badge>
+                  <Badge variant="outline">Try It</Badge>
                   <h3 className="mt-3 text-lg font-bold text-foreground">
                     {game.title}
                   </h3>

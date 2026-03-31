@@ -22,7 +22,7 @@ const transformations = [
     role: "Business Valuator",
     need: "Producing valuation reports manually, each requiring hours of comparable transaction research.",
     built: "An AI research agent that pulls and synthesizes valuation data, generating structured research briefs automatically.",
-    result: "Research time cut from hours to minutes per report. The tool pays for itself on a single engagement.",
+    result: "Research time cut from hours to minutes per report. Estimated $50K+ annual value from time savings alone. The tool pays for itself on a single engagement.",
     marketValue: "$12K-$20K",
     buildTime: "1 day",
     quote: "This saves me 4-5 hours per report.",
@@ -32,7 +32,7 @@ const transformations = [
     role: "Managing Partner (8-Attorney Firm)",
     need: "No real-time visibility into attorney performance. Had to wait for month-end reports to see who was on track.",
     built: "A live performance dashboard pulling real data, showing on-track and off-track scoring for every attorney.",
-    result: "Complete real-time firm visibility. Performance issues caught in days, not months.",
+    result: "Complete real-time firm visibility. Performance issues caught in days, not months. Partner now manages 8 attorneys with data instead of gut feel.",
     marketValue: "$15K-$25K",
     buildTime: "Sprint delivery",
     quote: "This is exactly what I wanted.",
@@ -62,7 +62,7 @@ const transformations = [
     role: "Managing Director",
     need: "Needed a CRM, AI integration, and automation system to manage deal flow and client relationships.",
     built: "A complete CRM build with AI-powered lead scoring, automated follow-ups, and pipeline management.",
-    result: "Full deal pipeline visibility with automated workflows. From manual chaos to structured operations.",
+    result: "Full deal pipeline visibility with automated workflows. From manual chaos to structured operations. Client retained on monthly engagement to continue building.",
     marketValue: "$25K-$40K",
     buildTime: "Multi-sprint",
     quote: null,
@@ -82,10 +82,10 @@ export default function ResultsPage() {
         <Container>
           <StatsBar
             stats={[
-              { value: "$350K-$700K+", label: "Market Value of Systems Built" },
-              { value: "13+", label: "Client Builds Delivered" },
-              { value: "Hours to Days", label: "Typical Build Time" },
+              { value: "$350K-$700K+", label: "In System Value Delivered to Clients" },
+              { value: "Under 1 Week", label: "Most Systems Deployed" },
               { value: "2-5x", label: "Avg. Client ROI" },
+              { value: "200+", label: "Professionals Trained" },
             ]}
           />
         </Container>
@@ -145,18 +145,10 @@ export default function ResultsPage() {
                       <div className="flex flex-wrap gap-3">
                         <div className="rounded-[var(--radius-md)] bg-muted px-3 py-2">
                           <p className="text-xs text-muted-foreground">
-                            Market Value
+                            System Value
                           </p>
                           <p className="text-sm font-bold text-accent">
                             {story.marketValue}
-                          </p>
-                        </div>
-                        <div className="rounded-[var(--radius-md)] bg-muted px-3 py-2">
-                          <p className="text-xs text-muted-foreground">
-                            Build Time
-                          </p>
-                          <p className="text-sm font-bold text-foreground">
-                            {story.buildTime}
                           </p>
                         </div>
                       </div>
@@ -170,6 +162,66 @@ export default function ResultsPage() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </Container>
+      </Section>
+
+      {/* Video Testimonials */}
+      <Section className="border-t border-border bg-muted/20">
+        <Container>
+          <div className="mb-10 text-center">
+            <h2 className="text-3xl font-bold tracking-tight">
+              Hear It From Our Clients
+            </h2>
+            <p className="mt-3 text-muted-foreground">
+              Real people. Real results. Unscripted.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="relative overflow-hidden rounded-xl border border-border">
+              <div className="aspect-video">
+                <iframe
+                  src="https://www.youtube.com/embed/Wcnn2-b_iQQ"
+                  title="Client Testimonial: Financial Services"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
+            </div>
+            <div className="relative overflow-hidden rounded-xl border border-border">
+              <div className="aspect-video">
+                <iframe
+                  src="https://www.youtube.com/embed/c-mkT74bbvk"
+                  title="AI Expo Testimonials"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
+            </div>
+            <div className="relative overflow-hidden rounded-xl border border-border">
+              <div className="aspect-video">
+                <iframe
+                  src="https://www.youtube.com/embed/tJztoA4Cjv4"
+                  title="Client Testimonial: Pediatric Dentistry"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
+            </div>
+            <div className="relative overflow-hidden rounded-xl border border-border">
+              <div className="aspect-video">
+                <iframe
+                  src="https://www.youtube.com/embed/7kV5DBHugZc"
+                  title="The Gen AI Divide: Why Your Competitor's AI Works and Yours Doesn't"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
+            </div>
           </div>
         </Container>
       </Section>
@@ -225,10 +277,10 @@ export default function ResultsPage() {
         <Container size="md">
           <div className="text-center">
             <p className="text-2xl font-bold tracking-tight text-foreground">
-              $350K-$700K+ in AI system value delivered to clients.
+              Clients have received $350K-$700K+ in AI system value.
             </p>
             <p className="mt-2 text-2xl font-bold tracking-tight text-accent">
-              Most systems built in days, not months.
+              Most deployed in under a week.
             </p>
             <p className="mt-4 text-lg text-muted-foreground">
               That is the ROI from AI when you work with someone who builds.

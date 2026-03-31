@@ -65,7 +65,7 @@ export default function ContactPage() {
                       LinkedIn
                     </p>
                     <a
-                      href="https://www.linkedin.com/company/prismaiconsultants"
+                      href="https://www.linkedin.com/company/prism-ai-consultants"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="mt-1 block text-sm font-medium text-accent hover:underline"

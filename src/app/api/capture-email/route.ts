@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
-  const { email, name, eventSlug } = body;
+  const { email, name, eventSlug, score, answers } = body;
 
   if (!email) {
     return NextResponse.json(
@@ -26,8 +26,14 @@ export async function POST(req: NextRequest) {
           firstName: firstName || undefined,
           lastName: lastParts.join(" ") || undefined,
           email,
-          tags: [`prism-speaking-event-${eventSlug || "unknown"}`],
-          source: `prismaiconsultants.com Speaking Event: ${eventSlug || "unknown"}`,
+          tags: [
+            `prism-${eventSlug || "unknown"}`,
+            ...(score ? [`ai-readiness-score-${score}`] : []),
+          ],
+          source: `prismaiconsultants.com ${eventSlug || "unknown"}`,
+          customField: score
+            ? { ai_readiness_score: String(score) }
+            : undefined,
         }),
       });
     }
@@ -42,6 +48,8 @@ export async function POST(req: NextRequest) {
           email,
           name,
           eventSlug,
+          score,
+          answers,
           source: "prismaiconsultants.com",
           timestamp: new Date().toISOString(),
         }),

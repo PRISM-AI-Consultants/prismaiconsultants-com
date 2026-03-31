@@ -5,11 +5,11 @@ import { Container } from "@/components/ui/container";
 const socialLinks = [
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/company/prismaiconsultants",
+    href: "https://www.linkedin.com/company/prism-ai-consultants",
   },
   {
     label: "YouTube",
-    href: "https://www.youtube.com/@prismaiconsultants",
+    href: "https://www.youtube.com/@drjeffbullock",
   },
   {
     label: "Skool",

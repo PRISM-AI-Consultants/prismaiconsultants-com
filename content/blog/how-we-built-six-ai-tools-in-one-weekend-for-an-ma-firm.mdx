@@ -1,0 +1,75 @@
+---
+title: "How We Built 6 AI Tools in One Weekend for an M&A Advisory Firm"
+date: "2026-03-29"
+description: "A real case study: an M&A broker drowning in 90 emails a day got a custom AI tools suite, seller scoring engine, and morning digest bot. All deployed in 48 hours."
+tags: ["Case Study", "AI Implementation", "M&A", "Professional Services"]
+author: "Dr. Jeff Bullock"
+---
+
+A lower middle market M&A advisory firm came to us with a simple problem: their president was drowning. Ninety emails a day. Manual valuation reports that took hours. Deal files scattered across folders with no system. A CRM with 60,000 contacts and no API.
+
+They had been named a Top 25 Lower Middle Market Investment Bank. They close deals in the $5M to $25M revenue range. They are sharp operators. But every deal still required a human to manually assemble Confidential Information Memorandums, draft blind profiles, review NDAs line by line, and score letters of intent against internal standards.
+
+We did not write them a strategy document. We built the tools.
+
+## The Problem Nobody Talks About
+
+Here is what most AI consultants miss about professional services firms: these people do not need a chatbot. They do not need a "prompt engineering workshop." They need systems that understand their specific workflow and plug directly into it.
+
+This firm's workflow has real regulatory constraints. They operate through a FINRA/SIPC member broker-dealer. Their deal process involves NDAs, LOIs, buyer outreach, seller qualification, and CIM assembly. Every step has compliance implications. A generic AI tool does not cut it.
+
+The president sent us a prioritized list of 19 AI applications he wanted built. Not "explore." Built.
+
+## What We Shipped
+
+In a single weekend build session, we deployed six production tools to a secure, password-protected portal on our infrastructure:
+
+**1. CIM Module Assembler.** Upload deal data, select from 8 standard modules, and the tool assembles a formatted Confidential Information Memorandum. AI-enhanced to fill gaps and standardize language across modules.
+
+**2. Blind Profile Generator.** Takes CIM data and produces a fully redacted teaser with auto-generated deal reference numbers, investment thesis, and anonymized financial highlights. What used to take an afternoon now takes minutes.
+
+**3. Pitch Deck Builder.** Input a prospect's industry and the tool generates a presentation with industry-specific data across six verticals, firm credentials, and concern-addressing sections tailored to the buyer profile.
+
+**4. NDA Reviewer.** Upload a counterparty's NDA and the tool compares it against 10 internal standard terms, flags deviations, and recommends accept, modify, or reject for each clause.
+
+**5. LOI Reviewer.** Analyzes letters of intent across 13 standard terms, generates a 0-to-100 seller favorability score, and produces negotiation talking points for each area of concern.
+
+**6. Call Notes Parser.** Takes raw Otter.ai transcripts from buyer calls and extracts a structured 14-field prospect summary ready for CRM entry.
+
+All six tools are AI-enhanced through a proxy API we deployed on the same server. Rate-limited, branded, and accessible through a single dashboard.
+
+## The Seller Scoring Engine
+
+But the tools were only half the story. The firm's biggest challenge is not finding buyers. Buyers show up. The hard part is finding sellers. Business owners who are ready to exit but have not started the process.
+
+We built a Retirement Readiness Scorer that processes CSV prospect lists and scores each one from 0 to 100 based on signals like business age, estimated owner age (derived from name analysis and founding date proximity), revenue fit, succession indicators, industry vertical, and geography.
+
+The firm has 28,000 potential sellers in their CRM. Instead of spending $10,000 on a 4,000-piece direct mail campaign and hoping for the best, they can now score every prospect and target the ones most likely to be ready.
+
+## The Morning Digest
+
+We also deployed a daily email digest bot. Every morning at 7 AM, it pulls the previous 24 hours of inbox activity, classifies each message into Urgent, Action Required, FYI, or Noise using AI, and sends a clean HTML summary. Ninety emails reduced to a single morning briefing.
+
+## The Scoreboard
+
+After the weekend build, we mapped progress against the president's original 19-item list:
+
+- **10 of 19 items: built or done**
+- **2 items: blocked waiting on client input**
+- **4 items: backlogged for future phases**
+- **1 item: scoped and ready**
+- **2 items: partially complete, pending API integrations**
+
+The client's daughter, who manages marketing and operations, got VSCode and Claude Code installed on her machine during the same session. She is now building alongside us.
+
+## Why This Matters
+
+This firm did not need a "digital transformation roadmap." They needed someone who understands M&A workflows, knows how to deploy to a secure server, and can ship production tools in a weekend.
+
+The president's reaction after seeing the 10-of-19 scorecard: he immediately converted from a session package to a monthly retainer. No pitch required. The work spoke for itself.
+
+That is what implementation looks like. Not a slide deck about what AI could do someday. A password-protected dashboard with six working tools, a scoring engine processing real prospect data, and a morning digest already running on a cron job.
+
+If your firm is still waiting for someone to "develop an AI strategy," you are falling behind the firms that are already building.
+
+**[Book a strategy call](https://calendly.com/prismaiconsultants/introductory-call)** and we will show you what your firm's AI tools suite could look like. Live demo, not a presentation.

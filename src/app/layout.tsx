@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | PRISM AI Consultants",
   },
   description:
-    "We build production AI systems for businesses. Agents, dashboards, automations, and integrations that run live. $350K+ in AI systems delivered. Based in Allentown, PA.",
+    "We build production AI systems for businesses. Agents, dashboards, automations, and integrations that run live. $350K-$700K+ in AI systems delivered. Based in Allentown, PA.",
   keywords: [
     "AI consultant",
     "AI consulting",
@@ -42,6 +42,9 @@ export const metadata: Metadata = {
     icon: "/images/prism-logo.png",
     apple: "/images/prism-logo.png",
   },
+  alternates: {
+    canonical: "https://prismaiconsultants.com",
+  },
   openGraph: {
     title: "PRISM AI Consultants",
     description:
@@ -49,12 +52,21 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "PRISM AI Consultants",
     locale: "en_US",
+    images: [
+      {
+        url: "https://prismaiconsultants.com/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Dr. Jeff Bullock - AI Systems Architect & Speaker",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "PRISM AI Consultants",
     description:
-      "We build production AI systems for businesses. 34 autonomous agents. $350K+ in systems delivered.",
+      "We build production AI systems for businesses. 34 autonomous agents. $350K-$700K+ in systems delivered.",
+    images: ["https://prismaiconsultants.com/images/og-image.png"],
   },
   robots: {
     index: true,
@@ -90,7 +102,7 @@ const organizationSchema = {
     url: "https://drjeffbullock.com",
   },
   sameAs: [
-    "https://www.linkedin.com/company/prismaiconsultants",
+    "https://www.linkedin.com/company/prism-ai-consultants",
     "https://www.skool.com/prism-ai-consultants",
   ],
   priceRange: "$2,500 - $25,000+/month",
