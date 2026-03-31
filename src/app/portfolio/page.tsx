@@ -99,8 +99,8 @@ export default function PortfolioPage() {
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
               13 client-facing builds. 5 internal platforms.
-              $350,000 to $700,000+ in market value.
-              Internal cost: near zero.
+              $350,000 to $700,000+ in system value delivered.
+              Most built in days, not months.
             </p>
             <div className="mt-10 grid grid-cols-2 gap-8 md:grid-cols-4">
               <div className="text-center">

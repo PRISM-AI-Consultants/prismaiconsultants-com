@@ -96,9 +96,9 @@ export default function AboutPage() {
                 </p>
                 <p className="text-lg font-medium text-foreground">
                   &ldquo;I don&rsquo;t talk about AI. I build AI systems. 34
-                  autonomous agents run my own business. I&rsquo;ve built
-                  $350K-$700K worth of AI systems for clients at near-zero
-                  marginal cost.&rdquo;
+                  autonomous agents run my own business. I&rsquo;ve delivered
+                  $350K-$700K in AI system value to clients, most built in
+                  days, not months.&rdquo;
                 </p>
                 <p>
                   Every system PRISM delivers was proven internally first. The
