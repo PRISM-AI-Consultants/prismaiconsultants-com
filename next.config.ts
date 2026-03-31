@@ -355,6 +355,15 @@ const nextConfig: NextConfig = {
       },
 
       // ===========================
+      // Wix blog /post/ prefix -> /blog/
+      // ===========================
+      {
+        source: "/post/:slug*",
+        destination: "/blog/:slug*",
+        permanent: true,
+      },
+
+      // ===========================
       // Blog post redirects (Wix root-level -> /blog/slug)
       // ===========================
       {

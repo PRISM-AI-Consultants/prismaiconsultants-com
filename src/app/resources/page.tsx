@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { BlogCard } from "@/components/content/blog-card";
 
 export const metadata: Metadata = {
-  title: "Resources | PRISM AI Consultants",
+  title: "Resources",
   description:
     "Books, games, blog posts, and community resources from PRISM AI Consultants. Learn how to build real AI systems for your business.",
 };

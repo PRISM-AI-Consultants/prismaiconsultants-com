@@ -71,7 +71,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHeader
-        title="About"
+        title="About Dr. Jeff Bullock"
         description="The person who builds the AI systems everyone else is just talking about."
       />
 

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description:
     "Keynotes, workshops, and breakout sessions on AI systems, automation, and the future of work. 25-30% audience-to-pipeline conversion rate.",
   openGraph: {
-    title: "Speaking & Events - Book Dr. Jeff Bullock | PRISM AI Consultants",
+    title: "Speaking & Events - Book Dr. Jeff Bullock",
     description:
       "Keynotes, workshops, and breakout sessions on AI systems, automation, and the future of work. 25-30% audience-to-pipeline conversion rate.",
   },

@@ -29,11 +29,15 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${post.title} | PRISM AI Consultants`,
+    title: post.title,
     description: post.description,
     openGraph: {
-      title: `${post.title} | PRISM AI Consultants`,
+      title: post.title,
       description: post.description,
+      type: "article",
+      publishedTime: post.date,
+      authors: ["Dr. Jeff Bullock"],
+      url: `https://prismaiconsultants.com/blog/${slug}`,
     },
   };
 }
@@ -55,8 +59,36 @@ export default async function BlogPostPage({ params }: PageProps) {
     notFound();
   }
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.description,
+    author: {
+      "@type": "Person",
+      name: "Dr. Jeff Bullock",
+      jobTitle: "AI Systems Architect & CEO",
+      url: "https://drjeffbullock.com",
+    },
+    datePublished: post.date,
+    publisher: {
+      "@type": "Organization",
+      name: "PRISM AI Consultants",
+      url: "https://prismaiconsultants.com",
+    },
+    mainEntityOfPage: `https://prismaiconsultants.com/blog/${slug}`,
+    keywords: post.tags.join(", "),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleSchema),
+        }}
+      />
+
       {/* Post Header */}
       <Section className="pb-0">
         <Container size="md">

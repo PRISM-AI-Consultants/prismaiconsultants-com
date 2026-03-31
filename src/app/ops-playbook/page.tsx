@@ -5,7 +5,7 @@ import { PlaybookForm } from "./playbook-form";
 
 export const metadata: Metadata = {
   title:
-    "The AI Agent Ops Playbook: 9 Root Causes That Break AI Automation | PRISM AI Consultants",
+    "The AI Agent Ops Playbook: 9 Root Causes That Break AI Automation",
   description:
     "Free playbook from running 34 AI agents in production for 44 days. 127 incidents logged. 9 root causes identified. Every fix documented. Download the PDF.",
   keywords: [

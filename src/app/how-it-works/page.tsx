@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     "AI consulting packages",
   ],
   openGraph: {
-    title: "How It Works & Pricing | PRISM AI Consultants",
+    title: "How It Works & Pricing",
     description:
       "Transparent pricing. Real outcomes. No hourly billing. Four clear paths to production AI systems.",
   },

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "PRISM AI builds",
   ],
   openGraph: {
-    title: "What We Build - Live AI Systems Portfolio | PRISM AI Consultants",
+    title: "What We Build - Live AI Systems Portfolio",
     description:
       "Click any of these. They are running right now. 18 production AI systems built and deployed.",
   },

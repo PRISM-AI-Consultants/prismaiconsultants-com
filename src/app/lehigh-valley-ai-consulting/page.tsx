@@ -6,7 +6,7 @@ import { Container } from "@/components/ui/container";
 
 export const metadata: Metadata = {
   title:
-    "AI Consulting & Systems Architecture in the Lehigh Valley | PRISM AI Consultants",
+    "AI Consulting & Systems Architecture in the Lehigh Valley",
   description:
     "PRISM AI Consultants provides AI consulting, AI automation, and AI systems architecture for businesses in Allentown, Bethlehem, Easton, and the Lehigh Valley. Production AI systems built by a local team.",
   keywords: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title:
-      "AI Consulting & Systems Architecture in the Lehigh Valley | PRISM AI Consultants",
+      "AI Consulting & Systems Architecture in the Lehigh Valley",
     description:
       "Production AI systems for Lehigh Valley businesses. 34 autonomous agents built. $350K-$700K+ in systems delivered. Based in Allentown, PA.",
   },

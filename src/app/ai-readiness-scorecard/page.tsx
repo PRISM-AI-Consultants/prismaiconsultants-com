@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "5 questions. 2 minutes. Find out where AI can save you the most time and money. Free AI readiness assessment from PRISM AI Consultants.",
   openGraph: {
-    title: "AI Readiness Scorecard | PRISM AI Consultants",
+    title: "AI Readiness Scorecard",
     description:
       "Take the free AI Readiness Scorecard. 5 questions. 2 minutes. Find out where AI saves you the most.",
     images: [

@@ -4,7 +4,7 @@ import { Section } from "@/components/ui/section";
 import { Container } from "@/components/ui/container";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | PRISM AI Consultants",
+  title: "Privacy Policy",
   description:
     "Privacy policy for PRISM AI Consultants. Learn how we collect, use, and protect your information.",
 };

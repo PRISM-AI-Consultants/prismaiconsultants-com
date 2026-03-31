@@ -5,7 +5,7 @@ import { PageHeader } from "@/components/ui/page-header";
 import { faqItems } from "@/data/faq";
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions | PRISM AI Consultants",
+  title: "Frequently Asked Questions",
   description:
     "Answers to common questions about AI consulting, pricing, timelines, ROI, and how PRISM AI Consultants builds production AI systems for businesses. Learn about AI agents, automation, and implementation.",
   keywords: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     "PRISM AI Consultants questions",
   ],
   openGraph: {
-    title: "Frequently Asked Questions | PRISM AI Consultants",
+    title: "Frequently Asked Questions",
     description:
       "Get answers about AI consulting costs, timelines, ROI, and how PRISM builds production AI systems for businesses.",
   },

@@ -42,9 +42,6 @@ export const metadata: Metadata = {
     icon: "/images/prism-logo.png",
     apple: "/images/prism-logo.png",
   },
-  alternates: {
-    canonical: "https://prismaiconsultants.com",
-  },
   openGraph: {
     title: "PRISM AI Consultants",
     description:
