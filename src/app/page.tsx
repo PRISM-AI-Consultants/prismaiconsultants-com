@@ -335,16 +335,16 @@ export default function HomePage() {
               <div className="relative overflow-hidden rounded-xl border border-border">
                 <div className="aspect-video">
                   <iframe
-                    src="https://www.youtube.com/embed/Wcnn2-b_iQQ"
-                    title="Client Testimonial: Financial Services"
+                    src="https://www.youtube.com/embed/i18jie5evzY"
+                    title="Client Testimonial: Real Estate - Lead Conversion"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                     className="w-full h-full"
                   />
                 </div>
               </div>
-              <p className="text-sm font-medium text-foreground">Financial Services</p>
-              <p className="text-xs text-muted-foreground">Professional and personal impact from AI systems</p>
+              <p className="text-sm font-medium text-foreground">Real Estate</p>
+              <p className="text-xs text-muted-foreground">How AI improved lead conversion for a real estate professional</p>
             </div>
             <div className="space-y-3">
               <div className="relative overflow-hidden rounded-xl border border-border">
