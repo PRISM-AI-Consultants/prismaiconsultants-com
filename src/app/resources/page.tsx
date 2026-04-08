@@ -15,24 +15,24 @@ export const metadata: Metadata = {
 
 const books = [
   {
-    title: "AI-Powered: A Non-Technical Leader's Playbook",
+    title: "A Prompt's Tale",
     description:
-      "The practical guide for business leaders who want to understand and implement AI without needing a computer science degree.",
-    url: "https://www.amazon.com/dp/B0DQ5K2QXC",
+      "A beginner's guide to AI and prompt engineering, told as a narrative journey through story. Written by Dr. Jeff Bullock.",
+    url: "https://drjeffbullock.com/books/a-prompts-tale",
     badge: "Book",
   },
   {
-    title: "AI-Powered: The Sequel",
+    title: "A Prompt's Power",
     description:
-      "Advanced strategies for leaders who are ready to go deeper. Covers autonomous agents, system architecture, and scaling AI operations.",
-    url: "https://www.amazon.com/dp/B0F1JL5KP7",
-    badge: "Book",
+      "The advanced follow-up to A Prompt's Tale. Deeper prompt engineering strategies, multi-step workflows, and elite-level AI output.",
+    url: "https://drjeffbullock.com/books/prompt-power",
+    badge: "Coming Soon",
   },
   {
-    title: "The AI Whisperer",
+    title: "All Books on Amazon",
     description:
       "Explore the full library of books by Dr. Jeff Bullock, covering AI, business strategy, and technology leadership.",
-    url: "https://drjeffbullock.com/books",
+    url: "https://www.amazon.com/stores/Jeffrey-Bullock/author/B0GNHP88TR",
     badge: "All Books",
   },
 ];
