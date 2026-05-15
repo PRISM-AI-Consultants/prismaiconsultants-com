@@ -237,6 +237,15 @@ const nextConfig: NextConfig = {
       },
 
       // ===========================
+      // Privacy Policy -> /privacy
+      // ===========================
+      {
+        source: "/privacy-policy",
+        destination: "/privacy",
+        permanent: true,
+      },
+
+      // ===========================
       // FAQ
       // ===========================
       {
