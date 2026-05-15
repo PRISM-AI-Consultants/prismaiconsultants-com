@@ -4,7 +4,7 @@ export const faqItems: FAQItem[] = [
   {
     question: "How much does AI consulting cost?",
     answer:
-      "PRISM AI Consultants offers Momentum Sprints starting at $4,500 for a 90-day accelerator with multiple AI systems deployed. Ongoing Core retainers start at $2,500 per month for continuous AI system development and strategy. Enterprise custom builds start at $25,000. Every engagement is designed to deliver measurable ROI, often within the first build.",
+      "PRISM AI Consultants offers Momentum Sprints at $4,500 for a 90-day accelerator with multiple AI systems deployed. For ongoing engagements, the AI Business Partnership is tailored to your organization and scoped in a 30-minute conversation. Workshops are $15,000 and keynote speaking engagements are $20,000. Every engagement is designed to deliver measurable ROI, often within the first build.",
   },
   {
     question: "What does an AI consultant actually do?",
@@ -66,12 +66,12 @@ export const faqItems: FAQItem[] = [
   {
     question: "What does the monthly retainer include?",
     answer:
-      "Core at $2,500 per month includes weekly strategy sessions with Dr. Jeff, continuous AI system development and deployment, a dedicated execution team, unlimited team access, and monthly progress reviews. Scale at $5,000 per month adds accelerated parallel builds, complex multi-system projects, and priority support for faster delivery.",
+      "The AI Business Partnership includes weekly strategy sessions with Dr. Jeff, continuous AI system development and deployment, a dedicated execution team, unlimited team access, and quarterly board-level roadmap reviews. The engagement is scoped to your organization's size, complexity, and goals in a 30-minute introductory conversation rather than priced off a one-size-fits-all rate card.",
   },
   {
     question: "Is AI consulting only for large enterprises?",
     answer:
-      "Absolutely not. Most of PRISM's clients are small businesses, solo practitioners, and mid-size organizations. Our Momentum Sprint starts at $4,500, and our Core partnership is $2,500 per month. Small businesses often see the biggest relative impact because AI can give a 5-person team the output capacity of a 15-person team.",
+      "Absolutely not. Most of PRISM's clients are small businesses, solo practitioners, and mid-size organizations. Our Momentum Sprint is $4,500 as a clear entry point, and our AI Business Partnership is tailored to organizations of every size. Small businesses often see the biggest relative impact because AI can give a 5-person team the output capacity of a 15-person team.",
   },
   {
     question: "How do I get started with AI consulting?",
@@ -91,6 +91,6 @@ export const faqItems: FAQItem[] = [
   {
     question: "Why does PRISM publish its pricing publicly?",
     answer:
-      "Transparency is a core principle. We publish pricing because we believe you should know what an engagement costs before your first call. We also document the market value of what we build alongside what clients actually paid, so you can evaluate the ROI for yourself. No hidden fees, no surprise invoices, no bait-and-switch.",
+      "Transparency is a core principle. We publish clear pricing on our entry tier and add-on services so you know what an engagement costs before your first call. For our tailored AI Business Partnership, the scope is unique to each organization, so we set pricing in a brief conversation rather than publish a one-size-fits-all rate. We also document the market value of what we build alongside what clients actually paid, so you can evaluate the ROI for yourself. No hidden fees, no surprise invoices, no bait-and-switch.",
   },
 ];

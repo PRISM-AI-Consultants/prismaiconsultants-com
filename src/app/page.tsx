@@ -64,21 +64,21 @@ const steps = [
   },
   {
     number: 2,
-    name: "Core",
-    price: "$2,500/mo",
-    description: "Your AI business partner. Strategy, builds, and a dedicated execution team.",
+    name: "AI Business Partnership",
+    price: "Tailored",
+    description: "Your AI business partner. Weekly strategy, continuous builds, unlimited team access. Scoped to your organization.",
   },
   {
     number: 3,
-    name: "Scale",
-    price: "$5,000/mo",
-    description: "Maximum velocity with parallel builds and priority support.",
+    name: "Workshops",
+    price: "$15,000",
+    description: "Team and organizational AI training, customized to your operations.",
   },
   {
     number: 4,
-    name: "Enterprise",
-    price: "$25,000+",
-    description: "Full-stack AI solutions for complex organizations.",
+    name: "Speaking & Keynotes",
+    price: "$20,000",
+    description: "Stage-tested keynotes and breakout sessions on practical AI for business.",
   },
 ];
 

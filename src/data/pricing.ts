@@ -19,9 +19,9 @@ export const pricingTiers: PricingTier[] = [
     ctaUrl: CALENDLY_URL,
   },
   {
-    name: "Core",
-    price: "$2,500",
-    priceNote: "/month",
+    name: "AI Business Partnership",
+    price: "Tailored",
+    priceNote: "book a conversation",
     description: "Your AI business partner.",
     highlighted: true,
     features: [
@@ -29,24 +29,9 @@ export const pricingTiers: PricingTier[] = [
       "Continuous AI system builds",
       "Dedicated execution team",
       "Unlimited team access",
-      "Monthly progress reviews",
+      "Quarterly board-level AI roadmap",
     ],
-    cta: "Join as Core Partner",
-    ctaUrl: CALENDLY_URL,
-  },
-  {
-    name: "Scale",
-    price: "$5,000",
-    priceNote: "/month",
-    description: "Maximum velocity.",
-    features: [
-      "Everything in Core",
-      "Accelerated parallel builds",
-      "Complex multi-system projects",
-      "Priority support and faster delivery",
-      "Strategic roadmap with quarterly reviews",
-    ],
-    cta: "Scale With Us",
+    cta: "Book a 30-Min Conversation",
     ctaUrl: CALENDLY_URL,
   },
 ];
@@ -54,22 +39,17 @@ export const pricingTiers: PricingTier[] = [
 export const premiumAddOns: PremiumAddOn[] = [
   {
     name: "Workshops",
-    priceRange: "$7,500-$15,000",
+    priceRange: "$15,000",
     description: "Team and organizational AI training.",
   },
   {
     name: "Speaking Engagements",
-    priceRange: "$10,000-$20,000",
+    priceRange: "$20,000",
     description: "Keynotes and breakout sessions.",
   },
   {
-    name: "Team Transformation",
-    priceRange: "$12,500-$30,000+",
-    description: "Multi-department AI rollouts.",
-  },
-  {
     name: "Enterprise & Custom Builds",
-    priceRange: "$25,000+",
+    priceRange: "Tailored",
     description: "Full-stack AI solutions for complex organizations. Custom scoping, dedicated teams.",
   },
 ];

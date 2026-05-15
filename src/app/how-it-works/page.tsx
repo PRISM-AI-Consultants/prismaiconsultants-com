@@ -10,7 +10,7 @@ import { pricingTiers, premiumAddOns } from "@/data/pricing";
 export const metadata: Metadata = {
   title: "How It Works & Pricing - AI Systems Implementation",
   description:
-    "Transparent pricing for AI systems architecture and implementation. From Momentum Sprints to Scale retainers and enterprise custom builds. No hourly billing. Real outcomes.",
+    "Transparent pricing for AI systems architecture and implementation. From Momentum Sprints to tailored business partnerships. No hourly billing. Real outcomes.",
   keywords: [
     "AI consulting pricing",
     "AI systems implementation cost",
@@ -42,27 +42,27 @@ const journeySteps = [
   },
   {
     icon: Settings,
-    name: "Core",
-    price: "$2,500",
-    priceNote: "/month",
+    name: "AI Business Partnership",
+    price: "Tailored",
+    priceNote: "book a conversation",
     description:
-      "Your AI business partner. Weekly strategy sessions with Dr. Jeff, continuous builds, and a dedicated execution team.",
+      "Your AI business partner. Weekly strategy with Dr. Jeff, continuous builds, dedicated execution team, unlimited team access. Scoped to your organization.",
   },
   {
     icon: TrendingUp,
-    name: "Scale",
-    price: "$5,000",
-    priceNote: "/month",
+    name: "Workshops",
+    price: "$15,000",
+    priceNote: "per workshop",
     description:
-      "Maximum velocity. Accelerated parallel builds, complex multi-system projects, and priority support.",
+      "Team and organizational AI training. Customized to your operations, your stack, your team.",
   },
   {
     icon: Rocket,
-    name: "Enterprise",
-    price: "$25,000+",
-    priceNote: "custom",
+    name: "Speaking & Keynotes",
+    price: "$20,000",
+    priceNote: "per engagement",
     description:
-      "Full-stack AI solutions for complex organizations. Custom scoping, dedicated teams, and scaled delivery.",
+      "Stage-tested keynotes and breakout sessions on practical AI for business. Conferences, summits, leadership events.",
   },
 ];
 
@@ -82,8 +82,7 @@ export default function HowItWorksPage() {
               Your Path to Production AI
             </h2>
             <p className="mt-3 text-lg text-muted-foreground">
-              Three partnership tiers and enterprise solutions. Pick the one
-              that fits your stage.
+              Four clear paths. Pick the one that fits where you are right now.
             </p>
           </div>
 
@@ -161,10 +160,10 @@ export default function HowItWorksPage() {
                 <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6">
                   <div className="flex-1">
                     <p className="font-bold text-foreground">
-                      &ldquo;I use some tools but need more built and connected.&rdquo;
+                      &ldquo;I need an embedded AI partner for my organization.&rdquo;
                     </p>
                     <p className="mt-1 text-sm text-muted-foreground">
-                      <span className="text-accent font-semibold">Core</span> is your fit. Weekly strategy sessions with Dr. Jeff, continuous builds, and a team shipping for you every week.
+                      The <span className="text-accent font-semibold">AI Business Partnership</span> is your fit. Weekly strategy with Dr. Jeff, continuous builds, unlimited team access, and quarterly roadmap reviews. Scoped to your scale and goals.
                     </p>
                   </div>
                 </div>
@@ -175,10 +174,10 @@ export default function HowItWorksPage() {
                 <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6">
                   <div className="flex-1">
                     <p className="font-bold text-foreground">
-                      &ldquo;I need everything built fast, in parallel, with priority.&rdquo;
+                      &ldquo;I want to train my team or bring AI to a stage.&rdquo;
                     </p>
                     <p className="mt-1 text-sm text-muted-foreground">
-                      <span className="text-accent font-semibold">Scale</span> gives you maximum velocity. Multiple systems building at once, priority support, and accelerated delivery.
+                      Book a <span className="text-accent font-semibold">Workshop</span> for your team or a <span className="text-accent font-semibold">Keynote</span> for your event. Both are tailored, both deliver real, practical AI that audiences can use the next day.
                     </p>
                   </div>
                 </div>
