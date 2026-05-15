@@ -82,7 +82,7 @@ const reasons = [
     icon: "\u{1F4B0}",
     title: "Transparent Pricing",
     description:
-      "From our Momentum Sprint to Scale retainers and enterprise custom builds, our pricing is published publicly. No hidden fees, no discovery phases that never end.",
+      "From our Momentum Sprint to tailored AI Business Partnerships and enterprise custom builds, our entry pricing is published publicly. No hidden fees, no discovery phases that never end.",
   },
   {
     icon: "\u{1F91D}",
