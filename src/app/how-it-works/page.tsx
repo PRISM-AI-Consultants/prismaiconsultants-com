@@ -246,7 +246,7 @@ export default function HowItWorksPage() {
             <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
               Banks, health systems, franchises, and organizations with complex compliance
               or infrastructure needs. Full-stack AI solutions with custom scoping, dedicated teams,
-              and scaled delivery. Engagements start at $25,000.
+              and scaled delivery. Pricing is tailored to the engagement.
             </p>
             <a
               href="https://calendly.com/prismaiconsultants/introductory-call"

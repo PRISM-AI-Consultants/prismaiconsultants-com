@@ -62,7 +62,7 @@ const localBusinessSchema = {
     "@type": "Person",
     name: "Dr. Jeff Bullock",
   },
-  priceRange: "$2,500 - $25,000+/month",
+  priceRange: "$4,500 - $20,000",
 };
 
 const reasons = [
