@@ -190,6 +190,11 @@ export function ScorecardClient() {
                 <p className="text-sm font-semibold text-accent mb-8">
                   {tier.cta}
                 </p>
+                <div className="rounded-lg bg-accent/10 border border-accent/20 p-4 mb-6">
+                  <p className="text-sm text-accent font-medium">
+                    Thanks for taking the scorecard. We will follow up with your personalized recommendations.
+                  </p>
+                </div>
                 <div className="flex flex-col gap-4 sm:flex-row">
                   <a
                     href="https://calendly.com/prismaiconsultants/introductory-call"
@@ -198,13 +203,6 @@ export function ScorecardClient() {
                     className="inline-flex h-12 items-center justify-center rounded-[var(--radius-md)] bg-accent px-6 text-base font-medium text-accent-foreground transition-colors hover:bg-accent/90"
                   >
                     Book a Free Strategy Call
-                  </a>
-                  <a
-                    href="/downloads/ai-readiness-scorecard.pdf"
-                    target="_blank"
-                    className="inline-flex h-12 items-center justify-center rounded-[var(--radius-md)] border border-border px-6 text-base font-medium text-foreground transition-colors hover:bg-muted"
-                  >
-                    Download Full Scorecard (PDF)
                   </a>
                 </div>
               </CardContent>
