@@ -9,6 +9,7 @@ import { StatsBar } from "@/components/ui/stats-bar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { CalendlyEmbed } from "@/components/ui/calendly-embed";
+import { VideoTestimonialCarousel } from "@/components/ui/video-testimonial-carousel";
 
 export const metadata: Metadata = {
   title: "Results - Client Transformations & ROI",
@@ -177,52 +178,7 @@ export default function ResultsPage() {
               Real people. Real results. Unscripted.
             </p>
           </div>
-          <div className="grid gap-6 md:grid-cols-2">
-            <div className="relative overflow-hidden rounded-xl border border-border">
-              <div className="aspect-video">
-                <iframe
-                  src="https://www.youtube.com/embed/Wcnn2-b_iQQ"
-                  title="Client Testimonial: Financial Services - Professional & Personal Impact"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                />
-              </div>
-            </div>
-            <div className="relative overflow-hidden rounded-xl border border-border">
-              <div className="aspect-video">
-                <iframe
-                  src="https://www.youtube.com/embed/c-mkT74bbvk"
-                  title="AI Expo Testimonials"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                />
-              </div>
-            </div>
-            <div className="relative overflow-hidden rounded-xl border border-border">
-              <div className="aspect-video">
-                <iframe
-                  src="https://www.youtube.com/embed/tJztoA4Cjv4"
-                  title="Client Testimonial: Pediatric Dentistry"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                />
-              </div>
-            </div>
-            <div className="relative overflow-hidden rounded-xl border border-border">
-              <div className="aspect-video">
-                <iframe
-                  src="https://www.youtube.com/embed/7kV5DBHugZc"
-                  title="The Gen AI Divide: Why Your Competitor's AI Works and Yours Doesn't"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                />
-              </div>
-            </div>
-          </div>
+          <VideoTestimonialCarousel />
         </Container>
       </Section>
 

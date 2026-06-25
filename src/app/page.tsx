@@ -6,6 +6,7 @@ import { Section } from "@/components/ui/section";
 import { Container } from "@/components/ui/container";
 import { StatsBar } from "@/components/ui/stats-bar";
 import { TestimonialCard } from "@/components/ui/testimonial-card";
+import { VideoTestimonialCarousel } from "@/components/ui/video-testimonial-carousel";
 import { PortfolioCard } from "@/components/content/portfolio-card";
 import { Card, CardContent } from "@/components/ui/card";
 import { portfolioItems } from "@/data/portfolio";
@@ -341,38 +342,7 @@ export default function HomePage() {
               Real clients. Real results. Unscripted.
             </p>
           </div>
-          <div className="grid gap-6 md:grid-cols-2">
-            <div className="space-y-3">
-              <div className="relative overflow-hidden rounded-xl border border-border">
-                <div className="aspect-video">
-                  <iframe
-                    src="https://www.youtube.com/embed/i18jie5evzY"
-                    title="Client Testimonial: Real Estate - Lead Conversion"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full"
-                  />
-                </div>
-              </div>
-              <p className="text-sm font-medium text-foreground">Real Estate</p>
-              <p className="text-xs text-muted-foreground">How AI improved lead conversion for a real estate professional</p>
-            </div>
-            <div className="space-y-3">
-              <div className="relative overflow-hidden rounded-xl border border-border">
-                <div className="aspect-video">
-                  <iframe
-                    src="https://www.youtube.com/embed/c-mkT74bbvk"
-                    title="AI Expo Testimonials"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full"
-                  />
-                </div>
-              </div>
-              <p className="text-sm font-medium text-foreground">Live Event</p>
-              <p className="text-xs text-muted-foreground">What attendees said after an AI live demo</p>
-            </div>
-          </div>
+          <VideoTestimonialCarousel />
           <div className="mt-8 text-center">
             <Link
               href="/results"
