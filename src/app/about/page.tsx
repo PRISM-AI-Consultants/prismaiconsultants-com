@@ -95,10 +95,10 @@ export default function AboutPage() {
                   PRISM AI Consultants.
                 </p>
                 <p className="text-lg font-medium text-foreground">
-                  &ldquo;I don&rsquo;t talk about AI. I build AI systems. 34
-                  autonomous agents run my own business. I&rsquo;ve delivered
-                  $350K to $700K in AI system value to clients, most built in
-                  days, not months.&rdquo;
+                  &ldquo;I don&rsquo;t talk about AI. I build AI systems that run
+                  my own business. I&rsquo;ve delivered $350K to $700K in AI
+                  system value to clients, most built in days, not
+                  months.&rdquo;
                 </p>
                 <p>
                   Every system PRISM delivers was proven internally first. The
