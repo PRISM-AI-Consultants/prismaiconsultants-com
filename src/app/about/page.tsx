@@ -183,62 +183,63 @@ export default function AboutPage() {
             Strategy from Jeff. Execution from a team that ships every week.
           </p>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            <Card>
-              <CardContent>
-                <div className="flex flex-col items-center text-center">
-                  <div className="h-20 w-20 rounded-full bg-accent/20 flex items-center justify-center mb-4">
-                    <span className="text-2xl font-bold text-accent">JB</span>
+            {[
+              {
+                img: "/images/team/jeff.jpg",
+                name: "Dr. Jeff Bullock",
+                role: "CEO & AI Systems Architect",
+                bio: "Pharm.D. 18 years CVS Health. Builds the architecture, leads strategy sessions, owns every client relationship.",
+              },
+              {
+                img: "/images/team/saleem.jpg",
+                name: "Saleem Raja",
+                role: "Head of Operations",
+                bio: "Runs day-to-day delivery and operations. Keeps every client account on deadline, on spec, and renewed.",
+              },
+              {
+                img: "/images/team/james.jpg",
+                name: "James Liu",
+                role: "Chief of Staff",
+                bio: "Operations, scheduling, and campaign execution. Keeps the machine running while Jeff builds.",
+              },
+              {
+                img: "/images/team/jamie.jpg",
+                name: "Jamie Calma",
+                role: "Executive Assistant",
+                bio: "Client coordination, scheduling, and content execution. Keeps sessions, calendars, and deliverables on track.",
+              },
+              {
+                img: "/images/team/aubrey.jpg",
+                name: "Aubrey Ross",
+                role: "Content & Publishing",
+                bio: "Leads book production and content builds, turning client expertise into published assets.",
+              },
+              {
+                img: "/images/team/mythzkie.jpg",
+                name: "Mythzkie Geronimo",
+                role: "Production & QA",
+                bio: "Video, design, and quality assurance. Makes sure everything that ships meets spec.",
+              },
+            ].map((m) => (
+              <Card key={m.name}>
+                <CardContent>
+                  <div className="flex flex-col items-center text-center">
+                    <div className="h-20 w-20 rounded-full overflow-hidden mb-4">
+                      <Image
+                        src={m.img}
+                        alt={m.name}
+                        width={80}
+                        height={80}
+                        className="h-20 w-20 object-cover"
+                      />
+                    </div>
+                    <h3 className="text-lg font-bold text-foreground">{m.name}</h3>
+                    <p className="text-sm text-accent font-medium">{m.role}</p>
+                    <p className="mt-2 text-xs text-muted-foreground">{m.bio}</p>
                   </div>
-                  <h3 className="text-lg font-bold text-foreground">Dr. Jeff Bullock</h3>
-                  <p className="text-sm text-accent font-medium">CEO &amp; AI Systems Architect</p>
-                  <p className="mt-2 text-xs text-muted-foreground">
-                    Pharm.D. 18 years CVS Health. Builds the architecture, leads strategy sessions, owns every client relationship.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent>
-                <div className="flex flex-col items-center text-center">
-                  <div className="h-20 w-20 rounded-full bg-accent/20 flex items-center justify-center mb-4">
-                    <span className="text-2xl font-bold text-accent">SR</span>
-                  </div>
-                  <h3 className="text-lg font-bold text-foreground">Saleem Raja</h3>
-                  <p className="text-sm text-accent font-medium">Head of Operations</p>
-                  <p className="mt-2 text-xs text-muted-foreground">
-                    Runs day-to-day delivery and operations. Keeps every client account on deadline, on spec, and renewed.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent>
-                <div className="flex flex-col items-center text-center">
-                  <div className="h-20 w-20 rounded-full bg-accent/20 flex items-center justify-center mb-4">
-                    <span className="text-2xl font-bold text-accent">JL</span>
-                  </div>
-                  <h3 className="text-lg font-bold text-foreground">James Liu</h3>
-                  <p className="text-sm text-accent font-medium">Chief of Staff</p>
-                  <p className="mt-2 text-xs text-muted-foreground">
-                    Operations, scheduling, and campaign execution. Keeps the machine running while Jeff builds.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent>
-                <div className="flex flex-col items-center text-center">
-                  <div className="h-20 w-20 rounded-full bg-accent/20 flex items-center justify-center mb-4">
-                    <span className="text-2xl font-bold text-accent">+8</span>
-                  </div>
-                  <h3 className="text-lg font-bold text-foreground">Execution Team</h3>
-                  <p className="text-sm text-accent font-medium">Specialists</p>
-                  <p className="mt-2 text-xs text-muted-foreground">
-                    Content, design, research, QA, and VA support. Every team member uses AI tools daily to deliver 2x output.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </Container>
       </Section>
