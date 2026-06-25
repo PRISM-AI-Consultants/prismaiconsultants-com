@@ -4,7 +4,7 @@ export const faqItems: FAQItem[] = [
   {
     question: "How much does AI consulting cost?",
     answer:
-      "PRISM AI Consultants offers Momentum Sprints at $4,500 for a 90-day accelerator with multiple AI systems deployed. For ongoing engagements, the AI Business Partnership is tailored to your organization and scoped in a 30-minute conversation. Workshops are $15,000 and keynote speaking engagements are $20,000. Every engagement is designed to deliver measurable ROI, often within the first build.",
+      "PRISM AI Consultants offers Momentum Sprints at $4,500 for a 90-day accelerator with multiple AI systems deployed. Ongoing partnerships come in three tiers by scope: Core from $2,500 per month (weekly strategy, continuous builds, dedicated team), Partner from $7,500 per month (board-level cadence, a dedicated multi-build team, scaled rollout), and Enterprise (custom scoping for complex organizations). Workshops are $15,000 and keynote speaking engagements are $20,000. Every engagement is designed to deliver measurable ROI, often within the first build.",
   },
   {
     question: "What does an AI consultant actually do?",
@@ -40,7 +40,7 @@ export const faqItems: FAQItem[] = [
   {
     question: "What is an AI systems architect?",
     answer:
-      "An AI systems architect designs how multiple AI tools, automations, and data sources work together as a unified business system. At PRISM, Dr. Jeff Bullock serves as the systems architect, designing platforms like the Transcript Intelligence system (54 modules, 34 AI agents) that power entire business operations. It is the difference between using AI tools and having an AI-powered business.",
+      "An AI systems architect designs how multiple AI tools, automations, and data sources work together as a unified business system. At PRISM, Dr. Jeff Bullock serves as the systems architect, designing platforms like the Transcript Intelligence system (54 modules, dozens of AI agents) that power entire business operations. It is the difference between using AI tools and having an AI-powered business.",
   },
   {
     question: "What is the ROI of AI implementation for businesses?",
@@ -66,12 +66,12 @@ export const faqItems: FAQItem[] = [
   {
     question: "What does the monthly retainer include?",
     answer:
-      "The AI Business Partnership includes weekly strategy sessions with Dr. Jeff, continuous AI system development and deployment, a dedicated execution team, unlimited team access, and quarterly board-level roadmap reviews. The engagement is scoped to your organization's size, complexity, and goals in a 30-minute introductory conversation rather than priced off a one-size-fits-all rate card.",
+      "Every AI Partnership tier includes weekly strategy sessions with Dr. Jeff, continuous AI system development and deployment, a dedicated execution team, unlimited team access, and quarterly roadmap reviews. Core starts at $2,500 per month. Partner (from $7,500 per month) adds board-level cadence, a dedicated multi-build team, and scaled rollout. Enterprise adds custom scoping for complex organizations. You pick the tier by the scope you need, not by the size of your company.",
   },
   {
     question: "Is AI consulting only for large enterprises?",
     answer:
-      "Absolutely not. Most of PRISM's clients are small businesses, solo practitioners, and mid-size organizations. Our Momentum Sprint is $4,500 as a clear entry point, and our AI Business Partnership is tailored to organizations of every size. Small businesses often see the biggest relative impact because AI can give a 5-person team the output capacity of a 15-person team.",
+      "Absolutely not. Most of PRISM's clients are small businesses, solo practitioners, and mid-size organizations. Our Momentum Sprint is $4,500 as a clear entry point, and our AI Partnership starts at $2,500 per month (Core), scaling by scope to Partner and Enterprise. Small businesses often see the biggest relative impact because AI can give a 5-person team the output capacity of a 15-person team.",
   },
   {
     question: "How do I get started with AI consulting?",
@@ -91,6 +91,6 @@ export const faqItems: FAQItem[] = [
   {
     question: "Why does PRISM publish its pricing publicly?",
     answer:
-      "Transparency is a core principle. We publish clear pricing on our entry tier and add-on services so you know what an engagement costs before your first call. For our tailored AI Business Partnership, the scope is unique to each organization, so we set pricing in a brief conversation rather than publish a one-size-fits-all rate. We also document the market value of what we build alongside what clients actually paid, so you can evaluate the ROI for yourself. No hidden fees, no surprise invoices, no bait-and-switch.",
+      "Transparency is a core principle. We publish our partnership pricing up front: Core from $2,500 per month, Partner from $7,500 per month, plus our Sprint and add-on services, so you know what an engagement costs before your first call. Enterprise scope is unique to each organization, so we set that in a brief conversation. We also document the market value of what we build alongside what clients actually paid, so you can evaluate the ROI for yourself. No hidden fees, no surprise invoices, no bait-and-switch.",
   },
 ];

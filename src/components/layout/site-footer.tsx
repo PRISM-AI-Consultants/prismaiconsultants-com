@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ExternalLink } from "lucide-react";
 import { Container } from "@/components/ui/container";
 
@@ -48,7 +51,11 @@ const linkGroups = [
 ];
 
 export function SiteFooter() {
+  const pathname = usePathname();
   const currentYear = new Date().getFullYear();
+
+  // Standalone funnel pages render their own minimal chrome.
+  if (pathname === "/activation") return null;
 
   return (
     <footer className="border-t border-border bg-muted/30">
@@ -63,7 +70,7 @@ export function SiteFooter() {
               PRISM AI Consultants
             </Link>
             <p className="mt-2 text-sm text-muted-foreground">
-              AI Systems Architect. Business Partner. Builder.
+              AI implementation partner. We install it, build it, and run it with you.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               {socialLinks.map((social) => (

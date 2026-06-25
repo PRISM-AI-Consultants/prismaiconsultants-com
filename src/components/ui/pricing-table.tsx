@@ -37,6 +37,11 @@ export function PricingTable({ tiers, className }: PricingTableProps) {
           )}
         >
           <CardHeader>
+            {tier.highlighted && (
+              <span className="mb-2 inline-flex w-fit items-center rounded-full bg-accent px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent-foreground">
+                Recommended
+              </span>
+            )}
             <p className="text-sm font-medium uppercase tracking-wider text-muted-foreground">
               {tier.name}
             </p>

@@ -84,8 +84,8 @@ export default function ResultsPage() {
             stats={[
               { value: "$350K-$700K+", label: "In System Value Delivered to Clients" },
               { value: "Under 1 Week", label: "Most Systems Deployed" },
-              { value: "2-5x", label: "Avg. Client ROI" },
-              { value: "200+", label: "Professionals Trained" },
+              { value: "7-13x", label: "System Value vs. Price Paid" },
+              { value: "750+", label: "Coaching Sessions Delivered" },
             ]}
           />
         </Container>
@@ -181,8 +181,8 @@ export default function ResultsPage() {
             <div className="relative overflow-hidden rounded-xl border border-border">
               <div className="aspect-video">
                 <iframe
-                  src="https://www.youtube.com/embed/i18jie5evzY"
-                  title="Client Testimonial: Real Estate - Lead Conversion"
+                  src="https://www.youtube.com/embed/Wcnn2-b_iQQ"
+                  title="Client Testimonial: Financial Services - Professional & Personal Impact"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   className="w-full h-full"

@@ -8,7 +8,7 @@ import { BlogCard } from "@/components/content/blog-card";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Insights on AI systems, automation pipelines, and building real technology for business. From the team that runs 34 autonomous agents in production.",
+    "Insights on AI systems, automation pipelines, and building real technology for business. From the team that builds and runs production AI systems for clients.",
 };
 
 export default function BlogPage() {

@@ -14,8 +14,8 @@ const navLinks = [
   { label: "How It Works", href: "/how-it-works" },
   { label: "Speaking", href: "/speaking" },
   { label: "About", href: "/about" },
+  { label: "Consultants", href: "/certified" },
   { label: "Results", href: "/results" },
-  { label: "Resources", href: "/resources" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
@@ -26,6 +26,9 @@ const CALENDLY_URL =
 export function SiteNav() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  // Standalone funnel pages render their own minimal chrome.
+  if (pathname === "/activation") return null;
 
   function isActive(href: string) {
     if (href === "/") return pathname === "/";
@@ -52,7 +55,7 @@ export function SiteNav() {
                 <Link
                   href={link.href}
                   className={cn(
-                    "rounded-[var(--radius-md)] px-3 py-2 text-sm font-medium transition-colors hover:bg-muted hover:text-foreground",
+                    "whitespace-nowrap rounded-[var(--radius-md)] px-3 py-2 text-sm font-medium transition-colors hover:bg-muted hover:text-foreground",
                     isActive(link.href)
                       ? "text-foreground"
                       : "text-muted-foreground"

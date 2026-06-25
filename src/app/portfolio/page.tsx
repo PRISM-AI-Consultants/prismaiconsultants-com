@@ -98,14 +98,14 @@ export default function PortfolioPage() {
               The Numbers
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-              13 client-facing builds. 5 internal platforms.
+              22 client-facing builds. 3 internal platforms.
               $350,000 to $700,000+ in system value delivered.
               Most built in days, not months.
             </p>
             <div className="mt-10 grid grid-cols-2 gap-8 md:grid-cols-4">
               <div className="text-center">
                 <p className="text-3xl font-extrabold text-accent md:text-4xl">
-                  18
+                  25
                 </p>
                 <p className="mt-1 text-sm text-muted-foreground">
                   Total Builds
@@ -113,7 +113,7 @@ export default function PortfolioPage() {
               </div>
               <div className="text-center">
                 <p className="text-3xl font-extrabold text-accent md:text-4xl">
-                  13
+                  22
                 </p>
                 <p className="mt-1 text-sm text-muted-foreground">
                   Client-Facing
@@ -121,7 +121,7 @@ export default function PortfolioPage() {
               </div>
               <div className="text-center">
                 <p className="text-3xl font-extrabold text-accent md:text-4xl">
-                  5
+                  3
                 </p>
                 <p className="mt-1 text-sm text-muted-foreground">
                   Internal Platforms
@@ -129,10 +129,10 @@ export default function PortfolioPage() {
               </div>
               <div className="text-center">
                 <p className="text-3xl font-extrabold text-accent md:text-4xl">
-                  2-5x
+                  7-13x
                 </p>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  Avg. Client ROI
+                  System Value vs. Price Paid
                 </p>
               </div>
             </div>

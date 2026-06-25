@@ -19,23 +19,24 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://prismaiconsultants.com"),
   title: {
     default:
-      "PRISM AI Consultants - AI Systems Architecture for Business Leaders",
+      "PRISM AI Consultants - AI Implementation for Business Leaders",
     template: "%s | PRISM AI Consultants",
   },
   description:
-    "We build production AI systems for businesses. Agents, dashboards, automations, and integrations that run live. $350K-$700K+ in AI systems delivered. Based in Allentown, PA.",
+    "We don't just talk about AI. We implement it. PRISM installs AI inside your business, builds the systems with you, and makes them run. $350K-$700K+ in AI systems delivered. Based in Allentown, PA.",
   keywords: [
+    "AI implementation",
+    "AI implementation partner",
+    "AI implementation consultant",
+    "AI implementation services",
     "AI consultant",
     "AI consulting",
-    "AI systems architect",
     "AI automation",
     "AI agents",
     "business AI",
     "Allentown AI",
     "Lehigh Valley AI",
-    "Pennsylvania AI consultant",
-    "AI implementation",
-    "AI dashboard",
+    "Pennsylvania AI implementation",
     "PRISM AI",
   ],
   icons: {
@@ -43,9 +44,9 @@ export const metadata: Metadata = {
     apple: "/images/prism-logo.png",
   },
   openGraph: {
-    title: "PRISM AI Consultants",
+    title: "PRISM AI Consultants, AI Implementation Partner",
     description:
-      "AI Systems Architect. Business Partner. Builder. We build production AI systems that run live in your business.",
+      "We don't just talk about AI. We implement it. PRISM installs, builds, and runs production AI systems live in your business.",
     type: "website",
     siteName: "PRISM AI Consultants",
     locale: "en_US",
@@ -60,9 +61,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "PRISM AI Consultants",
+    title: "PRISM AI Consultants, AI Implementation Partner",
     description:
-      "We build production AI systems for businesses. 34 autonomous agents. $350K-$700K+ in systems delivered.",
+      "We implement AI inside your business. Install it, build it, run it. $350K-$700K+ in systems delivered. 750+ coaching sessions.",
     images: ["https://prismaiconsultants.com/images/og-image.png"],
   },
   robots: {
@@ -76,7 +77,7 @@ const organizationSchema = {
   "@type": "ProfessionalService",
   name: "PRISM AI Consultants",
   description:
-    "AI systems architecture and implementation for business leaders. We build production AI systems including agents, dashboards, automations, and integrations.",
+    "AI implementation for business leaders. PRISM installs, builds, and runs production AI systems including agents, dashboards, automations, and integrations inside your business.",
   url: "https://prismaiconsultants.com",
   telephone: "+18774182507",
   email: "info@prismaiconsultants.com",
@@ -104,6 +105,7 @@ const organizationSchema = {
   ],
   priceRange: "$4,500 - $20,000",
   serviceType: [
+    "AI Implementation",
     "AI Consulting",
     "AI Systems Architecture",
     "AI Automation",

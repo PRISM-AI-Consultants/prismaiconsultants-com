@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title:
       "AI Consulting & Systems Architecture in the Lehigh Valley",
     description:
-      "Production AI systems for Lehigh Valley businesses. 34 autonomous agents built. $350K-$700K+ in systems delivered. Based in Allentown, PA.",
+      "Production AI systems for Lehigh Valley businesses. $350K-$700K+ in systems delivered across 25+ client builds. Based in Allentown, PA.",
   },
 };
 
@@ -76,13 +76,13 @@ const reasons = [
     icon: "\u{2699}\uFE0F",
     title: "Production Systems, Not Slide Decks",
     description:
-      "34 autonomous agents built. $350K-$700K+ in AI systems delivered. Every engagement produces working software that runs in your business, not a PDF with recommendations.",
+      "$350K-$700K+ in AI systems delivered across 25+ client builds. Every engagement produces working software that runs in your business, not a PDF with recommendations.",
   },
   {
     icon: "\u{1F4B0}",
     title: "Transparent Pricing",
     description:
-      "From our Momentum Sprint to tailored AI Business Partnerships and enterprise custom builds, our entry pricing is published publicly. No hidden fees, no discovery phases that never end.",
+      "From our Momentum Sprint to our Core, Partner, and Enterprise tiers, our pricing is published publicly. No hidden fees, no discovery phases that never end.",
   },
   {
     icon: "\u{1F91D}",

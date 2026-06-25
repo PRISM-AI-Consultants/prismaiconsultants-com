@@ -13,25 +13,25 @@ import { testimonials } from "@/data/testimonials";
 
 export const metadata: Metadata = {
   title:
-    "PRISM AI Consultants | AI Systems Architect, Business Partner, Builder",
+    "PRISM AI Consultants | AI Implementation Partner",
   description:
-    "We build production AI systems that run live in your business. Agents, dashboards, automations, and integrations. 34 autonomous agents built. $350K-$700K+ in AI systems delivered. Allentown, PA.",
+    "We don't just talk about AI. We implement it. PRISM installs AI inside your business, builds the systems with you, and makes them run. $350K-$700K+ in AI systems delivered. 750+ coaching sessions. Allentown, PA.",
   keywords: [
+    "AI implementation",
+    "AI implementation partner",
+    "AI implementation consultant Allentown",
+    "AI implementation services Pennsylvania",
     "AI consultant Allentown",
-    "AI systems architect",
     "AI automation consultant",
     "AI agent development",
     "business AI systems",
-    "AI consulting Pennsylvania",
-    "Lehigh Valley AI consultant",
-    "production AI systems",
-    "AI dashboard development",
+    "Lehigh Valley AI implementation",
     "AI business partner",
   ],
   openGraph: {
-    title: "PRISM AI Consultants | AI Systems Architect. Business Partner. Builder.",
+    title: "PRISM AI Consultants | AI Implementation Partner",
     description:
-      "We build production AI systems that run live in your business. 34 autonomous agents. $350K-$700K+ in systems delivered.",
+      "We don't just talk about AI. We implement it. PRISM installs, builds, and runs production AI systems live in your business. $350K-$700K+ delivered across 25+ client builds.",
     images: [
       {
         url: "https://prismaiconsultants.com/images/og-image.png",
@@ -51,8 +51,8 @@ const SKOOL_URL = "https://www.skool.com/prism-ai-consultants";
 const stats = [
   { value: "15+", label: "Hours Saved Per Client Weekly" },
   { value: "Days", label: "Not Months to Deploy" },
-  { value: "2-5x", label: "Avg. Client ROI" },
-  { value: "200+", label: "Professionals Trained" },
+  { value: "7-13x", label: "System Value vs. Price Paid" },
+  { value: "750+", label: "Coaching Sessions Delivered" },
 ];
 
 const steps = [
@@ -64,9 +64,9 @@ const steps = [
   },
   {
     number: 2,
-    name: "AI Business Partnership",
-    price: "Tailored",
-    description: "Your AI business partner. Weekly strategy, continuous builds, unlimited team access. Scoped to your organization.",
+    name: "AI Partnership",
+    price: "From $2,500/mo",
+    description: "Your embedded AI partner. Three tiers by scope: Core, Partner (from $7,500/mo, board-level), and Enterprise. Weekly strategy, continuous builds, a team that ships.",
   },
   {
     number: 3,
@@ -97,15 +97,19 @@ export default function HomePage() {
           <div className="relative flex flex-col md:flex-row md:items-center md:gap-12 lg:gap-16">
             {/* Text column */}
             <div className="flex-1 animate-fade-in-up">
+              <p className="mb-5 inline-flex items-center rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-sm font-semibold text-accent">
+                AI Implementation Partner
+              </p>
               <h1 className="text-5xl font-extrabold tracking-tight md:text-7xl">
-                <span className="text-foreground">Your team is stuck doing</span>
+                <span className="text-foreground">We don&apos;t just talk about AI.</span>
                 <br />
-                <span className="gradient-text">work that software should handle.</span>
+                <span className="gradient-text">We implement it.</span>
               </h1>
               <p className="mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
-                We build the AI systems that give you your time back.
-                Dashboards that show what matters. Automations that eliminate busywork.
-                Tools your competitors wish they had. Deployed in days, not months.
+                Everyone has access to AI now. Almost no one has it actually running
+                their business. That is the gap we close. PRISM implements AI inside
+                your real workflows, builds the systems with you, and stays until they
+                run. Deployed in days, not months.
               </p>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
                 <a
@@ -130,7 +134,7 @@ export default function HomePage() {
                 <div className="absolute -inset-2 rounded-2xl bg-accent/20 blur-xl" />
                 <Image
                   src="/images/hero/jeff-hero.jpg"
-                  alt="Dr. Jeff Bullock, AI Systems Architect"
+                  alt="Dr. Jeff Bullock, AI implementation partner"
                   width={460}
                   height={460}
                   className="relative rounded-2xl border-2 border-accent/30 object-cover shadow-2xl"
@@ -246,7 +250,7 @@ export default function HomePage() {
               How It Works
             </h2>
             <p className="mt-3 text-lg text-muted-foreground">
-              Four clear paths. Transparent pricing. No hourly billing.
+              Four clear paths to get AI implemented. Transparent pricing. No hourly billing.
             </p>
           </div>
 
@@ -284,7 +288,14 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="mt-10 text-center">
+          <div className="mt-10 flex flex-col items-center gap-5">
+            <Link
+              href="/activation"
+              className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:border-accent hover:bg-accent/20"
+            >
+              Just getting started? Begin with an Activation. $1,500
+              <ArrowRight className="h-4 w-4" />
+            </Link>
             <Link
               href="/how-it-works"
               className="inline-flex items-center gap-2 text-accent font-medium transition-colors hover:text-accent/80"
@@ -392,6 +403,35 @@ export default function HomePage() {
               >
                 Take the AI Readiness Scorecard
               </a>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* Consultant Program callout */}
+      <Section className="border-t border-border bg-muted/20">
+        <Container>
+          <div className="grid items-center gap-8 md:grid-cols-5">
+            <div className="md:col-span-3">
+              <p className="text-sm font-semibold uppercase tracking-wide text-accent">
+                For operators and domain experts
+              </p>
+              <h2 className="mt-2 text-3xl font-extrabold tracking-tight md:text-4xl">
+                Run your own AI practice
+              </h2>
+              <p className="mt-4 max-w-xl text-lg text-muted-foreground">
+                Become a Certified PRISM Consultant. You bring the industry and
+                the relationships. We bring the method, the team, and the brand.
+                You keep the majority of what you earn.
+              </p>
+            </div>
+            <div className="md:col-span-2 md:text-right">
+              <Link
+                href="/certified"
+                className="inline-flex h-12 items-center justify-center rounded-[var(--radius-md)] bg-accent px-6 text-base font-medium text-accent-foreground transition-colors hover:bg-accent/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              >
+                Explore the program
+              </Link>
             </div>
           </div>
         </Container>

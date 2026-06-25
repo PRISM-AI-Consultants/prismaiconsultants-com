@@ -12,7 +12,7 @@ import { Badge } from "@/components/ui/badge";
 export const metadata: Metadata = {
   title: "About Dr. Jeff Bullock - AI Systems Architect",
   description:
-    "PharmD turned AI Systems Architect. Founder of 2 AI companies, builder of 34 autonomous agents, and creator of $350K-$700K worth of AI systems for clients.",
+    "Pharm.D. turned AI Systems Architect. Founder of 2 AI companies and creator of $350K to $700K worth of production AI systems for clients.",
 };
 
 const prismValues = [
@@ -85,19 +85,19 @@ export default function AboutPage() {
               </h2>
               <div className="mt-6 space-y-4 text-muted-foreground">
                 <p>
-                  Dr. Jeff Bullock holds a PharmD from Xavier University of
+                  Dr. Jeff Bullock holds a Pharm.D. from Xavier University of
                   Louisiana. He spent 18 years at CVS Health, rising from
                   pharmacy clerk to district leader overseeing multi-million
                   dollar operations across multiple states.
                 </p>
                 <p>
-                  Then he left to build. He founded two AI companies: PRISM AI
-                  Consultants and VersAssist LLC.
+                  Then he left to build. He founded two AI companies, including
+                  PRISM AI Consultants.
                 </p>
                 <p className="text-lg font-medium text-foreground">
                   &ldquo;I don&rsquo;t talk about AI. I build AI systems. 34
                   autonomous agents run my own business. I&rsquo;ve delivered
-                  $350K-$700K in AI system value to clients, most built in
+                  $350K to $700K in AI system value to clients, most built in
                   days, not months.&rdquo;
                 </p>
                 <p>
@@ -141,8 +141,8 @@ export default function AboutPage() {
             stats={[
               { value: "18", label: "Years in Operations Leadership" },
               { value: "2", label: "AI Companies Founded" },
-              { value: "34", label: "AI Systems Built" },
-              { value: "200+", label: "Professionals Trained" },
+              { value: "$350K-$700K+", label: "In Client Systems Delivered" },
+              { value: "750+", label: "Coaching Sessions Delivered" },
             ]}
           />
         </Container>
@@ -192,7 +192,7 @@ export default function AboutPage() {
                   <h3 className="text-lg font-bold text-foreground">Dr. Jeff Bullock</h3>
                   <p className="text-sm text-accent font-medium">CEO &amp; AI Systems Architect</p>
                   <p className="mt-2 text-xs text-muted-foreground">
-                    PharmD. 18 years CVS Health. Builds the architecture, leads strategy sessions, owns every client relationship.
+                    Pharm.D. 18 years CVS Health. Builds the architecture, leads strategy sessions, owns every client relationship.
                   </p>
                 </div>
               </CardContent>
@@ -201,12 +201,12 @@ export default function AboutPage() {
               <CardContent>
                 <div className="flex flex-col items-center text-center">
                   <div className="h-20 w-20 rounded-full bg-accent/20 flex items-center justify-center mb-4">
-                    <span className="text-2xl font-bold text-accent">SM</span>
+                    <span className="text-2xl font-bold text-accent">SR</span>
                   </div>
-                  <h3 className="text-lg font-bold text-foreground">Saleem</h3>
-                  <p className="text-sm text-accent font-medium">Lead Developer</p>
+                  <h3 className="text-lg font-bold text-foreground">Saleem Raja</h3>
+                  <p className="text-sm text-accent font-medium">Head of Operations</p>
                   <p className="mt-2 text-xs text-muted-foreground">
-                    Full-stack engineering. Builds the dashboards, automations, and integrations that run in client environments.
+                    Runs day-to-day delivery and operations. Keeps every client account on deadline, on spec, and renewed.
                   </p>
                 </div>
               </CardContent>
@@ -215,9 +215,9 @@ export default function AboutPage() {
               <CardContent>
                 <div className="flex flex-col items-center text-center">
                   <div className="h-20 w-20 rounded-full bg-accent/20 flex items-center justify-center mb-4">
-                    <span className="text-2xl font-bold text-accent">JM</span>
+                    <span className="text-2xl font-bold text-accent">JL</span>
                   </div>
-                  <h3 className="text-lg font-bold text-foreground">James</h3>
+                  <h3 className="text-lg font-bold text-foreground">James Liu</h3>
                   <p className="text-sm text-accent font-medium">Chief of Staff</p>
                   <p className="mt-2 text-xs text-muted-foreground">
                     Operations, scheduling, and campaign execution. Keeps the machine running while Jeff builds.
@@ -239,6 +239,86 @@ export default function AboutPage() {
                 </div>
               </CardContent>
             </Card>
+          </div>
+        </Container>
+      </Section>
+
+      {/* PRISM Certified Consultants */}
+      <Section className="border-t border-border bg-muted/20">
+        <Container>
+          <div className="max-w-2xl">
+            <Badge variant="accent" className="mb-4">
+              Now Certifying
+            </Badge>
+            <h2 className="text-3xl font-bold tracking-tight">
+              PRISM Certified Consultants
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              PRISM is scaling AI implementation the way it builds everything
+              else: with proven operators on the ground. Our Certified
+              Consultant program trains independent professionals to bring the
+              full PRISM method to their own markets. Each consultant runs their
+              own business and delivers the systems PRISM is known for, backed
+              by our team and our tools.
+            </p>
+            <p className="mt-4">
+              <Link
+                href="/certified"
+                className="font-medium text-accent hover:underline"
+              >
+                Learn about becoming a Certified PRISM Consultant &rarr;
+              </Link>
+            </p>
+          </div>
+
+          {/* Featured consultant: Dan Garrett (Seat #1) */}
+          <div className="mt-12 grid gap-10 md:grid-cols-5 md:items-center">
+            <div className="md:col-span-2">
+              <div className="relative mx-auto max-w-xs md:max-w-none">
+                <div className="absolute -inset-2 rounded-[var(--radius-lg)] bg-accent/15 blur-lg" />
+                <Image
+                  src="/images/consultants/dan-garrett.jpg"
+                  alt="Dan Garrett, Certified PRISM AI Consultant"
+                  width={800}
+                  height={800}
+                  className="relative aspect-square w-full rounded-[var(--radius-lg)] border-2 border-accent/20 object-cover shadow-2xl"
+                />
+              </div>
+            </div>
+            <div className="md:col-span-3">
+              <Badge variant="accent" className="mb-3">
+                Certified PRISM AI Consultant &middot; Seat #1
+              </Badge>
+              <h3 className="text-2xl font-bold tracking-tight text-foreground">
+                Dan Garrett
+              </h3>
+              <p className="mt-1 text-sm font-medium text-accent">
+                Lehigh Valley, PA &middot; BNI Bethlehem One
+              </p>
+              <div className="mt-5 space-y-4 text-muted-foreground">
+                <p>
+                  Dan brings four decades of B2B sales leadership to the PRISM
+                  network. He spent his career building and scaling companies,
+                  from VP of Sales and Marketing roles to leading global sales
+                  organizations, selling by live demonstration the entire way.
+                </p>
+                <p>
+                  Now he does the same thing with AI. Dan helps Lehigh Valley
+                  business owners put AI to work in the rooms he already knows,
+                  turning real conversations into real workflows. Not theory,
+                  installed.
+                </p>
+                <p className="font-medium text-foreground">
+                  If you run a local business and want AI built into it, not
+                  just explained, Dan is your first call in the Valley.
+                </p>
+              </div>
+              <div className="mt-6">
+                <Link href="/contact">
+                  <Button variant="accent">Work with Dan</Button>
+                </Link>
+              </div>
+            </div>
           </div>
         </Container>
       </Section>
@@ -307,7 +387,7 @@ export default function AboutPage() {
               Ready to build?
             </h2>
             <p className="mt-3 text-muted-foreground">
-              Book a call and find out what 34 agents and a team of 11 can do
+              Book a call and find out what Dr. Jeff and a team of 11 can do
               for your business.
             </p>
             <div className="mt-6">

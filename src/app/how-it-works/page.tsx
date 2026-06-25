@@ -42,11 +42,11 @@ const journeySteps = [
   },
   {
     icon: Settings,
-    name: "AI Business Partnership",
-    price: "Tailored",
-    priceNote: "book a conversation",
+    name: "AI Partnership",
+    price: "From $2,500",
+    priceNote: "per month",
     description:
-      "Your AI business partner. Weekly strategy with Dr. Jeff, continuous builds, dedicated execution team, unlimited team access. Scoped to your organization.",
+      "Your embedded AI partner: weekly strategy, continuous builds, and a team that ships. Three tiers by scope: Core, Partner (from $7,500/mo, board-level), and Enterprise.",
   },
   {
     icon: TrendingUp,
@@ -82,6 +82,7 @@ export default function HowItWorksPage() {
               Your Path to Production AI
             </h2>
             <p className="mt-3 text-lg text-muted-foreground">
+              We teach your team to operate AI, then build and run the systems with you.
               Four clear paths. Pick the one that fits where you are right now.
             </p>
           </div>
@@ -163,7 +164,7 @@ export default function HowItWorksPage() {
                       &ldquo;I need an embedded AI partner for my organization.&rdquo;
                     </p>
                     <p className="mt-1 text-sm text-muted-foreground">
-                      The <span className="text-accent font-semibold">AI Business Partnership</span> is your fit. Weekly strategy with Dr. Jeff, continuous builds, unlimited team access, and quarterly roadmap reviews. Scoped to your scale and goals.
+                      <span className="text-accent font-semibold">Core</span> (from $2,500/mo) gives you weekly strategy with Dr. Jeff and continuous builds. Need board-level cadence, a dedicated multi-build team, and scaled rollout? That is <span className="text-accent font-semibold">Partner</span> (from $7,500/mo). One Partner&rsquo;s first build was a live attorney dashboard worth $15,000-$25,000, shipped in 2 days. &ldquo;Oh my God, holy moly... this is exactly what I wanted.&rdquo;
                     </p>
                   </div>
                 </div>
@@ -197,10 +198,10 @@ export default function HowItWorksPage() {
         <Container>
           <div className="mb-12">
             <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">
-              Detailed Pricing
+              Partnership Tiers
             </h2>
             <p className="mt-3 text-lg text-muted-foreground">
-              Everything included. No surprises. No hourly billing.
+              Three tiers by scope: Core, Partner, and Enterprise. Everything included. No hourly billing.
             </p>
           </div>
           <PricingTable tiers={pricingTiers} />
@@ -212,10 +213,10 @@ export default function HowItWorksPage() {
         <Container>
           <div className="mb-12">
             <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">
-              Premium Add-Ons
+              Other Ways to Work Together
             </h2>
             <p className="mt-3 text-lg text-muted-foreground">
-              For organizations that need deeper engagement.
+              A 90-day Sprint to start, team workshops, or a keynote for your event.
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
