@@ -9,6 +9,7 @@ import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { VideoTestimonialCarousel } from "@/components/ui/video-testimonial-carousel";
 import { PortfolioCard } from "@/components/content/portfolio-card";
 import { Card, CardContent } from "@/components/ui/card";
+import { ReferralForm } from "@/components/ui/referral-form";
 import { portfolioItems } from "@/data/portfolio";
 import { testimonials } from "@/data/testimonials";
 
@@ -402,6 +403,44 @@ export default function HomePage() {
               >
                 Explore the program
               </Link>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* Referral Partner program */}
+      <Section className="border-t border-border">
+        <Container>
+          <div className="grid gap-10 md:grid-cols-2 md:gap-16">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-wide text-accent">
+                For anyone with a network
+              </p>
+              <h2 className="mt-2 text-3xl font-extrabold tracking-tight md:text-4xl">
+                Send us a business. Earn 10%.
+              </h2>
+              <p className="mt-4 max-w-xl text-lg text-muted-foreground">
+                Know a business owner who needs AI done right? Refer them. When
+                they become a client, you earn 10% of what they pay us, every
+                month, for a full year. No cap.
+              </p>
+              <ul className="mt-6 space-y-3 text-muted-foreground">
+                {[
+                  "Refer anyone. You never sign anything to send us a name.",
+                  "They become a client. We do the work and close it.",
+                  "You get paid. 10% of collected revenue, monthly, for 12 months.",
+                ].map((step, i) => (
+                  <li key={i} className="flex gap-3">
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-semibold text-accent-foreground">
+                      {i + 1}
+                    </span>
+                    <span>{step}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <ReferralForm />
             </div>
           </div>
         </Container>
