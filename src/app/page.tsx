@@ -10,6 +10,7 @@ import { VideoTestimonialCarousel } from "@/components/ui/video-testimonial-caro
 import { PortfolioCard } from "@/components/content/portfolio-card";
 import { Card, CardContent } from "@/components/ui/card";
 import { ReferralForm } from "@/components/ui/referral-form";
+import { getEvents } from "@/lib/events";
 import { portfolioItems } from "@/data/portfolio";
 import { testimonials } from "@/data/testimonials";
 
@@ -87,7 +88,8 @@ const steps = [
 const featuredTestimonials = testimonials.slice(0, 3);
 const featuredPortfolio = portfolioItems.filter((item) => item.featured);
 
-export default function HomePage() {
+export default async function HomePage() {
+  const events = await getEvents();
   return (
     <>
       {/* Hero */}
@@ -404,6 +406,66 @@ export default function HomePage() {
                 Explore the program
               </Link>
             </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* Where to see us — live from the public events calendar */}
+      <Section className="border-t border-border">
+        <Container>
+          <div className="grid gap-10 lg:grid-cols-[0.75fr_1.6fr] lg:gap-16">
+            <div className="lg:pt-2">
+              <p className="text-sm font-semibold uppercase tracking-wide text-accent">
+                In person
+              </p>
+              <h2 className="mt-2 text-3xl font-extrabold tracking-tight md:text-4xl">
+                Where to see us
+              </h2>
+              <p className="mt-4 text-lg text-muted-foreground">
+                This business runs on relationships, not ads. Come find us at a
+                room near you. You are welcome as our guest.
+              </p>
+            </div>
+            <ul>
+              {events.map((e, i) => (
+                <li
+                  key={i}
+                  className={`flex flex-col gap-1 border-t border-border py-6 first:border-t-0 sm:grid sm:grid-cols-[7rem_1fr] sm:gap-x-8 sm:gap-y-0 ${
+                    i === 0 ? "relative pl-4 sm:pl-6" : ""
+                  }`}
+                >
+                  {i === 0 && (
+                    <span className="absolute left-0 top-6 bottom-6 w-[3px] rounded-full bg-accent" />
+                  )}
+                  <div>
+                    <div className="text-base font-bold leading-tight text-accent sm:text-lg">
+                      {e.when}
+                    </div>
+                    {i === 0 && (
+                      <div className="mt-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                        Next up
+                      </div>
+                    )}
+                  </div>
+                  <div>
+                    <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                      <h3 className="text-lg font-bold tracking-tight sm:text-xl">
+                        {e.title}
+                      </h3>
+                      <span className="rounded-full border border-accent/40 px-2 py-0.5 text-xs font-medium text-accent">
+                        {e.tag}
+                      </span>
+                    </div>
+                    {e.where && (
+                      <p className="mt-1 text-sm text-muted-foreground">{e.where}</p>
+                    )}
+                    {e.note && (
+                      <p className="mt-2 text-muted-foreground">{e.note}</p>
+                    )}
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
         </Container>
       </Section>
