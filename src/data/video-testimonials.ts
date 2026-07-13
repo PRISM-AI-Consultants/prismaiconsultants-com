@@ -18,11 +18,6 @@ export const videoTestimonials: VideoTestimonial[] = [
     caption: "How AI improved lead conversion for a real estate professional.",
   },
   {
-    id: "tJztoA4Cjv4",
-    industry: "Pediatric Dentistry",
-    caption: "Why AI had universal appeal across the whole practice.",
-  },
-  {
     id: "EtgQkByad_I",
     industry: "Financial Advisory",
     caption: "A whole-team AI transformation, not just one power user.",
