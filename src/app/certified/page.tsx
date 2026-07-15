@@ -11,33 +11,56 @@ import { Button } from "@/components/ui/button";
 export const metadata: Metadata = {
   title: "Become a Certified PRISM AI Consultant",
   description:
-    "Turn your domain expertise into AI implementation income. PRISM certifies independent consultants, sets up your network, gives you the method and the delivery team, and pays you to build.",
+    "Turn your domain expertise into AI implementation income. PRISM certifies independent consultants, places you in a referral network, gives you the method and the delivery team, and puts a closer on your calls. Certified is earned, not bought.",
 };
 
-const includes = [
+const kit = [
   {
-    title: "Your networking membership",
-    body: "We place you inside a proven referral pipeline and cover your first-year membership. You are surrounded by an active business ecosystem from day one, not cold-starting alone.",
+    title: "Your networking membership, year one",
+    body: "We place you inside a proven referral pipeline and cover your first-year membership. You are surrounded by an active business ecosystem from day one instead of cold-starting alone.",
   },
   {
-    title: "Chamber and event access",
-    body: "Select chamber of commerce and local business events. The rooms you would need to be in anyway, handled for you.",
+    title: "Your micro-site",
+    body: "A real presence of your own, built for you, pointed at the market you work.",
   },
   {
-    title: "A support assistant",
-    body: "A dedicated assistant for follow-up, pipeline tracking, and admin, so you stay in front of people instead of buried in busywork.",
+    title: "Branding and business cards",
+    body: "The materials you need to walk into a room and be taken seriously. Handled before your first meeting.",
+  },
+  {
+    title: "Your tools, wired up",
+    body: "Your connectors and AI stack configured and working, so the system runs the way it is supposed to from the start.",
+  },
+  {
+    title: "Onboarding",
+    body: "We get you set up and pointed at the work, rather than handing you a login and wishing you luck.",
+  },
+];
+
+const behind = [
+  {
+    title: "A dedicated person who builds it with you",
+    body: "Not a queue and not a ticket system. You get an assigned team member who builds the deliverables for your clients. You are never the bottleneck and you never have to become technical.",
+  },
+  {
+    title: "A trained closer on your calls",
+    body: "You do not close alone. On your thirty-minute strategy calls, a trained closer from our team is on with you, naming the price and handling objections while you stay in the room.",
+  },
+  {
+    title: "Coaching off your own conversations",
+    body: "We cover your transcript seat. Your real calls get reviewed and coached, so you improve from your own tape instead of generic advice. Nobody sits in on your meetings.",
   },
   {
     title: "The PRISM method and tools",
-    body: "Our implementation frameworks, workflow libraries, transcript intelligence, and the certification itself. The system that lets one person deliver what used to take a firm.",
+    body: "Our implementation frameworks, workflow libraries, and transcript intelligence. The system that lets one person deliver what used to take a firm.",
   },
   {
     title: "The PRISM brand behind you",
-    body: "You walk into every room as a Certified PRISM AI Consultant. The trust is already built. You carry it.",
+    body: "You walk into every room carrying a brand that is already trusted, and you run your own business while you do it.",
   },
   {
-    title: "A delivery team that builds with you",
-    body: "When you close, our team builds the deliverables alongside you. You sell and guide. We help you ship.",
+    title: "A weekly room with the other consultants",
+    body: "One standing call a week where real deals get worked. Not a webinar. Your actual pipeline, with people doing the same thing you are.",
   },
 ];
 
@@ -50,7 +73,7 @@ const earn = [
   {
     pct: "70%",
     label: "Workshops and speaking",
-    body: "PRISM-booked workshops and speaking engagements pay out the majority to you.",
+    body: "PRISM-booked workshops and speaking engagements you deliver pay out the majority to you.",
   },
   {
     pct: "100%",
@@ -65,27 +88,31 @@ const steps = [
     body: "We confirm this is right for both of us before anyone commits.",
   },
   {
-    title: "Get certified and equipped",
-    body: "The method, the tools, the brand, a support assistant, and your place in the network.",
+    title: "Get equipped and start earning",
+    body: "You come on as a PRISM AI Consultant in training and you can source and earn from day one. You just do it with a net under you.",
   },
   {
-    title: "Land your first client",
-    body: "You sell and guide. Our team builds the deliverables alongside you.",
+    title: "Sell it, then teach it",
+    body: "You run the one-to-ones and the strategy call with a closer beside you. When they say yes, you run all three sessions yourself while our team builds behind you.",
   },
   {
-    title: "Build your book",
-    body: "Stack clients, run workshops, take the stage. The splits pay the person doing the work.",
+    title: "Earn the certification",
+    body: "Certified is earned, not bought. Do the reps, prove you can run a full cycle, and the badge is yours. Usually sixty to ninety days.",
   },
 ];
 
 const faqs = [
   {
     q: "Do I need to be technical?",
-    a: "No. You bring the industry and the relationships. Our team builds the AI systems. You sell and you own the relationship.",
+    a: "No. You bring the industry and the relationships. Our team builds the AI systems. You sell it, you teach it, and you own the relationship.",
   },
   {
     q: "Who actually does the work?",
-    a: "You guide and own the client relationship. Our delivery team builds the deliverables alongside you, so you are never the bottleneck.",
+    a: "Our delivery team builds every deliverable. You are in the room for all three client sessions, teaching them how to run it. Selling is half the job and teaching is the other half.",
+  },
+  {
+    q: "Am I certified as soon as I pay?",
+    a: "No, and that is the point. You start as a PRISM AI Consultant in training, earning from day one with support on your calls. You earn the full certification by doing the work and proving you can run a cycle yourself. A badge you can buy is not worth carrying.",
   },
   {
     q: "Is the $5,000 a recurring fee?",
@@ -93,11 +120,11 @@ const faqs = [
   },
   {
     q: "Do I keep my own business?",
-    a: "Yes. You own your business outright and carry the PRISM brand. You are not an employee.",
+    a: "Yes. You own your business outright and carry the PRISM brand. You are not an employee, and we do not tell you how to run your week.",
   },
   {
     q: "What if I have never sold AI before?",
-    a: "You do not need to have. You need to know your field and your people. We bring the method, the demos, and the team.",
+    a: "You do not need to have. You need to know your field and your people. We bring the method, the demos, the team, and a closer who is on the call with you.",
   },
   {
     q: "How many consultants do you take?",
@@ -110,7 +137,7 @@ export default function CertifiedPage() {
     <>
       <PageHeader
         title="Become a Certified PRISM AI Consultant"
-        description="Turn what you already know into AI implementation income. You own your business. PRISM gives you the method, the network, the team, and the brand."
+        description="Turn what you already know into AI implementation income. You own your business. PRISM gives you the method, the network, the team, and the brand. The certification you earn."
       />
 
       {/* Brand hero band */}
@@ -141,11 +168,11 @@ export default function CertifiedPage() {
                   is the part that cannot be faked.
                 </p>
                 <p>
-                  PRISM supplies the rest. We certify you, set up your network,
-                  hand you the frameworks and workflow libraries, and put a
-                  delivery team behind you. You bring the trust and the
-                  relationships. We make sure every client walks away with
-                  something built, not just explained.
+                  PRISM supplies the rest. We certify you, place you in a
+                  referral network, hand you the frameworks and workflow
+                  libraries, and put a delivery team behind you. You bring the
+                  trust and the relationships. We make sure every client walks
+                  away with something built, not just explained.
                 </p>
                 <p className="text-lg font-medium text-foreground">
                   You run your own business. You carry the PRISM brand. You keep
@@ -182,11 +209,42 @@ export default function CertifiedPage() {
             <p className="mt-4 text-muted-foreground">
               Most of this is what you would spend to launch a serious practice
               anyway. We bundle it, set it up for you, and put you to work. The
-              investment is your first year, all in.
+              investment is your first year, all in. It does not cover your gas,
+              your travel, or your hotels. Those are yours, the same as any
+              business you own.
             </p>
           </div>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {includes.map((item) => (
+            {kit.map((item) => (
+              <Card key={item.title}>
+                <CardContent>
+                  <h3 className="text-lg font-bold text-foreground">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    {item.body}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      {/* What stands behind you */}
+      <Section>
+        <Container>
+          <div className="max-w-2xl">
+            <h2 className="text-3xl font-bold tracking-tight">
+              And this is what stands behind you
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              The kit gets you launched. This is the part that keeps you in
+              business, and it does not stop after year one.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {behind.map((item) => (
               <Card key={item.title}>
                 <CardContent>
                   <h3 className="text-lg font-bold text-foreground">
@@ -203,11 +261,11 @@ export default function CertifiedPage() {
       </Section>
 
       {/* How it works */}
-      <Section>
+      <Section className="border-y border-border bg-muted/20">
         <Container>
           <h2 className="text-3xl font-bold tracking-tight">How it works</h2>
           <p className="mt-4 max-w-2xl text-muted-foreground">
-            Four steps from interested to your first client.
+            Four steps from interested to certified.
           </p>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {steps.map((s, i) => (
@@ -223,6 +281,105 @@ export default function CertifiedPage() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </Container>
+      </Section>
+
+      {/* Certified is earned */}
+      <Section>
+        <Container size="md">
+          <Badge variant="accent" className="mb-4">
+            The certification
+          </Badge>
+          <h2 className="text-3xl font-bold tracking-tight">
+            Certified is earned, not bought
+          </h2>
+          <div className="mt-6 space-y-4 text-muted-foreground">
+            <p className="text-lg">
+              Plenty of programs hand you a badge when your card clears. Ours
+              does not, because a credential anyone can buy is not worth
+              carrying into a room.
+            </p>
+            <p>
+              You come on as a{" "}
+              <span className="font-medium text-foreground">
+                PRISM AI Consultant, in training
+              </span>
+              . From day one you can work your rooms, source clients, and earn.
+              You just do it with support on your calls and our team building
+              behind you.
+            </p>
+            <p>
+              You earn the full{" "}
+              <span className="font-medium text-foreground">
+                Certified PRISM AI Consultant
+              </span>{" "}
+              badge by doing the actual work: your recorded one-to-ones, the
+              coursework and the AI tool certifications, co-delivering an
+              activation, closing a client with support, and then running one
+              full cycle on your own and winning it. Most of that happens inside
+              sixty to ninety days, and every rep of it is paid work on your own
+              pipeline.
+            </p>
+            <p className="font-medium text-foreground">
+              When you finally say you are certified, it will be true, and the
+              room will feel the difference.
+            </p>
+          </div>
+        </Container>
+      </Section>
+
+      {/* What the work actually is */}
+      <Section className="border-y border-border bg-muted/20">
+        <Container size="md">
+          <h2 className="text-3xl font-bold tracking-tight">
+            What the work actually is
+          </h2>
+          <p className="mt-4 text-muted-foreground">
+            No mystery, no motivational fog. Here is the job.
+          </p>
+          <div className="mt-8 space-y-6">
+            <div>
+              <p className="font-semibold text-foreground">
+                You do one-to-ones. A lot of them.
+              </p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Ten a week is decent. Twenty a week is where it compounds. You
+                never talk money in a one-to-one. Its only job is to earn a
+                second meeting.
+              </p>
+            </div>
+            <div>
+              <p className="font-semibold text-foreground">
+                Then a thirty-minute strategy call, and you are not alone on it.
+              </p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                That is where the money gets discussed, and a trained closer from
+                our team is on the call with you. You do not have to be a great
+                closer on day one, because you are not closing by yourself.
+              </p>
+            </div>
+            <div>
+              <p className="font-semibold text-foreground">
+                When they say yes, you teach.
+              </p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Our team builds every deliverable. You run all three client
+                sessions yourself and teach them how to operate what we built.
+                Selling is half the job. Teaching is the other half, and it is
+                the half that turns one close into a client who stays.
+              </p>
+            </div>
+            <div>
+              <p className="font-semibold text-foreground">
+                There is exactly one bar.
+              </p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Two activations closed in your first ninety days. That is the
+                only requirement we hold you to. We do not dictate your hours or
+                your calendar. You own the business, so you run your week.
+              </p>
+            </div>
           </div>
         </Container>
       </Section>
@@ -263,9 +420,9 @@ export default function CertifiedPage() {
                   Activations <span className="text-accent">the door</span>
                 </p>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  A paid entry package, a few working sessions and real
-                  deliverables. You source it and run it, and you keep half. The
-                  first close that proves value.
+                  A paid entry package, three working sessions and real
+                  deliverables. You source it, close it, and teach it, and you
+                  keep half. The first close that proves value.
                 </p>
               </div>
               <div>
@@ -276,7 +433,8 @@ export default function CertifiedPage() {
                 <p className="mt-1 text-sm text-muted-foreground">
                   Activations grow into an ongoing monthly retainer. You keep
                   half of it every month the client stays. This is where your
-                  income compounds.
+                  income compounds, and it is the reward for being the person who
+                  taught them.
                 </p>
               </div>
               <div>
@@ -286,6 +444,7 @@ export default function CertifiedPage() {
                 <p className="mt-1 text-sm text-muted-foreground">
                   Fill a room instead of one seat. You drive attendance and
                   deliver, and the split flips to seventy percent in your favor.
+                  It is the best split in the program on purpose.
                 </p>
               </div>
               <div>
@@ -294,7 +453,8 @@ export default function CertifiedPage() {
                 </p>
                 <p className="mt-1 text-sm text-muted-foreground">
                   Paid talks at seventy percent to you, and every stage puts
-                  activations and workshop seats in front of a new audience.
+                  activations and workshop seats in front of a new audience. We
+                  teach it and we pay for it. We never make you do it.
                 </p>
               </div>
             </div>
@@ -329,13 +489,13 @@ export default function CertifiedPage() {
             <p className="text-lg">
               Dan Garrett is the founding Certified PRISM AI Consultant. Four
               decades in B2B sales, now bringing AI implementation to Lehigh
-              Valley businesses, and he closed his first client in his opening
-              weeks.
+              Valley businesses, and he has closed real paying clients out of his
+              own rooms and his own relationships.
             </p>
             <p>
-              That is the whole point of the program. A skilled operator, using
-              the PRISM system, selling and converting real clients without Jeff
-              in the room. Dan is the blueprint. You could be next.
+              That is the whole point of the program. A skilled operator works
+              the network, the PRISM system does the rest, and the client walks
+              away with something built. Dan is the blueprint. You could be next.
             </p>
             <p>
               <Link
@@ -360,19 +520,69 @@ export default function CertifiedPage() {
               and domain experts with real relationships and the drive to build
               something of their own.
             </p>
+            <p>
+              You take one lane and you lead it. Each consultant works a single
+              vertical, and the playbook you build in it becomes part of the
+              PRISM method.
+            </p>
             <p className="font-medium text-foreground">
               It is not for you if you want something to watch, a side project,
               or someone to hand you customers.
             </p>
-            <p>
-              This is a business you run, with PRISM standing behind you.
-            </p>
+            <p>This is a business you run, with PRISM standing behind you.</p>
+          </div>
+        </Container>
+      </Section>
+
+      {/* How we work */}
+      <Section className="border-t border-border bg-muted/20">
+        <Container size="md">
+          <h2 className="text-3xl font-bold tracking-tight">How we work</h2>
+          <p className="mt-4 text-muted-foreground">
+            Five words we actually hold each other to. They spell the name.
+          </p>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2">
+            <div>
+              <p className="font-semibold text-foreground">Positivity</p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                People buy from someone they want to be around. Urgency is a
+                gain, never a threat.
+              </p>
+            </div>
+            <div>
+              <p className="font-semibold text-foreground">Resilience</p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Most rooms will not turn into a client. You go back next week
+                anyway.
+              </p>
+            </div>
+            <div>
+              <p className="font-semibold text-foreground">Innovation</p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                The tools change constantly. Staying current is part of the job,
+                not a bonus.
+              </p>
+            </div>
+            <div>
+              <p className="font-semibold text-foreground">Service</p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Give first in every room. Service does not stop when the payment
+                clears.
+              </p>
+            </div>
+            <div>
+              <p className="font-semibold text-foreground">Mastery</p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Mastery is not what you know. It is what you can transfer to
+                someone else.
+              </p>
+            </div>
           </div>
         </Container>
       </Section>
 
       {/* FAQ */}
-      <Section className="border-t border-border bg-muted/20">
+      <Section className="border-t border-border">
         <Container size="md">
           <h2 className="text-3xl font-bold tracking-tight">
             Questions, answered
@@ -400,10 +610,10 @@ export default function CertifiedPage() {
             </h2>
             <p className="mt-3 text-muted-foreground">
               We onboard a small number of consultants at a time, because the
-              team builds for every one of them. Early consultants lock in their
-              industry and territory first. Tell us about your background and the
-              market you want to work, and if it is a fit we will walk you
-              through the program.
+              team builds for every one of them. Early consultants are first into
+              their vertical and help write the playbook for it. Tell us about
+              your background and the market you want to work, and if it is a fit
+              we will walk you through the program.
             </p>
             <div className="mt-6">
               <Link href="/contact">
