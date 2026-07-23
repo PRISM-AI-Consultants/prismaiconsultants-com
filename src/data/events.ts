@@ -16,13 +16,8 @@ export const speakingEvents: SpeakingEvent[] = [
       "Book a follow-up strategy session: https://calendly.com/prismaiconsultants/introductory-call",
     ],
   },
-  {
-    slug: "sepa-shrm-sept",
-    name: "AI Systems for HR Professionals",
-    organization: "SEPA SHRM",
-    date: "September 17, 2026",
-    location: "Philadelphia Area",
-    description:
-      "Keynote presentation for the Southeastern Pennsylvania Society for Human Resource Management on building AI systems that enhance HR operations. This session will cover the Jevons Paradox of AI, why automation increases demand for human professionals rather than replacing them, and practical AI implementations for recruiting, onboarding, performance management, and employee engagement. Attendees will see live demonstrations of production AI systems and leave with a framework for evaluating AI readiness in their organizations.",
-  },
+  // Removed 2026-07-22: "sepa-shrm-sept" advertised a Sept 17, 2026 SEPA SHRM HR Legal Summit
+  // keynote that was never confirmed. Jeff was evaluated (3/9 committee call) but it did not
+  // convert; the relationship pivoted to a confirmed UNPAID monthly chapter meeting on Jan 19, 2027.
+  // Do not re-add a Sept 17 event. A Jan 19, 2027 resources page can be built closer to that date.
 ];
