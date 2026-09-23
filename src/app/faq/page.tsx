@@ -5,6 +5,7 @@ import { PageHeader } from "@/components/ui/page-header";
 import { faqItems } from "@/data/faq";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/faq" },
   title: "Frequently Asked Questions",
   description:
     "Answers to common questions about AI consulting, pricing, timelines, ROI, and how PRISM AI Consultants builds production AI systems for businesses. Learn about AI agents, automation, and implementation.",

@@ -136,7 +136,7 @@ export default function ActivationPage() {
               <span className="hidden h-3 w-px bg-[#333] sm:inline-block" />
               <span>
                 <span className="font-bold text-[#F5F5F4]">$350K-$700K+</span> in
-                systems built
+                estimated system value built
               </span>
               <span className="hidden h-3 w-px bg-[#333] sm:inline-block" />
               <span>Built with Dr. Jeff (PharmD)</span>
@@ -165,9 +165,9 @@ export default function ActivationPage() {
         <Container size="lg">
           <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl md:grid-cols-4">
             {[
-              { n: "$350K-$700K+", l: "in AI systems delivered" },
+              { n: "$350K-$700K+", l: "in estimated AI system value" },
               { n: "Days", l: "to ship, not months" },
-              { n: "7-13x", l: "system value vs. price paid" },
+              { n: "7-13x", l: "est. system value vs. price paid" },
               { n: "750+", l: "coaching sessions delivered" },
             ].map((s) => (
               <div key={s.l} className="bg-[#101010] p-6 text-center">

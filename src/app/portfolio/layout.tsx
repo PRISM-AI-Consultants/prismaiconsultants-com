@@ -1,23 +1,12 @@
 import type { Metadata } from "next";
 
+// page.tsx is a client component ("use client") so it cannot export metadata.
+// This layout supplies the title, description, and canonical for /portfolio.
 export const metadata: Metadata = {
-  title: "What We Build - Live AI Systems Portfolio",
+  alternates: { canonical: "/portfolio" },
+  title: "What We Build - AI Agents, Dashboards & Automations",
   description:
-    "Live production AI systems built and deployed by PRISM AI Consultants. AI agents, dashboards, automations, content systems, and more. 18 builds. $350K-$700K+ in market value.",
-  keywords: [
-    "AI portfolio",
-    "AI systems examples",
-    "AI agent examples",
-    "AI dashboard",
-    "AI automation portfolio",
-    "production AI systems",
-    "PRISM AI builds",
-  ],
-  openGraph: {
-    title: "What We Build - Live AI Systems Portfolio",
-    description:
-      "Click any of these. They are running right now. 18 production AI systems built and deployed.",
-  },
+    "Real production AI systems PRISM has built for clients: AI agents, dashboards and apps, automations and integrations, content systems, and interactive games.",
 };
 
 export default function PortfolioLayout({
@@ -25,5 +14,5 @@ export default function PortfolioLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return children;
 }

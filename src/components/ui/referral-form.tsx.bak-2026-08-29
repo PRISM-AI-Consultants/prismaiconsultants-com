@@ -32,9 +32,8 @@ export function ReferralForm() {
         <p className="text-lg font-semibold">Got it. Thank you.</p>
         <p className="mt-2 text-muted-foreground">
           We&apos;ll reach out to your referral and keep you posted. When they
-          become a client, you earn 10% of the first $100,000 they pay us over
-          the year. We&apos;ll send the one-page agreement with your first check,
-          nothing to sign now.
+          become a client, you earn 10% of what they pay us for a year. We&apos;ll
+          send the one-page agreement with your first check, nothing to sign now.
         </p>
       </div>
     );

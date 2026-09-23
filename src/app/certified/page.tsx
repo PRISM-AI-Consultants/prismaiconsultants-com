@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/certified" },
   title: "Become a Certified PRISM AI Consultant",
   description:
     "Turn your domain expertise into AI implementation income. PRISM certifies independent consultants, places you in a referral network, gives you the method and the delivery team, and puts a closer on your calls. Certified is earned, not bought.",

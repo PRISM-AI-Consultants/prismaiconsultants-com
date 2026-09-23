@@ -32,6 +32,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `${event.name} | PRISM AI Consultants`,
     description: event.description,
+    alternates: { canonical: `/speaking/event/${slug}` },
     openGraph: {
       title: `${event.name} | PRISM AI Consultants`,
       description: event.description,

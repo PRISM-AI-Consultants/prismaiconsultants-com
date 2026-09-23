@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { CalendlyEmbed } from "@/components/ui/calendly-embed";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/contact" },
   title: "Contact PRISM AI Consultants",
   description:
     "Book a call, send a message, or tell us what agent you need. PRISM AI Consultants builds production AI systems for businesses.",

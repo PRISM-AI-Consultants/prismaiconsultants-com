@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | PRISM AI Consultants",
   },
   description:
-    "We don't just talk about AI. We implement it. PRISM installs AI inside your business, builds the systems with you, and makes them run. $350K-$700K+ in AI systems delivered. Based in Allentown, PA.",
+    "We don't just talk about AI. We implement it. PRISM installs AI inside your business, builds the systems with you, and makes them run. $350K-$700K+ in estimated system value delivered. Based in Allentown, PA.",
   keywords: [
     "AI implementation",
     "AI implementation partner",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "PRISM AI Consultants, AI Implementation Partner",
     description:
-      "We implement AI inside your business. Install it, build it, run it. $350K-$700K+ in systems delivered. 750+ coaching sessions.",
+      "We implement AI inside your business. Install it, build it, run it. $350K-$700K+ in estimated system value delivered. 750+ coaching sessions.",
     images: ["https://prismaiconsultants.com/images/og-image.png"],
   },
   robots: {
@@ -72,9 +72,45 @@ export const metadata: Metadata = {
   },
 };
 
+// Entity IDs. These make the graph resolvable: the Organization and the Person
+// are distinct nodes that reference each other, so an engine can tell that
+// "Dr. Jeff Bullock" and "PRISM AI Consultants" are related but not identical.
+const ORG_ID = "https://prismaiconsultants.com/#organization";
+const PERSON_ID = "https://drjeffbullock.com/#person";
+
+// Every URL below was loaded and verified before being added. Do not add a
+// sameAs you have not opened. Source of truth for Jeff's identity is the
+// ledger at ~/prism/transcript-intelligence/src/aeo_entity.py.
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": PERSON_ID,
+  name: "Dr. Jeff Bullock",
+  givenName: "Jeff",
+  familyName: "Bullock",
+  honorificSuffix: "PharmD",
+  jobTitle: "AI Systems Architect & CEO",
+  url: "https://drjeffbullock.com",
+  // Direct fix for the entity collision: "Dr. Jeff Bullock" currently resolves
+  // to physicians in AI answers. State plainly that he is not one.
+  disambiguatingDescription:
+    "Dr. Jeff Bullock is a Doctor of Pharmacy (PharmD) and AI systems architect, not a physician. He does not practice medicine. He is the founder of PRISM AI Consultants in Allentown, Pennsylvania.",
+  worksFor: { "@id": ORG_ID },
+  sameAs: [
+    "https://drjeffbullock.com",
+    "https://www.linkedin.com/in/jeffrey-bullock-pharmd",
+    "https://www.youtube.com/@drjeffbullock",
+    "https://substack.com/@drjeffbullock",
+    "https://www.amazon.com/stores/Dr.-Jeff-Bullock/author/B0H7TCDNGS",
+    "https://open.spotify.com/album/1iOSi2A5g4LUjSkvniwl4u",
+    "https://valiantceo.com/closing-the-ai-implementation-gap-jeffrey-bullock-of-prism-ai-consultants-on-turning-spend-into-revenue/",
+  ],
+};
+
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
+  "@id": ORG_ID,
   name: "PRISM AI Consultants",
   description:
     "AI implementation for business leaders. PRISM installs, builds, and runs production AI systems including agents, dashboards, automations, and integrations inside your business.",
@@ -93,16 +129,28 @@ const organizationSchema = {
     { "@type": "City", name: "Easton" },
     { "@type": "State", name: "Pennsylvania" },
   ],
-  founder: {
-    "@type": "Person",
-    name: "Dr. Jeff Bullock",
-    jobTitle: "AI Systems Architect & CEO",
-    url: "https://drjeffbullock.com",
-  },
+  founder: { "@id": PERSON_ID },
   sameAs: [
     "https://www.linkedin.com/company/prism-ai-consultants",
     "https://www.skool.com/prism-ai-consultants",
+    "https://www.instagram.com/prismaiconsultant/",
+    "https://madeinthelehighvalley.com/prismaiconsultants/",
+    "https://web.lehighvalleychamber.org/Consulting-Services-Training/PRISM-AI-Consultants-17842",
+    "https://www.alignable.com/allentown-pa/prism-ai-consultants",
+    "https://www.bizapedia.com/pa/prism-ai-consultants-llc.html",
   ],
+  // Third-party editorial recognition. Selected by Lehigh Valley Business's
+  // editorial leadership team, announced 2026-07-27. This is an AWARD, not a
+  // paid feature or a self-submitted listing, which is why it belongs in
+  // schema: it is machine-readable validation from a source that is not us.
+  award: "Named to the Lehigh Valley Business In the Lead list of top Minority Owned Businesses (2026)",
+  subjectOf: {
+    "@type": "NewsArticle",
+    headline: "PRISM AI Consultants",
+    url: "https://lvb.com/prism-ai-consultants/",
+    datePublished: "2026-07-27",
+    publisher: { "@type": "Organization", name: "Lehigh Valley Business" },
+  },
   priceRange: "$4,500 - $20,000",
   serviceType: [
     "AI Implementation",
@@ -127,6 +175,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personSchema),
           }}
         />
       </head>

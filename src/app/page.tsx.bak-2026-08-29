@@ -490,14 +490,14 @@ export default async function HomePage() {
               </h2>
               <p className="mt-4 max-w-xl text-lg text-muted-foreground">
                 Know a business owner who needs AI done right? Refer them. When
-                they become a client, you earn 10% of the first $100,000 they
-                pay us, every month, for a full year. Refer as many as you like.
+                they become a client, you earn 10% of what they pay us, every
+                month, for a full year. No cap.
               </p>
               <ul className="mt-6 space-y-3 text-muted-foreground">
                 {[
                   "Refer anyone. You never sign anything to send us a name.",
                   "They become a client. We do the work and close it.",
-                  "You get paid. 10% of collected revenue, monthly, for 12 months. Above $100,000 the rate steps down, and one client tops out at $50,000.",
+                  "You get paid. 10% of collected revenue, monthly, for 12 months.",
                 ].map((step, i) => (
                   <li key={i} className="flex gap-3">
                     <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-semibold text-accent-foreground">

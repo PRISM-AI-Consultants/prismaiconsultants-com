@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/container";
 import { PlaybookForm } from "./playbook-form";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ops-playbook" },
   title:
     "The AI Agent Ops Playbook: 9 Root Causes That Break AI Automation",
   description:

@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Bullock;Jeff;;;Pharm.D.
+FN:Jeff Bullock, Pharm.D.
+ORG:PRISM AI Consultants
+TITLE:Founder & CEO
+TEL;TYPE=WORK,VOICE:+18774182507
+EMAIL;TYPE=WORK,INTERNET:info@prismaiconsultants.com
+URL:https://prismaiconsultants.com
+ADR;TYPE=WORK:;;;Allentown;PA;;United States
+NOTE:Your AI business partner.
+END:VCARD

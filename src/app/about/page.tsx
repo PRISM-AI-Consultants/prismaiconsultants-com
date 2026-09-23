@@ -10,9 +10,10 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/about" },
   title: "About Dr. Jeff Bullock - AI Systems Architect",
   description:
-    "Pharm.D. turned AI Systems Architect. Founder of 2 AI companies and creator of $350K to $700K worth of production AI systems for clients.",
+    "Pharm.D. turned AI Systems Architect. Founder of 2 AI companies and creator of an estimated $350K to $700K in production AI system value for clients.",
 };
 
 const prismValues = [
@@ -141,7 +142,7 @@ export default function AboutPage() {
             stats={[
               { value: "18", label: "Years in Operations Leadership" },
               { value: "2", label: "AI Companies Founded" },
-              { value: "$350K-$700K+", label: "In Client Systems Delivered" },
+              { value: "$350K-$700K+", label: "In Est. Client System Value" },
               { value: "750+", label: "Coaching Sessions Delivered" },
             ]}
           />
@@ -182,7 +183,7 @@ export default function AboutPage() {
           <p className="mt-4 max-w-2xl text-muted-foreground">
             Strategy from Jeff. Execution from a team that ships every week.
           </p>
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 flex flex-wrap justify-center gap-6">
             {[
               {
                 img: "/images/team/jeff.jpg",
@@ -209,19 +210,16 @@ export default function AboutPage() {
                 bio: "Client coordination, scheduling, and content execution. Keeps sessions, calendars, and deliverables on track.",
               },
               {
-                img: "/images/team/aubrey.jpg",
-                name: "Aubrey Ross",
-                role: "Content & Publishing",
-                bio: "Leads book production and content builds, turning client expertise into published assets.",
-              },
-              {
                 img: "/images/team/mythzkie.jpg",
                 name: "Mythzkie Geronimo",
-                role: "Production & QA",
-                bio: "Video, design, and quality assurance. Makes sure everything that ships meets spec.",
+                role: "Voice & Video Production",
+                bio: "Voice, music, and video production. Turns sessions and scripts into finished assets, and keeps every recording labeled and filed.",
               },
             ].map((m) => (
-              <Card key={m.name}>
+              <Card
+                key={m.name}
+                className="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)]"
+              >
                 <CardContent>
                   <div className="flex flex-col items-center text-center">
                     <div className="h-20 w-20 rounded-full overflow-hidden mb-4">
@@ -317,6 +315,57 @@ export default function AboutPage() {
               <div className="mt-6">
                 <Link href="/contact">
                   <Button variant="accent">Work with Dan</Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Featured consultant: Kwame Lewis (Seat #2) */}
+          <div className="mt-16 grid gap-10 border-t border-border pt-16 md:grid-cols-5 md:items-center">
+            <div className="md:col-span-2">
+              <div className="relative mx-auto max-w-xs md:max-w-none">
+                <div className="absolute -inset-2 rounded-[var(--radius-lg)] bg-accent/15 blur-lg" />
+                <Image
+                  src="/images/consultants/kwame-lewis.jpg"
+                  alt="Kwame Lewis, Certified PRISM AI Consultant"
+                  width={800}
+                  height={800}
+                  className="relative aspect-square w-full rounded-[var(--radius-lg)] border-2 border-accent/20 object-cover shadow-2xl"
+                />
+              </div>
+            </div>
+            <div className="md:col-span-3">
+              <Badge variant="accent" className="mb-3">
+                Certified PRISM AI Consultant &middot; Seat #2
+              </Badge>
+              <h3 className="text-2xl font-bold tracking-tight text-foreground">
+                Kwame Lewis
+              </h3>
+              <p className="mt-1 text-sm font-medium text-accent">
+                Easton, PA &middot; BNI Easton I &middot; Trades
+              </p>
+              <div className="mt-5 space-y-4 text-muted-foreground">
+                <p>
+                  Kwame leads the trades lane for PRISM. Through his company
+                  TaskRipple he works with contractors and home service
+                  businesses on the handoff between the field and the office,
+                  the point where a finished job sits unbilled because the
+                  information never made it back in time.
+                </p>
+                <p>
+                  Now he brings the PRISM method into those same shops. He sits
+                  with the owner, finds where the work is getting stuck, and
+                  installs AI into the day to day so completed jobs turn into
+                  invoices instead of paperwork.
+                </p>
+                <p className="font-medium text-foreground">
+                  If you run a trades or home services business and the office
+                  is always catching up to the field, Kwame is your call.
+                </p>
+              </div>
+              <div className="mt-6">
+                <Link href="/contact">
+                  <Button variant="accent">Work with Kwame</Button>
                 </Link>
               </div>
             </div>

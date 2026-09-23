@@ -12,6 +12,7 @@ import { CalendlyEmbed } from "@/components/ui/calendly-embed";
 import { VideoTestimonialCarousel } from "@/components/ui/video-testimonial-carousel";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/results" },
   title: "Results - Client Transformations & ROI",
   description:
     "$350K-$700K+ in AI system value delivered to clients. Real transformations, real numbers. Most systems built in days, not months.",

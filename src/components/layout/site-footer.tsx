@@ -7,6 +7,10 @@ import { Container } from "@/components/ui/container";
 
 const socialLinks = [
   {
+    label: "Dr. Jeff Bullock",
+    href: "https://drjeffbullock.com",
+  },
+  {
     label: "LinkedIn",
     href: "https://www.linkedin.com/company/prism-ai-consultants",
   },

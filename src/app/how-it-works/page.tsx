@@ -8,6 +8,7 @@ import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { pricingTiers, premiumAddOns } from "@/data/pricing";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/how-it-works" },
   title: "How It Works & Pricing - AI Systems Implementation",
   description:
     "Transparent pricing for AI systems architecture and implementation. From Momentum Sprints to tailored business partnerships. No hourly billing. Real outcomes.",

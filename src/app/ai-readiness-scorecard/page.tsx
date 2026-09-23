@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ScorecardClient } from "./scorecard-client";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ai-readiness-scorecard" },
   title: "AI Readiness Scorecard - Free Assessment",
   description:
     "5 questions. 2 minutes. Find out where AI can save you the most time and money. Free AI readiness assessment from PRISM AI Consultants.",
