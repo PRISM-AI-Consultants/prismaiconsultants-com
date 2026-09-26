@@ -90,6 +90,13 @@ const steps = [
 const featuredTestimonials = testimonials.slice(0, 3);
 const featuredPortfolio = portfolioItems.filter((item) => item.featured);
 
+// Chapters where a PRISM consultant sits. Keep names only for people with a
+// signed release in the consent registry.
+const bniChapters = [
+  { chapter: "BNI Allentown West", when: "Wednesdays", who: "Dr. Jeff Bullock and Dan Garrett, Certified PRISM AI Consultant" },
+  { chapter: "BNI Easton", when: "", who: "Kwame Lewis, Certified PRISM AI Consultant" },
+];
+
 export default async function HomePage() {
   const events = await getEvents();
   return (
@@ -463,6 +470,29 @@ export default async function HomePage() {
                 This business runs on relationships, not ads. Come find us at a
                 room near you. You are welcome as our guest.
               </p>
+              {/* PRISM in BNI. Dan and Kwame signed releases 2026-08-14 (consent registry). */}
+              <div className="mt-8 rounded-[var(--radius-md)] border border-border p-5">
+                <p className="text-xs font-semibold uppercase tracking-wide text-accent">
+                  PRISM in BNI
+                </p>
+                <ul className="mt-3 space-y-3">
+                  {bniChapters.map((c) => (
+                    <li key={c.chapter}>
+                      <p className="font-bold text-foreground">
+                        {c.chapter}
+                        {c.when && <span className="font-normal text-muted-foreground"> · {c.when}</span>}
+                      </p>
+                      <p className="text-sm text-muted-foreground">{c.who}</p>
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href="/contact"
+                  className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-accent hover:text-accent/80"
+                >
+                  Visit as our guest <ArrowRight className="h-3.5 w-3.5" />
+                </Link>
+              </div>
             </div>
             <ul>
               {events.map((e, i) => (
