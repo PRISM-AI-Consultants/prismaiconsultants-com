@@ -76,9 +76,6 @@ export const verticals: Vertical[] = [
         detail:
           "Automates valuation report preparation by pulling comparable transactions, industry data, and financial benchmarks into structured research briefs.",
         marketValue: "$12,000-$20,000",
-        quote:
-          "This saves me 4-5 hours per report. It is the equivalent of a $12,000-$20,000 tool.",
-        quoteAuthor: "Business Valuator",
       },
       {
         what: "Full CRM and AI business system, capital advisory firm",

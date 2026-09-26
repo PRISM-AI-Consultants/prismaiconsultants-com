@@ -24,10 +24,10 @@ const transformations = [
     role: "Business Valuator",
     need: "Producing valuation reports manually, each requiring hours of comparable transaction research.",
     built: "An AI research agent that pulls and synthesizes valuation data, generating structured research briefs automatically.",
-    result: "Research time cut from hours to minutes per report. Estimated $50K+ annual value from time savings alone. The tool pays for itself on a single engagement.",
+    result: "Comparable transaction research now arrives as a structured brief instead of a manual search.",
     marketValue: "$12K-$20K",
     buildTime: "1 day",
-    quote: "This saves me 4-5 hours per report.",
+    quote: null,
   },
   {
     industry: "Legal",

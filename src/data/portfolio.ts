@@ -11,7 +11,7 @@ export const portfolioItems: PortfolioItem[] = [
     stack: "Docker + API Integration",
     marketValue: "$15,000-$25,000",
     clientPaid: "Retainer client",
-    quote: "Oh my God, holy moly... this is exactly what I wanted.",
+    quote: "This is exactly what I wanted.",
     quoteAuthor: "Managing Partner",
     featured: true,
   },
@@ -21,13 +21,10 @@ export const portfolioItems: PortfolioItem[] = [
     client: "Business Valuation Firm",
     category: "ai-agents",
     description:
-      "AI research agent that automates business valuation report preparation. Pulls comparable transactions, industry data, and financial benchmarks to generate structured research briefs. Saves 4-5 hours per valuation report.",
+      "AI research agent that automates business valuation report preparation. Pulls comparable transactions, industry data, and financial benchmarks to generate structured research briefs.",
     stack: "Python + AI + Web Scraping",
     marketValue: "$12,000-$20,000",
     clientPaid: "Project engagement",
-    quote:
-      "This saves me 4-5 hours per report. It is the equivalent of a $12,000-$20,000 tool.",
-    quoteAuthor: "Business Valuator",
     featured: true,
   },
   {

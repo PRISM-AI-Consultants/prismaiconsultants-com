@@ -45,7 +45,7 @@ export const faqItems: FAQItem[] = [
   {
     question: "What is the ROI of AI implementation for businesses?",
     answer:
-      "ROI varies by project, but PRISM clients consistently see outsized returns. A $4,500 research agent saves 4 to 5 hours per valuation report. A $1,000 engagement produced a strategic plan valued at $10,000 to $15,000. A single speaking session generated 12 booked calls from 40 attendees. We track and communicate value on every build.",
+      "ROI varies by project, but PRISM clients consistently see outsized returns. A $1,000 engagement produced a strategic plan valued at $10,000 to $15,000. A single speaking session generated 12 booked calls from 40 attendees. We track and communicate value on every build.",
   },
   {
     question: "How does PRISM handle data security with AI systems?",

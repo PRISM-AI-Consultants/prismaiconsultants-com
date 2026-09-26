@@ -4,19 +4,10 @@ export const testimonials: Testimonial[] = [
   {
     id: "legal-managing-partner",
     quote: "This is exactly what I wanted.",
-    author: "Executive Coach, EOS",
-    title: "CEO",
-    company: "Executive Coaching",
+    author: "Managing Partner",
+    title: "Managing Partner",
+    company: "8-Attorney Law Firm",
     metric: "Dashboard built in 2 days",
-  },
-  {
-    id: "valuation-advisor",
-    quote:
-      "This saves me 4-5 hours per report. It is the equivalent of a $12,000-$20,000 tool.",
-    author: "Business Valuator, M&A",
-    title: "Business Valuator",
-    company: "M&A Advisory",
-    metric: "4-5 hours saved per report",
   },
   {
     id: "eos-implementer",

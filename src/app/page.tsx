@@ -54,7 +54,7 @@ const AGENT_INTAKE_URL = "https://agent-intake.prismaiconsultants.com";
 const SKOOL_URL = "https://www.skool.com/prism-ai-consultants";
 
 const stats = [
-  { value: "4-5", label: "Hours Saved Per Report, Client Reported" },
+  { value: "600+", label: "Members in Our Free AI Community" },
   { value: "Days", label: "Not Months to Deploy" },
   { value: "7-13x", label: "Est. System Value vs. Price Paid" },
   { value: "750+", label: "Coaching Sessions Delivered" },
@@ -167,8 +167,8 @@ export default async function HomePage() {
           <p className="mt-6 text-center text-xs text-muted-foreground">
             System value figures are PRISM estimates of what comparable systems
             cost to build elsewhere, measured against what the client paid.
-            Hours saved are reported by clients. Session count is drawn from our
-            own recorded session log.
+            Community size is our free Skool group. Session count is drawn from
+            our own recorded session log.
           </p>
         </Container>
       </Section>
