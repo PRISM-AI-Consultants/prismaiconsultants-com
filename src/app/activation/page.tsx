@@ -301,8 +301,8 @@ export default function ActivationPage() {
           </div>
           <div className="mx-auto mt-12 grid max-w-5xl gap-5 md:grid-cols-2">
             {[
-              { t: "Law Firm Performance Dashboard", d: "A live dashboard tracking every attorney's KPIs, caseload, and revenue, pulling real data through an API. Built and deployed in 2 days.", v: "$15,000-$25,000 comparable", q: "Oh my God, holy moly. This is exactly what I wanted.", a: "Managing Partner" },
-              { t: "Business Valuation Research Agent", d: "An AI agent that pulls comparable transactions and industry data and writes structured valuation research briefs automatically.", v: "$12,000-$20,000 comparable", q: "This saves me 4-5 hours per report.", a: "Business Valuator, M&A" },
+              { t: "Law Firm Performance Dashboard", d: "A live dashboard tracking every attorney's KPIs, caseload, and revenue, pulling real data through an API. Built and deployed in 2 days.", v: "$15,000-$25,000 comparable", q: "This is exactly what I wanted.", a: "Managing Partner" },
+              { t: "Business Valuation Research Agent", d: "An AI agent that pulls comparable transactions and industry data and writes structured valuation research briefs automatically.", v: "$12,000-$20,000 comparable", q: "", a: "Business Valuator, M&A" },
               { t: "Strategic Plan, Built Live", d: "A complete strategic plan for a multi-billion dollar investment opportunity, built live in front of the CEO's leadership team in one session.", v: "$10,000-$15,000 comparable", q: "Work that normally takes weeks, delivered in one session.", a: "Leadership Team, Economic Development" },
               { t: "Clinical Literature Research Agent", d: "An AI agent that searches, summarizes, and synthesizes clinical literature so a practice stays current without hours of manual research.", v: "$8,000-$12,000 comparable", q: "", a: "" },
             ].map((b) => (

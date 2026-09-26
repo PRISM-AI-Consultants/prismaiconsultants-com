@@ -165,7 +165,7 @@ export default function HowItWorksPage() {
                       &ldquo;I need an embedded AI partner for my organization.&rdquo;
                     </p>
                     <p className="mt-1 text-sm text-muted-foreground">
-                      <span className="text-accent font-semibold">Core</span> (from $2,500/mo) gives you weekly strategy with Dr. Jeff and continuous builds. Need board-level cadence, a dedicated multi-build team, and scaled rollout? That is <span className="text-accent font-semibold">Partner</span> (from $7,500/mo). One Partner&rsquo;s first build was a live attorney dashboard worth $15,000-$25,000, shipped in 2 days. &ldquo;Oh my God, holy moly... this is exactly what I wanted.&rdquo;
+                      <span className="text-accent font-semibold">Core</span> (from $2,500/mo) gives you weekly strategy with Dr. Jeff and continuous builds. Need board-level cadence, a dedicated multi-build team, and scaled rollout? That is <span className="text-accent font-semibold">Partner</span> (from $7,500/mo). One Partner&rsquo;s first build was a live attorney dashboard worth $15,000-$25,000, shipped in 2 days. &ldquo;This is exactly what I wanted.&rdquo;
                     </p>
                   </div>
                 </div>
