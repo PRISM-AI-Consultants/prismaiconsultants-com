@@ -13,6 +13,7 @@ import { ReferralForm } from "@/components/ui/referral-form";
 import { getEvents } from "@/lib/events";
 import { portfolioItems } from "@/data/portfolio";
 import { testimonials } from "@/data/testimonials";
+import { MISSION, prismValues } from "@/data/values";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -362,6 +363,36 @@ export default async function HomePage() {
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
+        </Container>
+      </Section>
+
+      {/* Mission + values: the name is the promise */}
+      <Section className="border-t border-border">
+        <Container>
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">Our mission</p>
+            <p className="mt-3 text-3xl font-extrabold leading-tight tracking-tight md:text-4xl">{MISSION}</p>
+            <p className="mt-5 text-lg text-muted-foreground">
+              The name is the promise. Every letter of PRISM is a standard we hold ourselves to on every engagement.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-px overflow-hidden rounded-[var(--radius-md)] border border-border bg-border sm:grid-cols-2 lg:grid-cols-5">
+            {prismValues.map((v) => (
+              <div key={v.word} className="bg-background p-6 sm:last:col-span-2 lg:last:col-span-1">
+                <span className="block text-5xl font-extrabold leading-none" style={{ color: v.color }} aria-hidden>
+                  {v.letter}
+                </span>
+                <h3 className="mt-4 text-lg font-bold text-foreground">{v.word}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{v.description}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-6 text-sm text-muted-foreground">
+            PRISM is one arrow in a bigger mission: make giving go viral, and solve poverty for everyone.{" "}
+            <a href="https://drjeffbullock.com/#dreams" target="_blank" rel="noopener noreferrer" className="font-medium text-accent hover:underline">
+              See the mission
+            </a>
+          </p>
         </Container>
       </Section>
 

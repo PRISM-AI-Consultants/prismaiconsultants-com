@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { PageHeader } from "@/components/ui/page-header";
 import { Section } from "@/components/ui/section";
+import { MISSION, prismValues } from "@/data/values";
 import { Container } from "@/components/ui/container";
 import { Card, CardContent } from "@/components/ui/card";
 import { StatsBar } from "@/components/ui/stats-bar";
@@ -15,39 +16,6 @@ export const metadata: Metadata = {
   description:
     "Pharm.D. turned AI Systems Architect. Founder of 2 AI companies and creator of an estimated $350K to $700K in production AI system value for clients.",
 };
-
-const prismValues = [
-  {
-    letter: "P",
-    word: "Positivity",
-    description:
-      "We lead with energy. Every engagement starts with belief in what is possible.",
-  },
-  {
-    letter: "R",
-    word: "Resilience",
-    description:
-      "We push through complexity. Hard problems are the ones worth solving.",
-  },
-  {
-    letter: "I",
-    word: "Innovation",
-    description:
-      "We build what does not exist yet. If it can be automated, we will find the way.",
-  },
-  {
-    letter: "S",
-    word: "Service",
-    description:
-      "We serve our clients, our community, and our team. Results first, always.",
-  },
-  {
-    letter: "M",
-    word: "Mastery",
-    description:
-      "We study the craft relentlessly. Every system we ship is better than the last.",
-  },
-];
 
 const communityInvolvements = [
   {
@@ -404,16 +372,17 @@ export default function AboutPage() {
       {/* PRISM Values */}
       <Section>
         <Container>
-          <h2 className="text-3xl font-bold tracking-tight">PRISM Values</h2>
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">Our mission</p>
+          <p className="mt-3 max-w-3xl text-2xl font-bold leading-snug tracking-tight md:text-3xl">{MISSION}</p>
+          <h2 className="mt-12 text-3xl font-bold tracking-tight">PRISM Values</h2>
           <p className="mt-4 max-w-2xl text-muted-foreground">
-            Five principles that guide every system we build and every
-            relationship we maintain.
+            The name is the promise. Every letter is a standard we hold ourselves to on every engagement.
           </p>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
             {prismValues.map((value) => (
               <Card key={value.letter}>
                 <CardContent>
-                  <span className="text-4xl font-extrabold text-accent">
+                  <span className="text-4xl font-extrabold" style={{ color: value.color }}>
                     {value.letter}
                   </span>
                   <h3 className="mt-2 text-lg font-bold text-foreground">
