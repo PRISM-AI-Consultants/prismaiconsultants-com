@@ -93,8 +93,9 @@ const featuredPortfolio = portfolioItems.filter((item) => item.featured);
 // Chapters where a PRISM consultant sits. Keep names only for people with a
 // signed release in the consent registry.
 const bniChapters = [
-  { chapter: "BNI Allentown West", when: "Wednesdays", who: "Dr. Jeff Bullock and Dan Garrett, Certified PRISM AI Consultant" },
-  { chapter: "BNI Easton", when: "", who: "Kwame Lewis, Certified PRISM AI Consultant" },
+  { chapter: "BNI Allentown West", when: "Wednesdays, 11 AM", who: "Dr. Jeff Bullock and Dan Garrett, Certified PRISM AI Consultant" },
+  // Day/time from BNI's own chapter page (bnidvr.com), checked 2026-09-26.
+  { chapter: "BNI Easton I", when: "Wednesdays, 11:30 AM", who: "Kwame Lewis, Certified PRISM AI Consultant" },
 ];
 
 export default async function HomePage() {
