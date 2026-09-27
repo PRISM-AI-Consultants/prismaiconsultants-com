@@ -5,10 +5,11 @@ import { INFO_SESSIONS } from "./workshop-data";
 
 const PINK = "#FF1493";
 
-export function RsvpForm() {
+export function RsvpForm({ mode = "session" }: { mode?: "session" | "notify" }) {
+  const notify = mode === "notify";
   const [state, setState] = useState<"idle" | "sending" | "done" | "error">("idle");
   const [message, setMessage] = useState("");
-  const [session, setSession] = useState("sep3");
+  const [session, setSession] = useState(notify ? "notify" : "sep3");
   const [attending, setAttending] = useState("in-person");
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -54,8 +55,9 @@ export function RsvpForm() {
           You are on the list.
         </p>
         <p className="mt-3 text-[15px] leading-relaxed text-[#A3A3A3]">
-          The Zoom link comes by email before the session. Bring the part of your week
-          that eats the most time. That is what we will work on.
+          {notify
+            ? "We will email you when the next cohort is set. That is the only thing we will send."
+            : "The Zoom link comes by email before the session. Bring the part of your week that eats the most time. That is what we will work on."}
         </p>
       </div>
     );
@@ -68,6 +70,7 @@ export function RsvpForm() {
 
   return (
     <form onSubmit={onSubmit} className="space-y-5">
+      {!notify && (
       <div>
         <span className={legend}>Which session</span>
         <div className="grid gap-2 sm:grid-cols-2">
@@ -105,9 +108,10 @@ export function RsvpForm() {
           Either one works, send me both links
         </button>
       </div>
+      )}
 
       <div>
-        <span className={legend}>The workshop itself</span>
+        <span className={legend}>{notify ? "How you would join" : "The workshop itself"}</span>
         <div className="flex flex-wrap gap-2">
           {[
             { v: "in-person", l: "In the room, Allentown" },
@@ -170,13 +174,13 @@ export function RsvpForm() {
 
       <div>
         <label htmlFor="f2b-question" className={legend}>
-          What do you want answered on the call
+          {notify ? "What would you want to build" : "What do you want answered on the call"}
         </label>
         <textarea
           id="f2b-question"
           name="question"
           rows={3}
-          placeholder="Whatever is actually stopping you. We read these before the session."
+          placeholder={notify ? "Optional. A site, a tool, a follow-up system, whatever is on your list." : "Whatever is actually stopping you. We read these before the session."}
           className={field}
         />
       </div>
@@ -196,7 +200,7 @@ export function RsvpForm() {
           boxShadow: "0 0 40px rgba(255,20,147,0.32)",
         }}
       >
-        {state === "sending" ? "Saving your seat..." : "Save my spot on the call"}
+        {state === "sending" ? "Saving..." : notify ? "Get notified" : "Save my spot on the call"}
       </button>
 
       {state === "error" && (
@@ -206,8 +210,9 @@ export function RsvpForm() {
       )}
 
       <p className="text-[13px] leading-relaxed text-[#6A6A6A]">
-        Free, about 45 minutes, and there is a real Q&amp;A at the end. We will not add you
-        to anything you did not ask for.
+        {notify
+          ? "One email when the next cohort is set. We will not add you to anything you did not ask for."
+          : "Free, about 45 minutes, and there is a real Q&A at the end. We will not add you to anything you did not ask for."}
       </p>
     </form>
   );

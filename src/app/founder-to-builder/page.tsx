@@ -1,31 +1,30 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/container";
 import { RsvpForm } from "./rsvp-form";
-import {
-  WORKSHOP,
-  PRICING,
-  INFO_SESSIONS,
-  BUILD_PROOF,
-  VOICES,
-  HERO_VIDEO,
-  GUARANTEE,
-  VALUE_STACK,
-  VALUE_TOTAL,
-  INSTALL_CALL,
-} from "./workshop-data";
+import { BUILD_PROOF, VOICES, GUARANTEE, INSTALL_CALL } from "./workshop-data";
+
+/**
+ * ⛔ QUIET MODE since 2026-09-27. Cohort 2 (Sept 22 and 23) was cancelled and
+ * Jeff approved taking the sales page down quietly: no dates, no prices, no
+ * Eventbrite link, no announcement. The page keeps the proof and captures
+ * interest for the next cohort through the same durable RSVP pipeline
+ * (/api/f2b-rsvp, session "notify"). See COHORT_OPEN in workshop-data.ts for
+ * how to bring the sales version back.
+ */
 
 const PINK = "#FF1493";
 const SPECTRUM =
   "linear-gradient(90deg, #0099FF 0%, #00C2D1 28%, #FF4D8D 58%, #FFB347 82%, #FF4D2A 100%)";
 
 export const metadata: Metadata = {
-  title: `Founder to Builder ${WORKSHOP.cohort} | ${WORKSHOP.dates} | Allentown PA`,
-  description: `Two mornings, ${WORKSHOP.hoursShort}. Non technical business owners build their own website, business asset and automations live, on their own business. ${WORKSHOP.seatsInPerson} seats in the room at ${WORKSHOP.venue} Allentown, ${WORKSHOP.seatsVirtual} virtual.`,
+  title: "Founder to Builder | Next cohort coming | Allentown PA",
+  description:
+    "Two mornings. Non technical business owners build their own website, business asset and automations live, on their own business. The next cohort is being scheduled. Get notified.",
   alternates: { canonical: "/founder-to-builder" },
   openGraph: {
-    title: `Founder to Builder ${WORKSHOP.cohort}: ${WORKSHOP.dates}`,
+    title: "Founder to Builder: next cohort coming",
     description:
-      "You leave with the thing built, not with notes about building it. Two mornings in Allentown or live virtual.",
+      "You leave with the thing built, not with notes about building it. Get notified when the next cohort is set.",
     url: "https://prismaiconsultants.com/founder-to-builder",
     type: "website",
   },
@@ -60,56 +59,8 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
 }
 
 export default function FounderToBuilderPage() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "EducationEvent",
-    name: `${WORKSHOP.name} ${WORKSHOP.cohort}`,
-    startDate: "2026-09-22T09:00:00-04:00",
-    endDate: "2026-09-23T13:00:00-04:00",
-    eventAttendanceMode: "https://schema.org/MixedEventAttendanceMode",
-    eventStatus: "https://schema.org/EventScheduled",
-    location: [
-      {
-        "@type": "Place",
-        name: WORKSHOP.venue,
-        address: WORKSHOP.venueAddress,
-      },
-      { "@type": "VirtualLocation", url: WORKSHOP.eventbrite },
-    ],
-    organizer: {
-      "@type": "Organization",
-      name: "PRISM AI Consultants",
-      url: "https://prismaiconsultants.com",
-    },
-    offers: [
-      {
-        "@type": "Offer",
-        name: "In person",
-        price: PRICING.inPersonEarly,
-        priceCurrency: "USD",
-        url: WORKSHOP.eventbrite,
-        availability: "https://schema.org/InStock",
-        validThrough: PRICING.earlyBirdEndsISO,
-      },
-      {
-        "@type": "Offer",
-        name: "Virtual",
-        price: PRICING.virtualEarly,
-        priceCurrency: "USD",
-        url: WORKSHOP.eventbrite,
-        availability: "https://schema.org/InStock",
-        validThrough: PRICING.earlyBirdEndsISO,
-      },
-    ],
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden bg-[#0A0A0A]">
         <div aria-hidden className="pointer-events-none absolute inset-0">
@@ -121,73 +72,36 @@ export default function FounderToBuilderPage() {
         </div>
 
         <Container size="xl" className="relative">
-          <div className="grid gap-12 py-16 md:py-24 lg:grid-cols-[1fr_1.05fr] lg:items-center lg:gap-16">
-            <div>
-              <Eyebrow>
-                {WORKSHOP.cohort} · {WORKSHOP.city}
-              </Eyebrow>
+          <div className="max-w-3xl py-16 md:py-24">
+            <Eyebrow>Founder to Builder · Allentown and virtual</Eyebrow>
 
-              <h1
-                className="mt-5 font-heading text-[clamp(2.6rem,6.2vw,4.6rem)] font-extrabold leading-[0.94] text-[#F5F5F4]"
-                style={{ letterSpacing: "-0.035em" }}
+            <h1
+              className="mt-5 font-heading text-[clamp(2.6rem,6.2vw,4.6rem)] font-extrabold leading-[0.94] text-[#F5F5F4]"
+              style={{ letterSpacing: "-0.035em" }}
+            >
+              You leave with
+              <br />
+              the thing built.
+            </h1>
+
+            <p className="mt-6 max-w-xl text-[17px] leading-relaxed text-[#B8B8B8]">
+              Not notes about building it. Two mornings working on your own business with a coach
+              at your elbow. People walk in using AI for email and walk out with a live site, a
+              working business asset, and a system that keeps running after they go home.
+            </p>
+
+            <p className="mt-6 max-w-xl text-[17px] font-semibold leading-relaxed text-[#F0F0F0]">
+              Next cohort coming. Get notified.
+            </p>
+
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <a
+                href="#notify"
+                className="inline-flex h-12 items-center justify-center rounded-[10px] px-7 text-base font-semibold text-white transition-transform hover:-translate-y-0.5"
+                style={{ background: PINK, boxShadow: "0 0 44px rgba(255,20,147,0.35)" }}
               >
-                You leave with
-                <br />
-                the thing built.
-              </h1>
-
-              <p className="mt-6 max-w-xl text-[17px] leading-relaxed text-[#B8B8B8]">
-                Not notes about building it. Two mornings, {WORKSHOP.hoursShort}, working on your
-                own business with a coach at your elbow. People walk in using AI for email and walk
-                out with a live site, a working business asset, and a system that keeps running
-                after they go home.
-              </p>
-
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-                <a
-                  href="#info-session"
-                  className="inline-flex h-12 items-center justify-center rounded-[10px] px-7 text-base font-semibold text-white transition-transform hover:-translate-y-0.5"
-                  style={{ background: PINK, boxShadow: "0 0 44px rgba(255,20,147,0.35)" }}
-                >
-                  Come to a free info session
-                </a>
-                <a
-                  href={WORKSHOP.eventbrite}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex h-12 items-center justify-center rounded-[10px] border border-[#2C2C2C] px-7 text-base font-medium text-[#E8E8E8] transition-colors hover:border-[#454545] hover:bg-white/[0.03]"
-                >
-                  Register for the workshop
-                </a>
-              </div>
-
-              <dl className="mt-10 grid max-w-lg grid-cols-2 gap-x-8 gap-y-5 border-t border-[#1E1E1E] pt-7 sm:grid-cols-3">
-                {[
-                  ["When", `${WORKSHOP.daysOfWeek}\nSept 22 and 23`],
-                  ["Hours", `${WORKSHOP.hours}\nboth days`],
-                  ["Where", `${WORKSHOP.venue}\nAllentown, or virtual`],
-                ].map(([k, v]) => (
-                  <div key={k}>
-                    <dt className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#6E6E6E]">
-                      {k}
-                    </dt>
-                    <dd className="mt-1.5 whitespace-pre-line text-[14px] leading-snug text-[#DADADA]">
-                      {v}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
-
-            <div>
-              <Video id={HERO_VIDEO.youtubeId} title={HERO_VIDEO.title} />
-              <p className="mt-4 text-[14px] leading-relaxed text-[#8E8E8E]">
-                <span className="font-semibold text-[#DADADA]">
-                  This is not a promo. This is the room.
-                </span>{" "}
-                Filmed at the July cohort in Allentown. Every person in it is a real attendee who
-                gave written permission to appear.
-              </p>
+                Get notified
+              </a>
             </div>
           </div>
         </Container>
@@ -208,9 +122,8 @@ export default function FounderToBuilderPage() {
                 You keep your afternoons.
               </h2>
               <p className="mt-5 text-[16px] leading-relaxed text-[#A3A3A3]">
-                It runs {WORKSHOP.daysOfWeek}, {WORKSHOP.hoursShort}. Not a weekend. You are back at
-                your desk by two both days, and you are not giving up time with your family to be
-                there.
+                Two weekday mornings. Not a weekend. You are back at your desk by the afternoon both
+                days, and you are not giving up time with your family to be there.
               </p>
             </div>
 
@@ -286,8 +199,8 @@ export default function FounderToBuilderPage() {
               </ul>
 
               <p className="mt-8 max-w-xl text-[16px] leading-relaxed text-[#DADADA]">
-                By the time you sit down on the 22nd, we already know what you want built. That is
-                why the room moves as fast as it does.
+                By the time you sit down on Day 1, we already know what you want built. That is why
+                the room moves as fast as it does.
               </p>
             </div>
 
@@ -302,11 +215,6 @@ export default function FounderToBuilderPage() {
                   style={{ letterSpacing: "-0.02em" }}
                 >
                   {GUARANTEE}
-                </p>
-                <p className="mt-6 text-[15px] leading-relaxed text-[#A3A3A3]">
-                  And if you change your mind entirely, there is a full refund through{" "}
-                  {WORKSHOP.refundThrough}. After that your payment carries as full credit toward
-                  Cohort 3. You are not stuck either way.
                 </p>
               </div>
             </div>
@@ -389,8 +297,8 @@ export default function FounderToBuilderPage() {
         </Container>
       </section>
 
-      {/* ── INFO SESSION ─────────────────────────────────────────────────── */}
-      <section id="info-session" className="scroll-mt-20 border-t border-[#1A1A1A] bg-[#0C0C0C]">
+      {/* ── NOTIFY ───────────────────────────────────────────────────────── */}
+      <section id="notify" className="scroll-mt-20 border-t border-[#1A1A1A] bg-[#0C0C0C]">
         <Container size="xl">
           <div className="grid gap-12 py-16 md:py-20 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
             <div>
@@ -399,193 +307,26 @@ export default function FounderToBuilderPage() {
                 className="mt-5 font-heading text-[clamp(1.9rem,3.4vw,2.7rem)] font-bold leading-[1.06] text-[#F5F5F4]"
                 style={{ letterSpacing: "-0.025em" }}
               >
-                Not sure yet? Come ask.
+                Next cohort coming.
+                <br />
+                Get notified.
               </h2>
               <p className="mt-5 text-[16px] leading-relaxed text-[#A3A3A3]">
-                Two free sessions before the workshop. Dr. Jeff builds something live on a real
-                business, walks the two days, and then it is open questions until they run out. No
-                pitch deck, and you can leave whenever you want.
+                Leave your name and email and you will hear from us once, when the next dates are
+                set. Questions before then:{" "}
+                <a
+                  href="mailto:info@prismaiconsultants.com"
+                  className="text-[#DADADA] underline underline-offset-4 hover:text-[#F5F5F4]"
+                >
+                  info@prismaiconsultants.com
+                </a>
+                .
               </p>
-
-              <ul className="mt-8 space-y-4">
-                {INFO_SESSIONS.map((s) => (
-                  <li key={s.id} className="flex gap-4 border-t border-[#1E1E1E] pt-4">
-                    <span
-                      className="mt-2 h-[3px] w-8 shrink-0 rounded-full"
-                      style={{ background: SPECTRUM }}
-                    />
-                    <div>
-                      <p className="text-[16px] font-semibold text-[#E8E8E8]">
-                        {s.label}, {s.timeLine}
-                      </p>
-                      <p className="mt-1 text-[14px] text-[#8E8E8E]">
-                        {s.altZone}. {s.note}
-                      </p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
             </div>
 
             <div className="rounded-[16px] border border-[#242424] bg-[#0F0F0F] p-6 sm:p-8">
-              <RsvpForm />
+              <RsvpForm mode="notify" />
             </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* ── PRICING ──────────────────────────────────────────────────────── */}
-      <section className="border-t border-[#1A1A1A] bg-[#0A0A0A]">
-        <Container size="xl">
-          <div className="py-16 md:py-20">
-            <Rule />
-            <h2
-              className="mt-5 font-heading text-[clamp(1.9rem,3.4vw,2.7rem)] font-bold leading-[1.06] text-[#F5F5F4]"
-              style={{ letterSpacing: "-0.025em" }}
-            >
-              {WORKSHOP.seatsInPerson} seats in the room.{" "}
-              <span className="text-[#6E6E6E]">{WORKSHOP.seatsVirtual} virtual.</span>
-            </h2>
-            <p className="mt-4 text-[16px] text-[#A3A3A3]">
-              Early pricing holds through {PRICING.earlyBirdEnds}.
-            </p>
-
-            {/* Value stack. Never show the price naked. */}
-            <div className="mt-10 grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-              <div className="rounded-[16px] border border-[#242424] bg-[#101010] p-7 sm:p-8">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#6E6E6E]">
-                  What this costs to buy separately
-                </p>
-                <dl className="mt-5 space-y-3">
-                  {VALUE_STACK.map((r) => (
-                    <div key={r.item} className="flex items-baseline justify-between gap-4">
-                      <dt className="text-[14px] leading-snug text-[#A3A3A3]">{r.item}</dt>
-                      <dd className="shrink-0 text-[14px] font-semibold tabular-nums text-[#DADADA]">
-                        ${r.value.toLocaleString()}
-                      </dd>
-                    </div>
-                  ))}
-                </dl>
-                <div className="mt-5 flex items-baseline justify-between gap-4 border-t border-[#242424] pt-4">
-                  <span className="text-[15px] font-semibold text-[#F0F0F0]">Total value</span>
-                  <span
-                    className="font-heading text-[26px] font-extrabold tabular-nums text-[#F5F5F4]"
-                    style={{ letterSpacing: "-0.02em" }}
-                  >
-                    ${VALUE_TOTAL.toLocaleString()}
-                  </span>
-                </div>
-              </div>
-
-              <p className="text-[16px] leading-relaxed text-[#A3A3A3] lg:pt-2">
-                That is what it would cost to hire each of these out one at a time, and most owners
-                never get around to any of them. You are not buying a seat in a class. You are
-                buying the week where the website, the marketing assets and the follow-up system
-                all actually get built, on your business, with someone sitting next to you.
-              </p>
-            </div>
-
-            <div className="mt-10 grid gap-5 md:grid-cols-2">
-              {[
-                {
-                  tier: "In the room",
-                  where: `${WORKSHOP.venue}, Allentown`,
-                  early: PRICING.inPersonEarly,
-                  standard: PRICING.inPersonStandard,
-                  seats: WORKSHOP.seatsInPerson,
-                  lead: true,
-                },
-                {
-                  tier: "Live virtual",
-                  where: "From anywhere, same two mornings",
-                  early: PRICING.virtualEarly,
-                  standard: PRICING.virtualStandard,
-                  seats: WORKSHOP.seatsVirtual,
-                  lead: false,
-                },
-              ].map((t) => (
-                <div
-                  key={t.tier}
-                  className={`rounded-[16px] border p-7 sm:p-8 ${
-                    t.lead ? "border-[#FF1493]/40 bg-[#FF1493]/[0.04]" : "border-[#242424] bg-[#101010]"
-                  }`}
-                >
-                  <p className="font-heading text-[20px] font-bold text-[#F0F0F0]">{t.tier}</p>
-                  <p className="mt-1 text-[14px] text-[#8E8E8E]">{t.where}</p>
-                  <p className="mt-6 flex items-baseline gap-3">
-                    <span
-                      className="font-heading text-[44px] font-extrabold leading-none text-[#F5F5F4]"
-                      style={{ letterSpacing: "-0.03em" }}
-                    >
-                      ${t.early.toLocaleString()}
-                    </span>
-                    <span className="text-[16px] text-[#6E6E6E] line-through">
-                      ${t.standard.toLocaleString()}
-                    </span>
-                  </p>
-                  <p className="mt-2 text-[13px] text-[#8E8E8E]">
-                    Through {PRICING.earlyBirdEndsShort}. Then ${t.standard.toLocaleString()}.{" "}
-                    {t.seats} seats.
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            <ul className="mt-10 grid gap-x-8 gap-y-4 sm:grid-cols-2 lg:grid-cols-4">
-              {[
-                [
-                  "A setup call before you arrive",
-                  "One on one with our team so Day 1 starts on your business, not on installing things.",
-                ],
-                [
-                  "Lunch both days",
-                  "For everyone in the room. You are there through the middle of the day.",
-                ],
-                [
-                  "30 days after",
-                  "Access to keep going once the two mornings are over and something breaks.",
-                ],
-                [
-                  "Full refund through Sept 8",
-                  `After that your payment carries as full credit toward Cohort 3.`,
-                ],
-              ].map(([h, b]) => (
-                <li key={h} className="border-t border-[#1E1E1E] pt-4">
-                  <p className="text-[15px] font-semibold text-[#DADADA]">{h}</p>
-                  <p className="mt-1.5 text-[14px] leading-relaxed text-[#8E8E8E]">{b}</p>
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-12 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <a
-                href={WORKSHOP.eventbrite}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex h-12 items-center justify-center rounded-[10px] px-7 text-base font-semibold text-white transition-transform hover:-translate-y-0.5"
-                style={{ background: PINK, boxShadow: "0 0 44px rgba(255,20,147,0.35)" }}
-              >
-                Take a seat
-              </a>
-              <a
-                href="#info-session"
-                className="inline-flex h-12 items-center justify-center rounded-[10px] border border-[#2C2C2C] px-7 text-base font-medium text-[#E8E8E8] transition-colors hover:border-[#454545] hover:bg-white/[0.03]"
-              >
-                Or come to a free session first
-              </a>
-            </div>
-
-            <p className="mt-8 max-w-2xl text-[14px] leading-relaxed text-[#6E6E6E]">
-              {WORKSHOP.venue}, {WORKSHOP.venueAddress}. Questions, or want to send a few people
-              from one company:{" "}
-              <a
-                href="mailto:info@prismaiconsultants.com"
-                className="text-[#A3A3A3] underline underline-offset-4 hover:text-[#F5F5F4]"
-              >
-                info@prismaiconsultants.com
-              </a>
-              .
-            </p>
           </div>
         </Container>
       </section>

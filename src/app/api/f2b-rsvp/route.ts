@@ -26,6 +26,7 @@ const SESSION_LABEL: Record<string, string> = {
   sep3: "Thu Sep 3, 7:00 PM ET",
   sep12: "Sat Sep 12, 10:00 AM ET",
   either: "Either session",
+  notify: "Next cohort, notify me",
 };
 
 export async function POST(req: NextRequest) {
@@ -106,12 +107,15 @@ export async function POST(req: NextRequest) {
           email: record.email,
           phone: record.phone || undefined,
           companyName: record.company || undefined,
-          tags: [
-            "f2b-cohort2",
-            "f2b-info-session",
-            `f2b-session-${record.session}`,
-            `f2b-${record.attending}`,
-          ],
+          tags:
+            record.session === "notify"
+              ? ["f2b-next-cohort-notify", `f2b-${record.attending}`]
+              : [
+                  "f2b-cohort2",
+                  "f2b-info-session",
+                  `f2b-session-${record.session}`,
+                  `f2b-${record.attending}`,
+                ],
           source: record.source,
         }),
       });

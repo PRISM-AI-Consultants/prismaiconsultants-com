@@ -8,6 +8,17 @@
  * price, a seat count, or a deadline reads it from here. Change it once.
  */
 
+/**
+ * ⛔ 2026-09-27: Cohort 2 (Sept 22 and 23) was cancelled. Jeff approved a quiet
+ * takedown: the page now runs in "next cohort coming, get notified" mode and
+ * reads NONE of the dated fields below. They are kept only as the record of
+ * Cohort 2. When Cohort 3 is set, put the new dates, prices and Eventbrite URL
+ * here, set COHORT_OPEN to true, and restore the sales sections of page.tsx
+ * from git (commit before the 2026-09-27 takedown) or
+ * ~/prism/sunday-review/2026-W39/f2b_takedown_backup/page.tsx.
+ */
+export const COHORT_OPEN = false;
+
 export const WORKSHOP = {
   name: "Founder to Builder",
   cohort: "Cohort 2",
