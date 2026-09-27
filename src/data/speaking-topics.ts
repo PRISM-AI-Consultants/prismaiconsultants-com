@@ -34,99 +34,153 @@ export const speakingTopics: SpeakingTopic[] = [
 ];
 
 export const speakingStats = {
-  eventsDelivered: "15+",
-  audiencesTrained: "200+",
-  conversionRate: "25-30%",
-  calendlyBookingsFromOneSession: "12",
+  shrmKeynotes: "2",
+  recentStages: "15",
+  coachingSessions: "750+",
+  upcoming: "4",
 };
+
+export const upcomingEvents = [
+  { name: "High Center Nonprofit: Turning Data into Storytelling for Fundraising", date: "October 7, 2026", location: "Lancaster, PA" },
+  { name: "ALCA Mid-Atlantic 2026, General Session", date: "November 9, 2026", location: "Falls Church, VA" },
+  { name: "McKinney Media Headshot Happy Hour", date: "November 19, 2026", location: "The Swiftwater, PA" },
+  { name: "SEPA SHRM Chapter Meeting", date: "January 19, 2027", location: "Southeastern PA" },
+];
 
 export const pastEvents: SpeakingEvent[] = [
   {
     slug: "pa-shrm-2026-opening-keynote",
     name: "PA SHRM 2026 Annual Conference, Opening Keynote",
-    organization: "Pennsylvania SHRM State Council",
+    organization: "Pennsylvania State Council of SHRM",
     date: "September 11, 2026",
     location: "Wyndham Lancaster Resort, Lancaster, PA",
     description:
-      "Opening keynote, AI That Actually Works, delivered to the full conference ballroom. Two HR volunteers brought real problems to the stage and watched them get solved live. Dr. Jeff's second year speaking at PA SHRM. The full keynote is on YouTube.",
+      "AI That Actually Works. Volunteers brought real HR problems to the stage and watched them get solved with AI live. The full keynote is on YouTube.",
   },
   {
-    slug: "lehigh-valley-business-summit-2026",
-    name: "Lehigh Valley Business Summit",
+    slug: "high-center-kl2-2026",
+    name: "KL2 Peer Group",
+    organization: "The High Center (Elizabethtown College)",
+    date: "August 25, 2026",
+    location: "Allentown, PA",
+    description:
+      "Workshop on putting AI to work for a peer group of business leaders.",
+  },
+  {
+    slug: "ideas-to-income-summit-2026",
+    name: "Ideas to Income Summit: Build It Live With AI",
+    organization: "Ideas to Income Summit",
+    date: "August 19, 2026",
+    location: "Virtual",
+    description:
+      "Summit session building an AI-powered offer live.",
+  },
+  {
+    slug: "aarei-club-2026",
+    name: "Guest Expert Speaker",
+    organization: "Allentown Area Real Estate Investors Club",
+    date: "June 17, 2026",
+    location: "Allentown, PA",
+    description:
+      "Live AI demonstration for real estate investors.",
+  },
+  {
+    slug: "delta-and-ai-2026",
+    name: "Delta and AI Panel",
+    organization: "Delta Sigma Theta, Collin County Alumni Chapter",
+    date: "May 4, 2026",
+    location: "Virtual",
+    description:
+      "Panelist on AI for May Week.",
+  },
+  {
+    slug: "lv-business-summit-2026",
+    name: "Lehigh Valley Business Summit: AI in Action",
     organization: "Greater Lehigh Valley Chamber of Commerce",
     date: "April 30, 2026",
     location: "DeSales University, Center Valley, PA",
-    description: "Keynote and panel on putting AI to work in regional businesses.",
+    description:
+      "Panelist on the AI in Action panel.",
+  },
+  {
+    slug: "zoellner-ai-arts-2026",
+    name: "AI in Arts and Culture",
+    organization: "Zoellner Arts Center, Lehigh University",
+    date: "April 28, 2026",
+    location: "Bethlehem, PA",
+    description:
+      "Talk and panel for arts and culture executives.",
+  },
+  {
+    slug: "aablc-roi-masterclass-2026",
+    name: "ROI from AI Masterclass",
+    organization: "AABLC, Greater Lehigh Valley Chamber",
+    date: "March 20, 2026",
+    location: "Virtual",
+    description:
+      "Virtual masterclass on getting a return from AI.",
+  },
+  {
+    slug: "asd-career-symposium-2026",
+    name: "College and Career Symposium",
+    organization: "Allentown School District",
+    date: "March 10, 2026",
+    location: "Muhlenberg College, Allentown, PA",
+    description:
+      "Panelist introducing students to AI careers and the future of work.",
+  },
+  {
+    slug: "ifel-ai-readiness-2026",
+    name: "AI Readiness Series",
+    organization: "IFEL / Verizon",
+    date: "January to April 2026",
+    location: "Virtual",
+    description:
+      "Webinars on AI for content, storytelling, and research for small business owners.",
+  },
+  {
+    slug: "executive-forum-2025",
+    name: "Beyond the Buzz: Real AI for Real Business",
+    organization: "Executive Forum of the Lehigh Valley",
+    date: "November 19, 2025",
+    location: "DeSales University, Center Valley, PA",
+    description:
+      "Presenter at the Executive Forum Signature Event.",
+  },
+  {
+    slug: "lehigh-mba-2025",
+    name: "MBA AI Workshop",
+    organization: "Lehigh University",
+    date: "October 13, 2025",
+    location: "Bethlehem, PA",
+    description:
+      "Hands-on AI workshop for MBA students.",
   },
   {
     slug: "pa-shrm-2025",
-    name: "PA SHRM 2025 Annual Conference",
-    organization: "Pennsylvania SHRM State Council",
-    date: "September 2025",
-    location: "Pennsylvania",
-    description: "Keynote on AI for HR leaders.",
+    name: "PA SHRM 2025 State Conference, Opening Keynote",
+    organization: "Pennsylvania State Council of SHRM",
+    date: "September 12, 2025",
+    location: "The Penn Stater, State College, PA",
+    description:
+      "Friday opening keynote on AI strategies for HR productivity.",
   },
   {
-    slug: "ifel-ask-the-expert-1",
-    name: "IFEL Ask the Expert (Session 1)",
-    organization: "IFEL / Verizon Small Business Digital Ready",
-    date: "2025",
+    slug: "faulkner-automotive-2025",
+    name: "AI Training",
+    organization: "Faulkner Automotive Group",
+    date: "May 21, 2025",
+    location: "Downingtown, PA",
+    description:
+      "Hands-on AI workshop for dealership leaders.",
+  },
+  {
+    slug: "ckv-hr-2025",
+    name: "AI Strategies for HR Leaders",
+    organization: "Central Keystone Valley HR Professionals",
+    date: "January 15, 2025",
     location: "Virtual",
     description:
-      "Interactive AI workshop for small business owners through the IFEL and Verizon Small Business Digital Ready program. Generated 12 Calendly bookings from 40 attendees, a 25-30% conversion rate. Attendees described being 'inspired beyond belief.'",
-  },
-  {
-    slug: "ifel-ask-the-expert-2",
-    name: "IFEL Ask the Expert (Session 2)",
-    organization: "IFEL / Verizon Small Business Digital Ready",
-    date: "2025",
-    location: "Virtual",
-    description:
-      "Follow-up session expanding on AI implementation strategies for small businesses. Continued the high engagement pattern from the first session with practical, hands-on demonstrations.",
-  },
-  {
-    slug: "lvedc-lunch-learn",
-    name: "LVEDC Leadership Lunch & Learn",
-    organization: "Lehigh Valley Economic Development Corporation",
-    date: "2025",
-    location: "Lehigh Valley, PA",
-    description:
-      "AI strategy presentation for LVEDC leadership team. Included a live build of a strategic plan for the Eli Lilly $3.5B investment opportunity, demonstrating real-time AI consulting capabilities.",
-  },
-  {
-    slug: "bni-chapter-events",
-    name: "BNI Chapter Events",
-    organization: "BNI",
-    date: "2025",
-    location: "Lehigh Valley, PA",
-    description:
-      "Multiple presentations across BNI chapters demonstrating AI applications for small business owners. Focused on practical, immediately actionable AI strategies for referral-based businesses.",
-  },
-  {
-    slug: "asd-career-symposium",
-    name: "Allentown School District Career Symposium",
-    organization: "Allentown School District",
-    date: "2025",
-    location: "Allentown, PA",
-    description:
-      "Career symposium presentation introducing high school students to AI careers and the future of work. Demonstrated live AI tools and discussed how students can prepare for an AI-augmented workforce.",
-  },
-  {
-    slug: "aablc-virtual-events",
-    name: "AABLC Virtual Events",
-    organization: "African American Business Leadership Council",
-    date: "2025",
-    location: "Virtual",
-    description:
-      "Virtual presentations on AI adoption for minority-owned businesses. Covered practical AI tools, cost-effective implementation strategies, and how AI can level the playing field for underrepresented entrepreneurs.",
-  },
-  {
-    slug: "chamber-technical-assistance",
-    name: "Chamber Technical Assistance",
-    organization: "Local Chamber of Commerce",
-    date: "2025",
-    location: "Lehigh Valley, PA",
-    description:
-      "Technical assistance sessions helping chamber members understand and implement AI tools. Provided hands-on guidance tailored to each business's specific needs and current technology stack.",
+      "Talk for a regional group of HR professionals.",
   },
 ];

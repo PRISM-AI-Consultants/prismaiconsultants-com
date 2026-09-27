@@ -7,25 +7,24 @@ import { PageHeader } from "@/components/ui/page-header";
 import { StatsBar } from "@/components/ui/stats-bar";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { CalendlyEmbed } from "@/components/ui/calendly-embed";
 import { LiteYouTube } from "@/components/ui/lite-youtube";
 import {
   speakingTopics,
   speakingStats,
   pastEvents,
+  upcomingEvents,
 } from "@/data/speaking-topics";
-import { testimonials } from "@/data/testimonials";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/speaking" },
   title: "Speaking & Events - Book Dr. Jeff Bullock",
   description:
-    "Book Dr. Jeff Bullock, PA SHRM 2025 and 2026 keynote speaker. Keynotes and workshops where the audience watches AI get built live on their own problems.",
+    "Book Dr. Jeff Bullock, PA SHRM opening keynote speaker in 2025 and 2026. Keynotes and workshops where the audience watches AI get built live on their own problems.",
   openGraph: {
     title: "Speaking & Events - Book Dr. Jeff Bullock",
     description:
-      "Book Dr. Jeff Bullock, PA SHRM 2025 and 2026 keynote speaker. Keynotes and workshops where the audience watches AI get built live on their own problems.",
+      "Book Dr. Jeff Bullock, PA SHRM opening keynote speaker in 2025 and 2026. Keynotes and workshops where the audience watches AI get built live on their own problems.",
     images: ["/images/speaking/pa-shrm-2026-keynote-gesture.jpg"],
   },
 };
@@ -34,13 +33,10 @@ const CALENDLY_URL =
   "https://calendly.com/prismaiconsultants/introductory-call";
 
 const stats = [
-  { value: speakingStats.eventsDelivered, label: "Events Delivered" },
-  { value: speakingStats.audiencesTrained, label: "Audiences Trained" },
-  { value: speakingStats.conversionRate, label: "Audience-to-Pipeline Conversion" },
-  {
-    value: speakingStats.calendlyBookingsFromOneSession,
-    label: "Calendly Bookings from One Session",
-  },
+  { value: speakingStats.shrmKeynotes, label: "PA SHRM Opening Keynotes" },
+  { value: speakingStats.recentStages, label: "Stages Since January 2025" },
+  { value: speakingStats.coachingSessions, label: "Coaching Sessions Delivered" },
+  { value: speakingStats.upcoming, label: "Dates Booked Ahead" },
 ];
 
 const INQUIRY_URL = "https://drjeffbullock.com/speaking#inquire";
@@ -63,9 +59,7 @@ const shrmTestimonials = [
   },
 ];
 
-const speakingTestimonials = testimonials.filter(
-  (t) => t.id === "kristina-ifel" || t.id === "lvedc-team"
-);
+
 
 export default function SpeakingPage() {
   return (
@@ -73,7 +67,7 @@ export default function SpeakingPage() {
       {/* Page Header */}
       <PageHeader
         title="Speaking & Events"
-        description="Keynote speaker at PA SHRM in 2025 and 2026. Every talk includes a live AI build on real problems from the room."
+        description="Opening keynote at the PA SHRM State Conference in 2025 and 2026. Every talk includes a live AI build on real problems from the room."
       />
 
       {/* Reel + full keynote */}
@@ -232,7 +226,20 @@ export default function SpeakingPage() {
         <Container>
           <div className="mb-12">
             <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">
-              Past Events
+              Coming Up
+            </h2>
+          </div>
+          <div className="mb-12 grid gap-4 md:grid-cols-2">
+            {upcomingEvents.map((e) => (
+              <div key={e.name} className="rounded-xl border border-accent/40 bg-accent/5 p-5">
+                <h3 className="font-bold text-foreground">{e.name}</h3>
+                <p className="mt-1 text-sm text-muted-foreground">{e.date} &middot; {e.location}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mb-12">
+            <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">
+              Recent Stages
             </h2>
           </div>
           <div className="space-y-6">
@@ -286,18 +293,6 @@ export default function SpeakingPage() {
                 </figure>
               ))}
             </div>
-          </div>
-          <div className="grid gap-8 md:grid-cols-2">
-            {speakingTestimonials.map((t) => (
-              <TestimonialCard
-                key={t.id}
-                quote={t.quote}
-                author={t.author}
-                title={t.title}
-                company={t.company}
-                metric={t.metric}
-              />
-            ))}
           </div>
         </Container>
       </Section>
