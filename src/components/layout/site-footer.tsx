@@ -35,6 +35,7 @@ const linkGroups = [
       { label: "Portfolio", href: "/portfolio" },
       { label: "How It Works", href: "/how-it-works" },
       { label: "Results", href: "/results" },
+      { label: "Proof Library", href: "https://proof.prismaiconsultants.com" },
     ],
   },
   {
@@ -42,6 +43,7 @@ const linkGroups = [
     links: [
       { label: "Speaking", href: "/speaking" },
       { label: "Events", href: "/speaking#events" },
+      { label: "Speaker Kit", href: "https://speaker.prismaiconsultants.com" },
     ],
   },
   {

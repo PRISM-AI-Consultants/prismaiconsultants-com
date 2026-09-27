@@ -180,6 +180,16 @@ export default function ResultsPage() {
             </p>
           </div>
           <VideoTestimonialCarousel />
+          <p className="mt-8 text-center">
+            <a
+              href="https://proof.prismaiconsultants.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-accent hover:underline"
+            >
+              See every recorded testimonial and documented build in the proof library
+            </a>
+          </p>
         </Container>
       </Section>
 

@@ -2,6 +2,12 @@ import type { SpeakingTopic, SpeakingEvent } from "@/lib/types";
 
 export const speakingTopics: SpeakingTopic[] = [
   {
+    title: "AI That Actually Works (Signature Keynote)",
+    description:
+      "The PA SHRM 2026 opening keynote. Volunteers bring a real problem from their job to the stage, and Dr. Jeff solves it with AI in front of the room. Open enrollment questions, pay benchmarking, the work that eats a week. The audience watches it get done, not described.",
+    audience: "HR leaders, association conferences, leadership teams",
+  },
+  {
     title: "AI Systems Architecture for Teams",
     description:
       "How to build production AI systems that run your business, not just demos. Covers the difference between proof-of-concept AI and real operational systems, with live demonstrations of working business infrastructure.",
@@ -35,6 +41,31 @@ export const speakingStats = {
 };
 
 export const pastEvents: SpeakingEvent[] = [
+  {
+    slug: "pa-shrm-2026-opening-keynote",
+    name: "PA SHRM 2026 Annual Conference, Opening Keynote",
+    organization: "Pennsylvania SHRM State Council",
+    date: "September 11, 2026",
+    location: "Wyndham Lancaster Resort, Lancaster, PA",
+    description:
+      "Opening keynote, AI That Actually Works, delivered to the full conference ballroom. Two HR volunteers brought real problems to the stage and watched them get solved live. Dr. Jeff's second year speaking at PA SHRM. The full keynote is on YouTube.",
+  },
+  {
+    slug: "lehigh-valley-business-summit-2026",
+    name: "Lehigh Valley Business Summit",
+    organization: "Greater Lehigh Valley Chamber of Commerce",
+    date: "April 30, 2026",
+    location: "DeSales University, Center Valley, PA",
+    description: "Keynote and panel on putting AI to work in regional businesses.",
+  },
+  {
+    slug: "pa-shrm-2025",
+    name: "PA SHRM 2025 Annual Conference",
+    organization: "Pennsylvania SHRM State Council",
+    date: "September 2025",
+    location: "Pennsylvania",
+    description: "Keynote on AI for HR leaders.",
+  },
   {
     slug: "ifel-ask-the-expert-1",
     name: "IFEL Ask the Expert (Session 1)",

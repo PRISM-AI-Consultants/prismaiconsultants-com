@@ -9,6 +9,7 @@ import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { CalendlyEmbed } from "@/components/ui/calendly-embed";
+import { LiteYouTube } from "@/components/ui/lite-youtube";
 import {
   speakingTopics,
   speakingStats,
@@ -20,11 +21,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/speaking" },
   title: "Speaking & Events - Book Dr. Jeff Bullock",
   description:
-    "Keynotes, workshops, and breakout sessions on AI systems, automation, and the future of work. 25-30% audience-to-pipeline conversion rate.",
+    "Book Dr. Jeff Bullock, PA SHRM 2025 and 2026 keynote speaker. Keynotes and workshops where the audience watches AI get built live on their own problems.",
   openGraph: {
     title: "Speaking & Events - Book Dr. Jeff Bullock",
     description:
-      "Keynotes, workshops, and breakout sessions on AI systems, automation, and the future of work. 25-30% audience-to-pipeline conversion rate.",
+      "Book Dr. Jeff Bullock, PA SHRM 2025 and 2026 keynote speaker. Keynotes and workshops where the audience watches AI get built live on their own problems.",
+    images: ["/images/speaking/pa-shrm-2026-keynote-gesture.jpg"],
   },
 };
 
@@ -41,6 +43,26 @@ const stats = [
   },
 ];
 
+const INQUIRY_URL = "https://drjeffbullock.com/speaking#inquire";
+
+const shrmTestimonials = [
+  {
+    quote: "He was engaging and fun. He made everybody laugh. I didn't only learn, I was using what I learned right here.",
+    name: "Angela Jeffries",
+    role: "PA SHRM 2026 attendee",
+  },
+  {
+    quote: "A lot of these AI chats have been very high level, and this was very tactical. What can we do right now, today, tomorrow?",
+    name: "Anthony Fernandez",
+    role: "SSP International",
+  },
+  {
+    quote: "I saw him last year, too. So I was excited for his presentation again.",
+    name: "Ala Ingros",
+    role: "HR, InFirst Bank",
+  },
+];
+
 const speakingTestimonials = testimonials.filter(
   (t) => t.id === "kristina-ifel" || t.id === "lvedc-team"
 );
@@ -51,8 +73,42 @@ export default function SpeakingPage() {
       {/* Page Header */}
       <PageHeader
         title="Speaking & Events"
-        description="Keynotes. Workshops. Breakout sessions. 25-30% audience-to-pipeline conversion."
+        description="Keynote speaker at PA SHRM in 2025 and 2026. Every talk includes a live AI build on real problems from the room."
       />
+
+      {/* Reel + full keynote */}
+      <Section className="py-12 md:py-16">
+        <Container>
+          <div className="grid gap-8 lg:grid-cols-2">
+            <div>
+              <div className="aspect-video overflow-hidden rounded-xl border border-border shadow-2xl">
+                <LiteYouTube id="LD_4ZoSdz7g" title="Dr. Jeff Bullock speaker reel, PA SHRM 2026" priority />
+              </div>
+              <p className="mt-3 font-semibold">Speaker reel, PA SHRM 2026 (1:36)</p>
+            </div>
+            <div>
+              <div className="aspect-video overflow-hidden rounded-xl border border-border shadow-2xl">
+                <LiteYouTube id="lAx1SRTICps" title="Full Keynote: AI That Actually Works, PA SHRM 2026" />
+              </div>
+              <p className="mt-3 font-semibold">The full keynote: AI That Actually Works (34 min)</p>
+            </div>
+          </div>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <a
+              href={INQUIRY_URL}
+              className="inline-flex h-12 items-center justify-center rounded-[var(--radius-md)] bg-accent px-6 text-base font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
+            >
+              Check your date
+            </a>
+            <a
+              href="#topics"
+              className="inline-flex h-12 items-center justify-center rounded-[var(--radius-md)] border border-border px-6 text-base font-medium transition-colors hover:bg-muted"
+            >
+              See the talks
+            </a>
+          </div>
+        </Container>
+      </Section>
 
       {/* Speaker Profile */}
       <Section className="py-12 md:py-16">
@@ -142,8 +198,8 @@ export default function SpeakingPage() {
           <div className="grid gap-4 md:grid-cols-3">
             <div className="relative overflow-hidden rounded-xl glow-accent">
               <Image
-                src="/images/events/event-presentation.jpg"
-                alt="Dr. Jeff Bullock presenting on AI systems at a live event"
+                src="/images/speaking/pa-shrm-2026-keynote-podium.jpg"
+                alt="Dr. Jeff Bullock at the PA SHRM 2026 podium"
                 width={600}
                 height={400}
                 className="w-full h-64 object-cover transition-transform duration-300 hover:scale-105"
@@ -151,8 +207,8 @@ export default function SpeakingPage() {
             </div>
             <div className="relative overflow-hidden rounded-xl glow-accent">
               <Image
-                src="/images/events/event-audience.jpg"
-                alt="Engaged audience at a PRISM AI speaking event"
+                src="/images/speaking/pa-shrm-2026-ballroom.jpg"
+                alt="The full ballroom at the PA SHRM 2026 opening keynote"
                 width={600}
                 height={400}
                 className="w-full h-64 object-cover transition-transform duration-300 hover:scale-105"
@@ -160,8 +216,8 @@ export default function SpeakingPage() {
             </div>
             <div className="relative overflow-hidden rounded-xl glow-accent">
               <Image
-                src="/images/events/event-networking.jpg"
-                alt="Networking after a PRISM AI workshop"
+                src="/images/speaking/pa-shrm-2026-live-build.jpg"
+                alt="A live AI build on stage with an HR volunteer at PA SHRM 2026"
                 width={600}
                 height={400}
                 className="w-full h-64 object-cover transition-transform duration-300 hover:scale-105"
@@ -172,7 +228,7 @@ export default function SpeakingPage() {
       </Section>
 
       {/* Past Events */}
-      <Section className="border-y border-border bg-muted/30">
+      <Section id="events" className="border-y border-border bg-muted/30">
         <Container>
           <div className="mb-12">
             <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">
@@ -209,8 +265,27 @@ export default function SpeakingPage() {
         <Container>
           <div className="mb-12">
             <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">
-              What Event Organizers Say
+              What Audiences Say
             </h2>
+            <p className="mt-3 text-lg text-muted-foreground">Recorded right after the PA SHRM 2026 keynote.</p>
+          </div>
+          <div className="mb-10 grid gap-8 lg:grid-cols-5">
+            <div className="lg:col-span-2">
+              <div className="aspect-video overflow-hidden rounded-xl border border-border">
+                <LiteYouTube id="emD7VLaE3cI" title="What HR leaders said after the PA SHRM 2026 keynote" />
+              </div>
+            </div>
+            <div className="grid gap-4 lg:col-span-3">
+              {shrmTestimonials.map((t) => (
+                <figure key={t.name} className="rounded-xl border border-border bg-card p-5">
+                  <blockquote className="text-base leading-relaxed">&ldquo;{t.quote}&rdquo;</blockquote>
+                  <figcaption className="mt-3 text-sm">
+                    <span className="font-semibold">{t.name}</span>
+                    <span className="text-muted-foreground">, {t.role}</span>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
           </div>
           <div className="grid gap-8 md:grid-cols-2">
             {speakingTestimonials.map((t) => (
@@ -263,7 +338,7 @@ export default function SpeakingPage() {
               $10,000 to $20,000.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Custom packages available for multi-session engagements and
+              Virtual delivery available. Custom packages available for multi-session engagements and
               ongoing training partnerships.
             </p>
           </div>
@@ -284,13 +359,18 @@ export default function SpeakingPage() {
             </p>
             <div className="mt-8">
               <a
-                href={CALENDLY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={INQUIRY_URL}
                 className="inline-flex h-12 items-center justify-center rounded-[var(--radius-md)] bg-accent px-6 text-base font-medium text-accent-foreground transition-colors hover:bg-accent/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
-                Book a Strategy Call
+                Check Your Date
               </a>
+              <p className="mt-4 text-sm text-muted-foreground">
+                Or talk it through first on the calendar below.{" "}
+                <a href="https://proof.prismaiconsultants.com" target="_blank" rel="noopener noreferrer" className="font-medium text-accent hover:underline">
+                  See the proof library
+                </a>
+                .
+              </p>
             </div>
           </div>
           <div className="mt-12">
