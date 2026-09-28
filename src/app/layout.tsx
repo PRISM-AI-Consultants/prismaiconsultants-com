@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import { SiteNav } from "@/components/layout/site-nav";
 import { SiteFooter } from "@/components/layout/site-footer";
@@ -190,6 +191,13 @@ export default function RootLayout({
         <SiteNav />
         <main className="min-h-screen">{children}</main>
         <SiteFooter />
+        {/* AI assistant (talk or type). Served by prism-voice-live on the VPS; edit ~/prism/voice-live/widget.js, not here. */}
+        <Script
+          src="https://voice.srv1030637.hstgr.cloud/live/widget.js"
+          strategy="afterInteractive"
+          data-site="prism"
+          data-theme="dark"
+        />
       </body>
     </html>
   );
