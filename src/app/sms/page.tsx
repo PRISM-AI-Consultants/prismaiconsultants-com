@@ -49,16 +49,10 @@ export default function SmsPage() {
             </p>
 
             <h2>2. How you opt in</h2>
-            <ul>
-              <li>
-                By submitting the form on this page with the consent box checked,
-                or
-              </li>
-              <li>
-                By telling us, including our AI phone assistant, that it is OK
-                to text you during a call to 610-795-2409 or 877-418-2507.
-              </li>
-            </ul>
+            <p>
+              You opt in by entering your mobile number in the form on this page
+              and checking the consent box. The box is never checked for you.
+            </p>
             <p>Consent to receive texts is never a condition of any purchase.</p>
 
             <h2>3. Message frequency and cost</h2>

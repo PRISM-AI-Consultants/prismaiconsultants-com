@@ -63,6 +63,17 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                      Text
+                    </p>
+                    <a
+                      href="/sms"
+                      className="mt-1 block text-sm font-medium text-accent hover:underline"
+                    >
+                      Get texts from PRISM
+                    </a>
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                       LinkedIn
                     </p>
                     <a

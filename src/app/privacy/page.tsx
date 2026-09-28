@@ -260,6 +260,9 @@ export default function PrivacyPage() {
                 <a href="/sms">Text Messaging Terms</a>.
               </li>
               <li>
+                Message frequency varies. Message and data rates may apply.
+              </li>
+              <li>
                 We do not sell, rent, or share mobile numbers or text messaging
                 opt-in data with third parties or affiliates for their marketing
                 or promotional purposes.
