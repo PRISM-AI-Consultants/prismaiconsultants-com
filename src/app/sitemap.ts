@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/faq`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/lehigh-valley-ai-consulting`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/privacy-policy`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.2 },
+    { url: `${BASE_URL}/sms`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.2 },
   ];
 
   const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({

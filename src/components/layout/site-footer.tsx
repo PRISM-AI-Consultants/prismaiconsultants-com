@@ -130,6 +130,14 @@ export function SiteFooter() {
             >
               info@prismaiconsultants.com
             </a>
+            <span className="hidden md:inline">&middot;</span>
+            <Link href="/privacy" className="transition-colors hover:text-foreground">
+              Privacy
+            </Link>
+            <span className="hidden md:inline">&middot;</span>
+            <Link href="/sms" className="transition-colors hover:text-foreground">
+              SMS Terms
+            </Link>
           </div>
         </div>
       </Container>

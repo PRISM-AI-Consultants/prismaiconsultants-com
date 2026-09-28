@@ -19,9 +19,12 @@ export default function PrivacyPage() {
         <Container size="md">
           <div className="prose max-w-none">
             <p>
-              <strong>Version:</strong> 1.0
+              <strong>Version:</strong> 1.1
               <br />
               <strong>Effective Date:</strong> April 12, 2026
+              <br />
+              <strong>Updated:</strong> September 27, 2026 (added Section 10,
+              Text Messaging)
               <br />
               <strong>Owner:</strong> Dr. Jeffrey Bullock, CEO
               <br />
@@ -248,6 +251,26 @@ export default function PrivacyPage() {
                 Provide guidance on protective measures clients should take
               </li>
               <li>Report to relevant authorities as required by law</li>
+            </ul>
+
+            <h2>10. Text Messaging (SMS)</h2>
+            <ul>
+              <li>
+                We text only people who opt in, as described in our{" "}
+                <a href="/sms">Text Messaging Terms</a>.
+              </li>
+              <li>
+                We do not sell, rent, or share mobile numbers or text messaging
+                opt-in data with third parties or affiliates for their marketing
+                or promotional purposes.
+              </li>
+              <li>
+                Text messaging originator opt-in data and consent are never
+                shared with any third party.
+              </li>
+              <li>
+                Reply STOP to any message to opt out, or HELP for help.
+              </li>
             </ul>
 
             <hr />
