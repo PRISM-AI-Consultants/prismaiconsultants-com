@@ -61,7 +61,7 @@ export function SiteFooter() {
   const currentYear = new Date().getFullYear();
 
   // Standalone funnel pages render their own minimal chrome.
-  if (pathname === "/activation") return null;
+  if (pathname?.startsWith("/activation")) return null;
 
   return (
     <footer className="border-t border-border bg-muted/30">

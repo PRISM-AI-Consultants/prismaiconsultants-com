@@ -28,7 +28,7 @@ export function SiteNav() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   // Standalone funnel pages render their own minimal chrome.
-  if (pathname === "/activation") return null;
+  if (pathname?.startsWith("/activation")) return null;
 
   function isActive(href: string) {
     if (href === "/") return pathname === "/";

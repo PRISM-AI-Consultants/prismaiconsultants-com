@@ -3,55 +3,55 @@ import Image from "next/image";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 
-// Primary action = book the free audit (the live 0-10 audit is where Activations
-// actually close). Direct Stripe buy is the secondary express lane for warm,
-// already-sold buyers. This ordering follows the conversion research for a
-// $1,500 "expensive and complicated" service: earn the call, don't force the buy.
-const STRIPE_URL = "https://buy.stripe.com/4gMbJ2grK5KP7WNbXF5AQ0J";
+// Activation v2 (2026-09-30). Self-serve: proof first (call the demo line), then buy,
+// then Session 1 is booked on /activation/start the same minute. Built from the
+// 90-day Activation audit: clients pay for the three sessions, and proof closes.
+// Stripe links verified live 2026-09-08 (activation_stripe_link.md). Never use
+// 4gMbJ2grK5KP7WNbXF5AQ0J here: its checkout reads "AI group strategy session".
+const STRIPE_URL = "https://buy.stripe.com/aFa3cwdfy7SX2Ct4vd5AQ19";
+const STRIPE_SPLIT_URL = "https://buy.stripe.com/4gMcN64J21uz7WN4vd5AQ1j";
 const CALENDLY_URL =
   "https://calendly.com/prismaiconsultants/introductory-call";
+const DEMO_TEL = "tel:+16102980516";
+const DEMO_DISPLAY = "(610) 298-0516";
 
-// Canonical PRISM brand kit (2026-06-13): near-black #0A0A0A, hot-pink #FF1493
-// accent, spectrum gradient blue->cyan->rose->amber->red-orange. Plus Jakarta Sans.
 const SPECTRUM =
   "linear-gradient(135deg, #0099FF 0%, #00C2D1 28%, #FF4D8D 58%, #FFB347 82%, #FF4D2A 100%)";
 
 export const metadata: Metadata = {
-  title: "Get AI Installed In Your Business | PRISM Activation",
+  title: "PRISM Activation | Run Your Business With AI in Three Sessions",
   description:
-    "Activation is a done-with-you AI install. In three working sessions PRISM builds your website, social, automation, and brand film with you, and you walk out with AI running your business. Starts with a free audit. $1,500.",
+    "Three working sessions where you learn to run your business with AI on your own real work, plus one system PRISM installs and proves with your own number. Starts the day you join. $1,500.",
   alternates: { canonical: "/activation" },
   openGraph: {
-    title: "PRISM Activation: Get AI Installed In Your Business",
+    title: "PRISM Activation: Three sessions. One install. Your own number.",
     description:
-      "A done-with-you install, not a course. Three sessions, real systems, AI running your business in weeks. Starts with a free audit. $1,500.",
+      "Learn to run your business with AI on your own work. We install one system and prove it moved. Starts today. $1,500.",
     url: "https://prismaiconsultants.com/activation",
     type: "website",
   },
   robots: { index: true, follow: true },
 };
 
-function CTAButton({
+function CTA({
   href,
   children,
   variant = "primary",
-  className = "",
 }: {
   href: string;
   children: React.ReactNode;
   variant?: "primary" | "ghost";
-  className?: string;
 }) {
   const base =
     "inline-flex items-center justify-center h-12 px-7 text-base font-semibold rounded-[10px] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF1493] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0A0A]";
   const styles =
     variant === "primary"
-      ? "text-white shadow-[0_0_40px_rgba(255,20,147,0.35)] hover:shadow-[0_0_56px_rgba(255,20,147,0.5)] hover:-translate-y-0.5"
-      : "border border-[#262626] text-[#F5F5F4] hover:border-[#FF1493]/50 hover:bg-white/[0.03]";
+      ? "text-white shadow-[0_0_40px_rgba(255,20,147,0.30)] hover:-translate-y-0.5"
+      : "border border-[#2a2a2a] text-[#F5F5F4] hover:border-[#FF1493]/50 hover:bg-white/[0.03]";
   return (
     <a
       href={href}
-      className={`${base} ${styles} ${className}`}
+      className={`${base} ${styles}`}
       style={
         variant === "primary"
           ? { background: "linear-gradient(135deg, #FF1493 0%, #FF4D2A 100%)" }
@@ -63,26 +63,113 @@ function CTAButton({
   );
 }
 
-// Primary CTA pair, reused so every section drives the same single action.
-function CTAPair({ center = true }: { center?: boolean }) {
+function CTAPair() {
   return (
-    <div
-      className={`flex flex-col gap-3 sm:flex-row ${
-        center ? "items-center justify-center" : "items-start"
-      }`}
-    >
-      <CTAButton href={CALENDLY_URL}>Book your free AI audit</CTAButton>
-      <CTAButton href={STRIPE_URL} variant="ghost">
-        Ready now? Start for $1,500
-      </CTAButton>
+    <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+      <CTA href={STRIPE_URL}>Start today for $1,500</CTA>
+      <CTA href={DEMO_TEL} variant="ghost">
+        Hear it first: call {DEMO_DISPLAY}
+      </CTA>
     </div>
   );
 }
 
+const PILLARS = [
+  {
+    word: "Capture",
+    color: "#0DACBD",
+    line: "Get your business into the AI.",
+    items: [
+      "A notetaker on every call, in person and on the phone",
+      "Your notes, documents and spreadsheets",
+      "An AI receptionist that catches the calls you miss",
+    ],
+  },
+  {
+    word: "Connect",
+    color: "#BE71B8",
+    line: "Hook it to the tools you already use.",
+    items: [
+      "Email, calendar and drive",
+      "Your meeting notes, so it remembers every conversation",
+      "Your CRM or your books, whatever you run on",
+    ],
+  },
+  {
+    word: "Direct",
+    color: "#FC7C17",
+    line: "Learn to actually use it.",
+    items: [
+      "Think of AI as a team of experts, and ask harder questions",
+      "The five steps to a prompt that works",
+      "Talk to it instead of typing",
+    ],
+  },
+];
+
+const SESSIONS = [
+  {
+    n: "01",
+    t: "Capture and Connect",
+    d: "We write down where your business stands today, connect your AI to your real accounts, and pick the one system we install for you.",
+  },
+  {
+    n: "02",
+    t: "Direct",
+    d: "Your hands, your real work. You learn to prompt and talk to it, use it on two live jobs, and your system goes live.",
+  },
+  {
+    n: "03",
+    t: "Prove it",
+    d: "You run it on your own, on a job we have never seen. Your number from session one goes next to today's.",
+  },
+];
+
+// Every person here is CLEARED in the consent registry (checked 2026-09-30) and every
+// video was confirmed embeddable via YouTube oEmbed the same day.
+const LEAD_VIDEO = { id: "D98lM6UZGD8", who: "Ryan Shepherd", what: "Did we deliver? Her Activation, in her words." };
+const VIDEOS = [
+  { id: "qRvjRX7TliE", who: "Dr. Will Brown", what: "Client testimonial" },
+  { id: "EtgQkByad_I", who: "Paula and Bill Harris", what: "Financial advisory, the whole team on AI" },
+  { id: "i18jie5evzY", who: "Aaron Kromer", what: "Real estate, lead conversion" },
+  { id: "aUIm-y6Wb6M", who: "Michael Olaiya", what: "Real estate, operations" },
+  { id: "daB575Eu954", who: "Andrea Mosley", what: "Grant funding, faster" },
+];
+
+const INSTALLS = [
+  {
+    lane: "Every business",
+    what: "An AI receptionist",
+    detail:
+      "Answers when you can't, after hours and when you're on a job, and sends you a summary of every call. Free for 30 days.",
+    proves: "Calls saved from voicemail",
+  },
+  {
+    lane: "Real estate",
+    what: "Your CRM talks to your AI",
+    detail:
+      "Ask it who you haven't followed up with, who is hot, and get a reply drafted for each one. Works with the CRM you already have.",
+    proves: "Leads followed up",
+  },
+  {
+    lane: "Trades and service",
+    what: "Where do I stand",
+    detail:
+      "Your AI reads your own books or spreadsheet and tells you where you are against your goal, any day you ask.",
+    proves: "Revenue to date against goal",
+  },
+  {
+    lane: "Growing your visibility",
+    what: "A full website",
+    detail:
+      "A multi-page site built to book calls and capture emails, live on your own domain.",
+    proves: "Leads captured",
+  },
+];
+
 export default function ActivationPage() {
   return (
     <div className="bg-[#0A0A0A] text-[#F5F5F4]">
-      {/* Minimal landing header (global nav/footer suppressed on this route) */}
       <header className="border-b border-[#171717]">
         <Container size="lg">
           <div className="flex h-16 items-center justify-between">
@@ -90,11 +177,8 @@ export default function ActivationPage() {
               <Image src="/images/prism-logo.png" alt="PRISM AI" width={30} height={30} />
               <span>PRISM</span>
             </a>
-            <a
-              href={CALENDLY_URL}
-              className="text-sm font-semibold text-[#FF6FB5] transition-colors hover:text-[#FF1493]"
-            >
-              Book your free audit
+            <a href={DEMO_TEL} className="text-sm font-semibold text-[#FF6FB5] transition-colors hover:text-[#FF1493]">
+              Call {DEMO_DISPLAY}
             </a>
           </div>
         </Container>
@@ -102,375 +186,248 @@ export default function ActivationPage() {
 
       {/* HERO */}
       <section className="relative overflow-hidden">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -top-40 left-1/2 h-[480px] w-[820px] -translate-x-1/2 opacity-[0.22] blur-[110px]"
-          style={{ background: SPECTRUM }}
-        />
+        <div aria-hidden className="pointer-events-none absolute -top-40 left-1/2 h-[480px] w-[820px] -translate-x-1/2 opacity-[0.20] blur-[110px]" style={{ background: SPECTRUM }} />
         <Container size="lg" className="relative">
           <div className="mx-auto max-w-3xl py-20 text-center md:py-28">
             <span className="inline-flex items-center rounded-full border border-[#262626] bg-white/[0.03] px-3 py-1 text-xs font-medium text-[#A3A3A3]">
-              Done-with-you install. Not a course.
+              Starts the day you join
             </span>
-            <h1 className="mt-6 text-4xl font-extrabold leading-[1.08] tracking-tight md:text-6xl">
-              You don&apos;t have an AI problem.
+            <h1 className="mt-6 text-4xl font-extrabold leading-[1.06] tracking-tight md:text-6xl">
+              Three sessions. One install.
               <br />
-              <span className="bg-clip-text text-transparent" style={{ backgroundImage: SPECTRUM }}>
-                You have an install problem.
-              </span>
+              <span style={{ color: "#FF6A4D" }}>Your own number.</span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-[#A3A3A3] md:text-xl">
-              Everyone has access to AI now. Almost no one has it running their
-              business. Activation is the install. In three working sessions PRISM
-              builds the systems with you, and you walk out with AI live in your
-              business. It starts with a free audit where we grade your business
-              and show you exactly what we would build.
+              In three working sessions you learn to run your business with AI,
+              on your own real work. We install one system for you and prove it
+              moved, with a number from your own business.
             </p>
-
-            {/* proof ABOVE the CTA */}
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-[#A3A3A3]">
-              <span>
-                <span className="font-bold text-[#F5F5F4]">750+</span> sessions
-                delivered
-              </span>
-              <span className="hidden h-3 w-px bg-[#333] sm:inline-block" />
-              <span>
-                <span className="font-bold text-[#F5F5F4]">$350K-$700K+</span> in
-                estimated system value built
-              </span>
-              <span className="hidden h-3 w-px bg-[#333] sm:inline-block" />
-              <span>Built with Dr. Jeff (PharmD)</span>
-            </div>
-
-            <div className="mt-7">
+            <div className="mt-9">
               <CTAPair />
             </div>
-
-            {/* proof + reassurance BELOW the CTA (flanking lift) */}
-            <p className="mt-5 text-sm text-[#737373]">
-              The audit is free and there is no pressure. You walk out with AI
-              running on your business, or PRISM keeps working at no extra cost
-              until you do.
-            </p>
-            <p className="mx-auto mt-4 max-w-md text-sm italic text-[#D4D4D4]">
-              &ldquo;I&apos;m converted.&rdquo;
-              <span className="not-italic text-[#737373]"> CEO, Professional Services</span>
+            <p className="mt-5 text-sm text-[#8a8a8a]">
+              Call the number and our AI answers as if it were your receptionist.
+              That is the system you get.
             </p>
           </div>
         </Container>
       </section>
 
-      {/* STAT STRIP */}
-      <section className="border-t border-[#171717] bg-[#0c0c0c]">
+      {/* HEAR IT FIRST */}
+      <section className="border-y border-[#171717] bg-[#0d0d0d]">
         <Container size="lg">
-          <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl md:grid-cols-4">
-            {[
-              { n: "$350K-$700K+", l: "in estimated AI system value" },
-              { n: "Days", l: "to ship, not months" },
-              { n: "7-13x", l: "est. system value vs. price paid" },
-              { n: "750+", l: "coaching sessions delivered" },
-            ].map((s) => (
-              <div key={s.l} className="bg-[#101010] p-6 text-center">
-                <div
-                  className="text-2xl font-extrabold md:text-3xl"
-                  style={{ backgroundImage: SPECTRUM, WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }}
-                >
-                  {s.n}
-                </div>
-                <div className="mt-1 text-xs text-[#A3A3A3]">{s.l}</div>
-              </div>
-            ))}
+          <div className="grid items-center gap-8 py-12 md:grid-cols-[1fr_auto]">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-wider text-[#FF1493]">Try it before you buy</p>
+              <h2 className="mt-3 text-2xl font-extrabold md:text-3xl">
+                Call {DEMO_DISPLAY}. Tell it what your business does.
+              </h2>
+              <p className="mt-3 max-w-2xl text-[#A3A3A3]">
+                For a minute or two it answers like your receptionist would. It
+                doesn&apos;t take the human out of the loop. It takes the
+                voicemail out.
+              </p>
+            </div>
+            <CTA href={DEMO_TEL}>Call now</CTA>
           </div>
         </Container>
       </section>
 
-      {/* THE SHIFT */}
-      <Section className="border-t border-[#171717]">
-        <Container size="md">
-          <div className="text-center">
-            <p className="text-sm font-semibold uppercase tracking-wider text-[#FF1493]">
-              The real gap
-            </p>
-            <h2 className="mt-4 text-3xl font-extrabold md:text-4xl">
-              Knowing about AI is not the same as running it
-            </h2>
-            <p className="mx-auto mt-5 max-w-2xl text-lg text-[#A3A3A3]">
-              You have read the threads. You have tried the tools. And it still
-              lives in a browser tab, separate from the work that actually pays
-              you. The difference between a business that talks about AI and one
-              that runs on it is not knowledge. It is the install. That is the one
-              thing we do for you.
-            </p>
+      {/* SEE IT WORK: real clients, on camera */}
+      <Section className="border-b border-[#171717]">
+        <Container size="lg">
+          <div className="max-w-2xl">
+            <p className="text-sm font-semibold uppercase tracking-wider text-[#FF1493]">See it work</p>
+            <h2 className="mt-3 text-3xl font-extrabold md:text-4xl">Don&apos;t take our word for it. Take theirs.</h2>
+          </div>
+          <div className="mt-10 grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:items-start">
+            <figure>
+              <div className="aspect-video overflow-hidden rounded-2xl border border-[#1f1f1f] bg-black">
+                <iframe
+                  className="h-full w-full"
+                  src={`https://www.youtube-nocookie.com/embed/${LEAD_VIDEO.id}?rel=0`}
+                  title={`${LEAD_VIDEO.who}: ${LEAD_VIDEO.what}`}
+                  loading="lazy"
+                  allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                  allowFullScreen
+                />
+              </div>
+              <figcaption className="mt-3">
+                <span className="font-bold">{LEAD_VIDEO.who}</span>
+                <span className="text-[#A3A3A3]"> · {LEAD_VIDEO.what}</span>
+              </figcaption>
+            </figure>
+            <ul className="grid grid-cols-2 gap-4">
+              {VIDEOS.map((v) => (
+                <li key={v.id}>
+                  <a href={`https://youtu.be/${v.id}`} target="_blank" rel="noopener noreferrer" className="group block">
+                    <div className="relative aspect-video overflow-hidden rounded-xl border border-[#1f1f1f] bg-black">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={`https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`}
+                        alt={`${v.who} testimonial`}
+                        className="h-full w-full object-cover opacity-80 transition-opacity group-hover:opacity-100"
+                        loading="lazy"
+                      />
+                      <span className="absolute inset-0 m-auto flex h-11 w-11 items-center justify-center rounded-full text-white" style={{ background: "linear-gradient(135deg, #FF1493 0%, #FF4D2A 100%)" }}>
+                        <svg width="14" height="16" viewBox="0 0 14 16" aria-hidden><path d="M0 0l14 8-14 8z" fill="currentColor" /></svg>
+                      </span>
+                    </div>
+                    <div className="mt-2 text-sm font-bold">{v.who}</div>
+                    <div className="text-xs text-[#8a8a8a]">{v.what}</div>
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         </Container>
       </Section>
 
-      {/* WHAT YOU WALK OUT WITH (real current deliverable stack) */}
-      <Section className="border-t border-[#171717]">
+      {/* FRAMEWORK */}
+      <Section className="border-b border-[#171717]">
         <Container size="lg">
-          <div className="text-center">
-            <h2 className="text-3xl font-extrabold md:text-4xl">
-              What you walk out with
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-[#A3A3A3]">
-              Activation is hands-on. We build it with you in three working
-              sessions, and it is still running the day after we are done.
+          <div className="max-w-2xl">
+            <p className="text-sm font-semibold uppercase tracking-wider text-[#A3A3A3]">How we teach it</p>
+            <h2 className="mt-3 text-3xl font-extrabold md:text-4xl">Capture. Connect. Direct.</h2>
+            <p className="mt-4 text-[#A3A3A3]">
+              Most people use AI like an assistant that is decent with emails. We
+              set it up the way it actually works, in this order.
             </p>
           </div>
-          <div className="mx-auto mt-12 grid max-w-5xl gap-5 md:grid-cols-2">
-            {[
-              { t: "A live 0-to-10 audit of your business", d: "On the first call we grade your website and digital presence and show you exactly where the money is leaking." },
-              { t: "A lead-capturing website", d: "Drafted by the end of week one. Built to turn visitors into booked calls and customers, not just look nice." },
-              { t: "A social channel and a 4-week content calendar", d: "Set up and scheduled so you stay visible without thinking about it." },
-              { t: "Automation that runs the busywork", d: "Booking, payment, and email capture wired together so leads stop slipping through the cracks." },
-              { t: "A custom brand film and song", d: "An AI-produced video and an original track for your brand. The thing that makes people stop scrolling." },
-              { t: "A sharper offer and pricing", d: "We rebuild what you sell and what you charge so the traffic we send actually converts." },
-              { t: "Training on your core AI tools", d: "You and your team learn to run the systems we install, inside your own environment." },
-              { t: "Everything you keep", d: "Recordings, materials, and every build stay yours after Activation ends." },
-            ].map((item) => (
-              <div key={item.t} className="rounded-2xl border border-[#1f1f1f] bg-[#111111] p-6 transition-colors hover:border-[#FF1493]/30">
-                <div className="mb-4 h-1 w-10 rounded-full" style={{ background: SPECTRUM }} />
-                <h3 className="text-lg font-bold">{item.t}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-[#A3A3A3]">{item.d}</p>
+          <div className="mt-12 grid gap-10 md:grid-cols-3 md:gap-0">
+            {PILLARS.map((p, i) => (
+              <div key={p.word} className={`md:px-8 ${i > 0 ? "md:border-l md:border-[#1f1f1f]" : "md:pl-0"}`}>
+                <h3 className="text-3xl font-extrabold" style={{ color: p.color }}>{p.word}</h3>
+                <p className="mt-3 text-lg font-semibold">{p.line}</p>
+                <ul className="mt-5 space-y-3 text-[#A3A3A3]">
+                  {p.items.map((x) => (
+                    <li key={x} className="flex gap-3">
+                      <span className="mt-[11px] h-[3px] w-3 shrink-0" style={{ background: p.color }} />
+                      <span>{x}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
-
-          {/* value anchor (market-comparable framing, honest) */}
-          <div className="mx-auto mt-8 max-w-5xl rounded-2xl border border-[#FF1493]/20 bg-[#120a10] p-6 text-center">
-            <p className="text-lg text-[#F5F5F4]">
-              A recent client&apos;s Activation produced a stack we would price
-              around{" "}
-              <span className="font-bold" style={{ backgroundImage: SPECTRUM, WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }}>
-                $22,000
-              </span>{" "}
-              on the open market. Theirs was $1,500.
-            </p>
-          </div>
         </Container>
       </Section>
 
-      {/* HOW IT WORKS (real 3-session cadence) */}
-      <Section className="border-t border-[#171717]">
+      {/* SESSIONS */}
+      <Section className="border-b border-[#171717]">
         <Container size="lg">
-          <div className="text-center">
-            <h2 className="text-3xl font-extrabold md:text-4xl">
-              Three sessions. AI running your business.
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-[#A3A3A3]">
-              One working hour each, about a week apart. We build live, in your
-              environment, the whole way.
+          <div className="max-w-2xl">
+            <h2 className="text-3xl font-extrabold md:text-4xl">Three working sessions. About three weeks.</h2>
+            <p className="mt-4 text-[#A3A3A3]">
+              One hour each, on Zoom, with your consultant. You drive. The team
+              builds between sessions.
             </p>
           </div>
-          <div className="mx-auto mt-12 grid max-w-5xl gap-6 md:grid-cols-3">
-            {[
-              { n: "01", t: "Audit and website", d: "We grade your business live, pick the bottleneck, and your lead-capturing website is drafted by the end of the week." },
-              { n: "02", t: "Social and content", d: "We set up a social channel and build a 4-week content calendar so you show up consistently without the effort." },
-              { n: "03", t: "Automation and what's next", d: "We wire up booking, payment, and email automation, hand you a custom brand film and song, sharpen your offer, and set your 90-day direction." },
-            ].map((s) => (
-              <div key={s.n} className="rounded-2xl border border-[#1f1f1f] bg-[#111111] p-7">
-                <div className="text-4xl font-extrabold" style={{ backgroundImage: SPECTRUM, WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }}>
-                  {s.n}
+          <ol className="mt-12 grid gap-6 md:grid-cols-3">
+            {SESSIONS.map((s) => (
+              <li key={s.n} className="border-t-2 border-[#262626] pt-6">
+                <div className="text-sm font-bold tracking-widest text-[#FF6A4D]">SESSION {s.n}</div>
+                <h3 className="mt-2 text-xl font-bold">{s.t}</h3>
+                <p className="mt-3 leading-relaxed text-[#A3A3A3]">{s.d}</p>
+              </li>
+            ))}
+          </ol>
+        </Container>
+      </Section>
+
+      {/* INSTALLS */}
+      <Section className="border-b border-[#171717]">
+        <Container size="lg">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl font-extrabold md:text-4xl">One system, installed and counted</h2>
+            <p className="mt-4 text-[#A3A3A3]">
+              Everyone gets the AI receptionist. Then we install the one that fits
+              your business, and it keeps its own score.
+            </p>
+          </div>
+          <div className="mt-10 divide-y divide-[#1f1f1f] border-y border-[#1f1f1f]">
+            {INSTALLS.map((r) => (
+              <div key={r.what} className="grid gap-3 py-7 md:grid-cols-[200px_1fr_240px] md:items-center md:gap-8">
+                <div className="text-xs font-bold uppercase tracking-widest text-[#8a8a8a]">{r.lane}</div>
+                <div>
+                  <h3 className="text-xl font-bold">{r.what}</h3>
+                  <p className="mt-1 text-[#A3A3A3]">{r.detail}</p>
                 </div>
-                <h3 className="mt-4 text-lg font-bold">{s.t}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-[#A3A3A3]">{s.d}</p>
+                <div className="text-sm">
+                  <span className="block text-xs font-bold uppercase tracking-widest text-[#6b6b6b]">It proves</span>
+                  <span className="font-semibold">{r.proves}</span>
+                </div>
               </div>
             ))}
           </div>
-          <p className="mx-auto mt-8 max-w-2xl text-center text-sm text-[#737373]">
-            Your website is drafted by the end of week one. Activation is built
-            around real revenue inside 90 days.
+          <p className="mt-6 text-sm text-[#8a8a8a]">
+            Human answering services commonly run $250 to $395 a month. Your AI
+            receptionist is included free for the first 30 days.
           </p>
         </Container>
       </Section>
 
-      {/* PROOF: REAL BUILDS */}
-      <Section className="border-t border-[#171717]">
+      {/* PROOF */}
+      <Section className="border-b border-[#171717]">
         <Container size="lg">
-          <div className="text-center">
-            <p className="text-sm font-semibold uppercase tracking-wider text-[#FF1493]">
-              This is what we install
-            </p>
-            <h2 className="mt-4 text-3xl font-extrabold md:text-4xl">
-              Real builds, real businesses
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-[#A3A3A3]">
-              Not slides. Working systems we built with owners like you, most of
-              them in days.
-            </p>
-          </div>
-          <div className="mx-auto mt-12 grid max-w-5xl gap-5 md:grid-cols-2">
-            {[
-              { t: "Law Firm Performance Dashboard", d: "A live dashboard tracking every attorney's KPIs, caseload, and revenue, pulling real data through an API. Built and deployed in 2 days.", v: "$15,000-$25,000 comparable", q: "This is exactly what I wanted.", a: "Managing Partner" },
-              { t: "Business Valuation Research Agent", d: "An AI agent that pulls comparable transactions and industry data and writes structured valuation research briefs automatically.", v: "$12,000-$20,000 comparable", q: "", a: "Business Valuator, M&A" },
-              { t: "Strategic Plan, Built Live", d: "A complete strategic plan for a multi-billion dollar investment opportunity, built live in front of the CEO's leadership team in one session.", v: "$10,000-$15,000 comparable", q: "Work that normally takes weeks, delivered in one session.", a: "Leadership Team, Economic Development" },
-              { t: "Clinical Literature Research Agent", d: "An AI agent that searches, summarizes, and synthesizes clinical literature so a practice stays current without hours of manual research.", v: "$8,000-$12,000 comparable", q: "", a: "" },
-            ].map((b) => (
-              <div key={b.t} className="flex flex-col rounded-2xl border border-[#1f1f1f] bg-[#111111] p-6 transition-colors hover:border-[#FF1493]/30">
-                <h3 className="text-lg font-bold">{b.t}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-[#A3A3A3]">{b.d}</p>
-                {b.q ? (
-                  <p className="mt-4 border-l-2 border-[#FF1493] pl-3 text-sm italic text-[#D4D4D4]">
-                    &ldquo;{b.q}&rdquo;
-                    <span className="mt-1 block not-italic text-xs text-[#737373]">{b.a}</span>
-                  </p>
-                ) : null}
-                <span className="mt-5 inline-flex w-fit items-center rounded-full px-3 py-1 text-xs font-semibold" style={{ background: "rgba(255,20,147,0.12)", color: "#FF6FB5" }}>
-                  {b.v}
-                </span>
-              </div>
-            ))}
-          </div>
-          <div className="mx-auto mt-8 max-w-5xl rounded-2xl border border-[#1f1f1f] bg-[#0d0d0d] p-6 text-center">
-            <p className="text-sm text-[#A3A3A3]">
-              Dashboards, agents, automations, full applications, even a studio of
-              playable games. The point is range.{" "}
-              <a href="https://prismstudios.app" className="font-semibold text-[#FF6FB5] underline underline-offset-2 hover:text-[#FF1493]">
-                See what we build at PRISM Studios
-              </a>
-              .
-            </p>
-          </div>
-        </Container>
-      </Section>
-
-      {/* MID-PAGE CTA (flanked by proof) */}
-      <Section className="border-t border-[#171717]">
-        <Container size="md">
-          <div className="text-center">
-            <p className="mx-auto max-w-xl text-lg italic text-[#D4D4D4]">
-              &ldquo;Almost fell off my seat.&rdquo;
-              <span className="not-italic text-sm text-[#737373]"> Certified EOS Implementer</span>
-            </p>
-            <h2 className="mt-6 text-2xl font-extrabold md:text-3xl">
-              Start with the free audit
-            </h2>
-            <p className="mx-auto mt-3 max-w-xl text-[#A3A3A3]">
-              We grade your business 0 to 10 and show you exactly what your
-              Activation would build. You leave with clarity even if you never buy.
-            </p>
-            <div className="mt-7">
-              <CTAPair />
-            </div>
-            <p className="mx-auto mt-6 max-w-xl text-lg italic text-[#D4D4D4]">
-              &ldquo;You got me excited right now. That&apos;s dope.&rdquo;
-              <span className="not-italic text-sm text-[#737373]"> Producer, Podcast</span>
-            </p>
-          </div>
-        </Container>
-      </Section>
-
-      {/* WHO IT'S FOR (scope-based, never revenue-band) */}
-      <Section className="border-t border-[#171717]">
-        <Container size="md">
-          <div className="text-center">
-            <h2 className="text-3xl font-extrabold md:text-4xl">
-              Who Activation is for
-            </h2>
-          </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
-            <div className="rounded-2xl border border-[#1f1f1f] bg-[#111111] p-7">
-              <h3 className="text-lg font-bold text-[#F5F5F4]">This is for you if</h3>
-              <ul className="mt-4 space-y-3 text-sm text-[#A3A3A3]">
-                {[
-                  "You run the business and you are tired of AI living on the sidelines.",
-                  "You want it set up and working, not another course to get through.",
-                  "You have a clear bottleneck you would pay to make disappear.",
-                  "You move when something is in front of you and it works.",
-                ].map((x) => (
-                  <li key={x} className="flex gap-3"><span className="mt-1 text-[#FF1493]">&#9656;</span><span>{x}</span></li>
-                ))}
-              </ul>
-            </div>
-            <div className="rounded-2xl border border-[#1f1f1f] bg-[#0d0d0d] p-7">
-              <h3 className="text-lg font-bold text-[#737373]">This is not for you if</h3>
-              <ul className="mt-4 space-y-3 text-sm text-[#737373]">
-                {[
-                  "You want to watch videos and figure it out on your own later.",
-                  "You are looking for the cheapest tool, not a working system.",
-                  "You are not ready to give three working sessions to install it right.",
-                ].map((x) => (
-                  <li key={x} className="flex gap-3"><span className="mt-1">&#8226;</span><span>{x}</span></li>
-                ))}
-              </ul>
-            </div>
+          <div className="grid gap-10 md:grid-cols-2">
+            <figure>
+              <blockquote className="text-2xl font-bold leading-snug md:text-3xl">
+                &ldquo;I&apos;ve learned things in these three sessions that are
+                going to change the way I do business.&rdquo;
+              </blockquote>
+              <figcaption className="mt-4 text-sm text-[#8a8a8a]">Ryan Shepherd, after her third session</figcaption>
+            </figure>
+            <figure>
+              <blockquote className="text-2xl font-bold leading-snug md:text-3xl">
+                &ldquo;It&apos;s gonna be my go-to on how I solve most issues going
+                forward, for sure.&rdquo;
+              </blockquote>
+              <figcaption className="mt-4 text-sm text-[#8a8a8a]">Chris Levant, RestoPros of Lehigh Valley</figcaption>
+            </figure>
           </div>
         </Container>
       </Section>
 
       {/* GUARANTEE */}
-      <Section className="border-t border-[#171717]">
+      <Section className="border-b border-[#171717]">
         <Container size="md">
-          <div className="relative overflow-hidden rounded-3xl border border-[#262626] p-10 text-center md:p-14" style={{ background: "radial-gradient(120% 120% at 50% 0%, rgba(255,20,147,0.10) 0%, rgba(10,10,10,0) 60%)" }}>
+          <div className="text-center">
             <p className="text-sm font-semibold uppercase tracking-wider text-[#FF1493]">The guarantee</p>
-            <h2 className="mx-auto mt-4 max-w-2xl text-2xl font-extrabold leading-snug md:text-3xl">
-              You walk out of Activation with AI installed and running on your
-              business, or PRISM keeps working at no additional cost until you do.
+            <h2 className="mx-auto mt-4 max-w-2xl text-2xl font-extrabold leading-snug md:text-4xl">
+              Your system is live by session three, or we keep working at no
+              extra cost until it is.
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-[#A3A3A3]">
-              Your website live. Your automation working. Your first systems
-              running. The promise is tied to installed and working, which is the
-              part we control.
+              Live means running on your own domain, your own number, your own
+              accounts. Not a draft on ours.
             </p>
           </div>
         </Container>
       </Section>
 
-      {/* CREDIBILITY */}
-      <Section className="border-t border-[#171717]">
-        <Container size="lg">
-          <div className="grid items-center gap-10 md:grid-cols-[280px_1fr]">
-            <div className="mx-auto w-full max-w-[280px]">
-              <div className="overflow-hidden rounded-2xl border border-[#1f1f1f]">
-                <Image src="/images/jeff-bullock-portrait.jpg" alt="Dr. Jeff Bullock, PharmD" width={560} height={700} className="h-full w-full object-cover" />
-              </div>
-            </div>
-            <div>
-              <h2 className="text-3xl font-extrabold md:text-4xl">
-                You install it with Dr. Jeff and the PRISM team
-              </h2>
-              <p className="mt-5 text-lg text-[#A3A3A3]">
-                Dr. Jeff Bullock (PharmD) and PRISM have delivered AI systems that
-                run live inside real businesses. Activation puts that team directly
-                into your environment for the install, so the systems are built
-                right and you have a partner who has done it before.
-              </p>
-              <div className="mt-7 flex flex-wrap gap-3">
-                {["Built with you, not for a slide deck", "Production systems, not demos", "A partner, not a vendor"].map((chip) => (
-                  <span key={chip} className="rounded-full border border-[#262626] bg-white/[0.03] px-3 py-1.5 text-xs font-medium text-[#A3A3A3]">{chip}</span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      {/* PRICE + FINAL CTA */}
-      <Section className="border-t border-[#171717]">
+      {/* PRICE */}
+      <Section>
         <Container size="md">
           <div className="relative overflow-hidden rounded-3xl border border-[#262626] bg-[#111111] p-10 text-center md:p-14">
             <div aria-hidden className="pointer-events-none absolute -bottom-32 left-1/2 h-[320px] w-[640px] -translate-x-1/2 opacity-20 blur-[100px]" style={{ background: SPECTRUM }} />
             <div className="relative">
-              <h2 className="text-3xl font-extrabold md:text-4xl">
-                Get AI installed in your business
-              </h2>
-              <div className="mt-6 flex items-end justify-center gap-2">
-                <span className="text-5xl font-extrabold md:text-6xl">$1,500</span>
-              </div>
+              <h2 className="text-3xl font-extrabold md:text-4xl">Start today</h2>
+              <div className="mt-6 text-5xl font-extrabold md:text-6xl">$1,500</div>
               <p className="mt-3 text-[#A3A3A3]">
-                Three sessions, the full build, and the guarantee.
+                Three sessions, your installed system, the 30-day AI receptionist
+                and the guarantee.
               </p>
-              <p className="mt-2 font-medium text-[#F5F5F4]">
-                Or split it: $750 today, $750 at week two. Work starts on the first payment.
+              <p className="mt-2 text-[#A3A3A3]">
+                Right after checkout you pick your first session. It happens within
+                a week.
               </p>
-              <div className="mt-8">
-                <CTAPair />
-              </div>
-              <p className="mt-5 text-sm text-[#737373]">
-                Prefer to do it in person? In-person Activation is $2,000. Ask us on the audit call.
-              </p>
-              <p className="mt-3 text-sm font-medium text-[#FF6FB5]">
-                PRISM takes a limited number of new Activations each month, because every one gets real install time.
+              <div className="mt-8"><CTAPair /></div>
+              <p className="mt-6 text-sm text-[#8a8a8a]">
+                Prefer two payments?{" "}
+                <a href={STRIPE_SPLIT_URL} className="font-semibold text-[#FF6FB5] underline underline-offset-2">$750 today, $750 in four weeks</a>
+                . Running a larger company?{" "}
+                <a href={CALENDLY_URL} className="font-semibold text-[#FF6FB5] underline underline-offset-2">Book a call</a>.
               </p>
             </div>
           </div>
@@ -483,13 +440,12 @@ export default function ActivationPage() {
           <h2 className="text-center text-3xl font-extrabold md:text-4xl">Questions</h2>
           <div className="mx-auto mt-10 max-w-3xl divide-y divide-[#171717]">
             {[
-              { q: "What is the free audit?", a: "A live working session where we grade your business 0 to 10 and show you exactly what your Activation would build. No pressure. You leave with clarity even if you never buy." },
-              { q: "Can I split the payment?", a: "Yes. $750 to start and $750 at week two. We begin the moment the first payment clears." },
-              { q: "Is this a course or coaching?", a: "Neither. It is a done-with-you install. Across three working sessions we build the real systems with you, in your business." },
-              { q: "Do I need to be technical?", a: "No. You bring your business. We bring the build. The whole reason Activation works for non-technical owners is that PRISM installs and configures it for you." },
-              { q: "How fast do I see something working?", a: "Your website is drafted by the end of week one, and Activation is built around real revenue inside 90 days." },
-              { q: "What happens after Activation?", a: "Many owners move into Core, our ongoing AI partnership, once they feel what is possible. There is no obligation. Activation stands on its own." },
-              { q: "What if it is not working when we finish?", a: "Then PRISM keeps working at no additional cost until it is installed and running. That is the guarantee." },
+              { q: "When does it start?", a: "The day you join. After checkout you book your first session on the next screen and we send your access checklist right away." },
+              { q: "Is this a course?", a: "No. It is three working sessions on your own business, with your hands on the keyboard, plus a system our team installs between sessions." },
+              { q: "Do I need to be technical?", a: "No. If you can talk, you can do this. One of the three lessons is literally to talk to the AI instead of typing." },
+              { q: "Will the AI receptionist replace my staff?", a: "No. It answers the calls that would have gone to voicemail and hands every one back to a person with a summary." },
+              { q: "What happens after the three sessions?", a: "You keep everything we built. Many owners continue with PRISM as their ongoing AI partner. There is no obligation." },
+              { q: "What if my system isn't live by session three?", a: "We keep working at no extra cost until it is. That is the guarantee." },
             ].map((f) => (
               <div key={f.q} className="py-6">
                 <h3 className="text-lg font-bold">{f.q}</h3>
@@ -497,13 +453,9 @@ export default function ActivationPage() {
               </div>
             ))}
           </div>
-          <div className="mt-12 flex flex-col items-center gap-4">
-            <CTAPair />
-          </div>
         </Container>
       </Section>
 
-      {/* Minimal footer */}
       <footer className="border-t border-[#171717] py-10">
         <Container size="lg">
           <div className="flex flex-col items-center justify-between gap-4 text-sm text-[#737373] sm:flex-row">
@@ -512,9 +464,9 @@ export default function ActivationPage() {
               <span>PRISM AI Consultants</span>
             </div>
             <div className="flex items-center gap-5">
-              <a href="/" className="transition-colors hover:text-[#F5F5F4]">Main site</a>
-              <a href="/privacy" className="transition-colors hover:text-[#F5F5F4]">Privacy</a>
-              <a href={CALENDLY_URL} className="transition-colors hover:text-[#F5F5F4]">Book your audit</a>
+              <a href="/" className="hover:text-[#F5F5F4]">Main site</a>
+              <a href="/privacy" className="hover:text-[#F5F5F4]">Privacy</a>
+              <a href={CALENDLY_URL} className="hover:text-[#F5F5F4]">Book a call</a>
             </div>
           </div>
         </Container>
