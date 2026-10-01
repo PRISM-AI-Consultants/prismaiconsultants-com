@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 const CHECKLIST = [
   { t: "Your email and calendar", d: "Gmail or Outlook, the account you run the business from." },
-  { t: "Your phone line", d: "Who your carrier is, so we can forward missed calls to your AI receptionist." },
+  { t: "Your phone line", d: "Who your carrier is, so we can connect your line to your AI front office." },
   { t: "Your website and domain", d: "Where it is hosted and where the domain is registered." },
   { t: "Your CRM or your books", d: "Whatever you run on: Follow Up Boss, QuickBooks, a spreadsheet. Its name is enough for now." },
   { t: "Social accounts", d: "Facebook and Instagram admin, plus your Google Business Profile." },

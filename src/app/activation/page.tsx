@@ -82,7 +82,7 @@ const PILLARS = [
     items: [
       "A notetaker on every call, in person and on the phone",
       "Your notes, documents and spreadsheets",
-      "An AI receptionist that catches the calls you miss",
+      "An AI front office that answers every call you miss",
     ],
   },
   {
@@ -139,10 +139,10 @@ const VIDEOS = [
 const INSTALLS = [
   {
     lane: "Every business",
-    what: "An AI receptionist",
+    what: "Your AI front office",
     detail:
-      "Answers when you can't, after hours and when you're on a job, and sends you a summary of every call. Free for 30 days.",
-    proves: "Calls saved from voicemail",
+      "Answers your phone in plain conversation, day and night. Knows your services, hours and prices, gets callers booked, logs every one in your CRM and hands you a summary. Free for 30 days.",
+    proves: "Calls answered that used to hit voicemail",
   },
   {
     lane: "Real estate",
@@ -206,8 +206,8 @@ export default function ActivationPage() {
               <CTAPair />
             </div>
             <p className="mt-5 text-sm text-[#8a8a8a]">
-              Call the number and our AI answers as if it were your receptionist.
-              That is the system you get.
+              Call the number and our AI front office answers as if it were your
+              business. That is the system you get.
             </p>
           </div>
         </Container>
@@ -223,7 +223,7 @@ export default function ActivationPage() {
                 Call {DEMO_DISPLAY}. Tell it what your business does.
               </h2>
               <p className="mt-3 max-w-2xl text-[#A3A3A3]">
-                For a minute or two it answers like your receptionist would. It
+                For a minute or two it answers as your front office would. It
                 doesn&apos;t take the human out of the loop. It takes the
                 voicemail out.
               </p>
@@ -232,6 +232,36 @@ export default function ActivationPage() {
           </div>
         </Container>
       </section>
+
+      {/* WHAT THE AI FRONT OFFICE DOES */}
+      <Section className="border-b border-[#171717]">
+        <Container size="lg">
+          <div className="max-w-2xl">
+            <p className="text-sm font-semibold uppercase tracking-wider text-[#FF1493]">What you get installed</p>
+            <h2 className="mt-3 text-3xl font-extrabold md:text-4xl">This isn&apos;t a chatbot. It&apos;s an AI front office.</h2>
+            <p className="mt-4 text-[#A3A3A3]">
+              A chatbot reads from a script. Your AI front office is connected to
+              your business, so it can actually do the work.
+            </p>
+          </div>
+          <dl className="mt-10 grid gap-x-12 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              { t: "Talks like a person", d: "Plain conversation. No \"press 1.\" Callers ask what they want, how they want." },
+              { t: "Knows your business", d: "Your services, hours, prices and policies, from a fact sheet we build with you and keep current." },
+              { t: "Captures every caller", d: "Name, what they need and how urgent it is, straight into your CRM with a summary." },
+              { t: "Gets them booked", d: "Sends your booking link and confirms the details, so the next step is already set." },
+              { t: "Hands off to your people", d: "Tells your team who to call back first, with the whole conversation in hand." },
+              { t: "Gets better every week", d: "Every call is reviewed and the lessons go back in, so it sharpens with use." },
+            ].map((c) => (
+              <div key={c.t} className="border-t border-[#262626] pt-5">
+                <dt className="text-lg font-bold">{c.t}</dt>
+                <dd className="mt-2 text-[#A3A3A3]">{c.d}</dd>
+              </div>
+            ))}
+          </dl>
+          <p className="mt-8 text-sm text-[#8a8a8a]">The same assistant can live on your website too, so visitors can talk or type to it.</p>
+        </Container>
+      </Section>
 
       {/* SEE IT WORK: real clients, on camera */}
       <Section className="border-b border-[#171717]">
@@ -341,7 +371,7 @@ export default function ActivationPage() {
           <div className="max-w-2xl">
             <h2 className="text-3xl font-extrabold md:text-4xl">One system, installed and counted</h2>
             <p className="mt-4 text-[#A3A3A3]">
-              Everyone gets the AI receptionist. Then we install the one that fits
+              Everyone gets the AI front office. Then we install the one that fits
               your business, and it keeps its own score.
             </p>
           </div>
@@ -362,7 +392,7 @@ export default function ActivationPage() {
           </div>
           <p className="mt-6 text-sm text-[#8a8a8a]">
             Human answering services commonly run $250 to $395 a month. Your AI
-            receptionist is included free for the first 30 days.
+            front office is included free for the first 30 days.
           </p>
         </Container>
       </Section>
@@ -415,8 +445,8 @@ export default function ActivationPage() {
               <h2 className="text-3xl font-extrabold md:text-4xl">Start today</h2>
               <div className="mt-6 text-5xl font-extrabold md:text-6xl">$1,500</div>
               <p className="mt-3 text-[#A3A3A3]">
-                Three sessions, your installed system, the 30-day AI receptionist
-                and the guarantee.
+                Three sessions, your installed system, 30 days of your AI front
+                office and the guarantee.
               </p>
               <p className="mt-2 text-[#A3A3A3]">
                 Right after checkout you pick your first session. It happens within
@@ -443,7 +473,7 @@ export default function ActivationPage() {
               { q: "When does it start?", a: "The day you join. After checkout you book your first session on the next screen and we send your access checklist right away." },
               { q: "Is this a course?", a: "No. It is three working sessions on your own business, with your hands on the keyboard, plus a system our team installs between sessions." },
               { q: "Do I need to be technical?", a: "No. If you can talk, you can do this. One of the three lessons is literally to talk to the AI instead of typing." },
-              { q: "Will the AI receptionist replace my staff?", a: "No. It answers the calls that would have gone to voicemail and hands every one back to a person with a summary." },
+              { q: "Will it replace my staff?", a: "It will change their job. Your AI front office can take the routine calls: questions, bookings, messages, follow-ups. That frees your front desk to become your customer experience person, taking care of the people standing in front of them. And any caller who wants a person gets one." },
               { q: "What happens after the three sessions?", a: "You keep everything we built. Many owners continue with PRISM as their ongoing AI partner. There is no obligation." },
               { q: "What if my system isn't live by session three?", a: "We keep working at no extra cost until it is. That is the guarantee." },
             ].map((f) => (
