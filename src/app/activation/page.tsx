@@ -21,10 +21,10 @@ const SPECTRUM =
 export const metadata: Metadata = {
   title: "PRISM Activation | Run Your Business With AI in Three Sessions",
   description:
-    "Three working sessions where you learn to run your business with AI on your own real work, plus one system PRISM installs and proves with your own number. Starts the day you join. $1,500.",
+    "PRISM installs your AI front office and AI back office, and teaches you to run both, in three working sessions. Everything we promise is live by session three, or we keep working until it is. Starts the day you join. $1,500.",
   alternates: { canonical: "/activation" },
   openGraph: {
-    title: "PRISM Activation: Three sessions. One install. Your own number.",
+    title: "PRISM Activation: your AI front office and back office, installed in three sessions",
     description:
       "Learn to run your business with AI on your own work. We install one system and prove it moved. Starts today. $1,500.",
     url: "https://prismaiconsultants.com/activation",
@@ -136,34 +136,28 @@ const VIDEOS = [
   { id: "daB575Eu954", who: "Andrea Mosley", what: "Grant funding, faster" },
 ];
 
-const INSTALLS = [
+const OFFICES = [
   {
-    lane: "Every business",
-    what: "Your AI front office",
-    detail:
-      "Answers your phone in plain conversation, day and night. Knows your services, hours and prices, gets callers booked, logs every one in your CRM and hands you a summary. Free for 30 days.",
+    tag: "Handles your customers",
+    name: "Your AI front office",
+    color: "#0DACBD",
+    items: [
+      "Answers every call in plain conversation, day and night, and gets callers booked",
+      "A website built to book calls and capture leads, live on your own domain",
+      "Every caller and lead logged in your CRM, with a summary to your team",
+    ],
     proves: "Calls answered that used to hit voicemail",
   },
   {
-    lane: "Real estate",
-    what: "Your CRM talks to your AI",
-    detail:
-      "Ask it who you haven't followed up with, who is hot, and get a reply drafted for each one. Works with the CRM you already have.",
-    proves: "Leads followed up",
-  },
-  {
-    lane: "Trades and service",
-    what: "Your AI back office",
-    detail:
-      "AI connected to your own books that tells you where you stand any day you ask, plus agents on a schedule that do the paperwork: the Monday money report, quotes, invoice reminders. Built so you can talk to it and run it yourself.",
-    proves: "Revenue to date against goal, and hours back",
-  },
-  {
-    lane: "Growing your visibility",
-    what: "A full website",
-    detail:
-      "A multi-page site built to book calls and capture emails, live on your own domain.",
-    proves: "Leads captured",
+    tag: "Handles your paperwork",
+    name: "Your AI back office",
+    color: "#FC7C17",
+    items: [
+      "Connected to your books or your CRM, so you can ask where you stand any day",
+      "Agents on a schedule doing the routine work: the Monday money report, follow-ups, quotes, invoice reminders",
+      "In real estate: who is hot, who you haven't called, and a reply drafted for each one",
+    ],
+    proves: "Hours back, and revenue against your goal",
   },
 ];
 
@@ -193,14 +187,14 @@ export default function ActivationPage() {
               Starts the day you join
             </span>
             <h1 className="mt-6 text-4xl font-extrabold leading-[1.06] tracking-tight md:text-6xl">
-              Three sessions. One install.
+              Your AI front office and back office.
               <br />
-              <span style={{ color: "#FF6A4D" }}>Your own number.</span>
+              <span style={{ color: "#FF6A4D" }}>Installed in three sessions.</span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-[#A3A3A3] md:text-xl">
-              In three working sessions you learn to run your business with AI,
-              on your own real work. We install one system for you and prove it
-              moved, with a number from your own business.
+              Your front office handles your customers. Your back office handles
+              your paperwork. We install both, then teach you to run them on your
+              own real work. Live by session three, guaranteed.
             </p>
             <div className="mt-9">
               <CTAPair />
@@ -365,32 +359,28 @@ export default function ActivationPage() {
         </Container>
       </Section>
 
-      {/* INSTALLS */}
+      {/* THE TWO OFFICES */}
       <Section className="border-b border-[#171717]">
         <Container size="lg">
           <div className="max-w-2xl">
-            <h2 className="text-3xl font-extrabold md:text-4xl">One system, installed and counted</h2>
-            <p className="mt-4 text-[#A3A3A3]">
-              Everyone gets the AI front office. Then we install the one that fits
-              your business, and it keeps its own score.
-            </p>
+            <h2 className="text-3xl font-extrabold md:text-4xl">What we install for you</h2>
+            <p className="mt-4 text-[#A3A3A3]">Two systems, set up for your business, and each one keeps its own score.</p>
           </div>
-          <div className="mt-10 divide-y divide-[#1f1f1f] border-y border-[#1f1f1f]">
-            {INSTALLS.map((r) => (
-              <div key={r.what} className="grid gap-3 py-7 md:grid-cols-[200px_1fr_240px] md:items-center md:gap-8">
-                <div className="text-xs font-bold uppercase tracking-widest text-[#8a8a8a]">{r.lane}</div>
-                <div>
-                  <h3 className="text-xl font-bold">{r.what}</h3>
-                  <p className="mt-1 text-[#A3A3A3]">{r.detail}</p>
-                </div>
-                <div className="text-sm">
-                  <span className="block text-xs font-bold uppercase tracking-widest text-[#6b6b6b]">It proves</span>
-                  <span className="font-semibold">{r.proves}</span>
-                </div>
+          <div className="mt-10 grid gap-10 md:grid-cols-2">
+            {OFFICES.map((o) => (
+              <div key={o.name} className="border-t-2 pt-6" style={{ borderColor: o.color }}>
+                <div className="text-xs font-bold uppercase tracking-widest" style={{ color: o.color }}>{o.tag}</div>
+                <h3 className="mt-2 text-2xl font-extrabold">{o.name}</h3>
+                <ul className="mt-5 space-y-3 text-[#A3A3A3]">
+                  {o.items.map((x) => (
+                    <li key={x} className="flex gap-3"><span className="mt-[11px] h-[3px] w-3 shrink-0" style={{ background: o.color }} /><span>{x}</span></li>
+                  ))}
+                </ul>
+                <p className="mt-6 text-sm"><span className="block text-xs font-bold uppercase tracking-widest text-[#6b6b6b]">It proves</span><span className="font-semibold">{o.proves}</span></p>
               </div>
             ))}
           </div>
-          <p className="mt-6 text-sm text-[#8a8a8a]">
+          <p className="mt-8 text-sm text-[#8a8a8a]">
             Human answering services commonly run $250 to $395 a month. Your AI
             front office is included free for the first 30 days.
           </p>
@@ -425,12 +415,13 @@ export default function ActivationPage() {
           <div className="text-center">
             <p className="text-sm font-semibold uppercase tracking-wider text-[#FF1493]">The guarantee</p>
             <h2 className="mx-auto mt-4 max-w-2xl text-2xl font-extrabold leading-snug md:text-4xl">
-              Your system is live by session three, or we keep working at no
-              extra cost until it is.
+              The Live-or-Free Guarantee
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-[#A3A3A3]">
-              Live means running on your own domain, your own number, your own
-              accounts. Not a draft on ours.
+              If everything we promised isn&apos;t live on your own number and
+              accounts by session three, we keep working at no extra cost until it
+              is. All we ask is that you show up to your three sessions and give us
+              access in your first three days.
             </p>
           </div>
         </Container>
@@ -445,8 +436,8 @@ export default function ActivationPage() {
               <h2 className="text-3xl font-extrabold md:text-4xl">Start today</h2>
               <div className="mt-6 text-5xl font-extrabold md:text-6xl">$1,500</div>
               <p className="mt-3 text-[#A3A3A3]">
-                Three sessions, your installed system, 30 days of your AI front
-                office and the guarantee.
+                Three sessions, your AI front office and back office, 30 days of
+                the front office included, and the Live-or-Free Guarantee.
               </p>
               <p className="mt-2 text-[#A3A3A3]">
                 Right after checkout you pick your first session. It happens within
@@ -475,7 +466,7 @@ export default function ActivationPage() {
               { q: "Do I need to be technical?", a: "No. If you can talk, you can do this. One of the three lessons is literally to talk to the AI instead of typing." },
               { q: "Will it replace my staff?", a: "It will change their job. Your AI front office can take the routine calls: questions, bookings, messages, follow-ups. That frees your front desk to become your customer experience person, taking care of the people standing in front of them. And any caller who wants a person gets one." },
               { q: "What happens after the three sessions?", a: "You keep everything we built. Many owners continue with PRISM as their ongoing AI partner. There is no obligation." },
-              { q: "What if my system isn't live by session three?", a: "We keep working at no extra cost until it is. That is the guarantee." },
+              { q: "What if it isn't live by session three?", a: "That is the Live-or-Free Guarantee. We keep working at no extra cost until everything we promised is live. All we ask is that you show up to your three sessions and give us access in your first three days." },
             ].map((f) => (
               <div key={f.q} className="py-6">
                 <h3 className="text-lg font-bold">{f.q}</h3>

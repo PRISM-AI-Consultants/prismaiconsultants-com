@@ -46,7 +46,7 @@ export default function ActivationStartPage() {
           <p className="mt-5 max-w-2xl text-lg text-[#A3A3A3]">
             Pick a time in the next seven days. Session 1 is sixty minutes on
             Zoom: we capture how your business runs today, connect your AI to
-            your accounts, and choose the one system we install for you.
+            your accounts, and plan your AI front office and back office.
           </p>
 
           <div className="mt-10 grid gap-10 lg:grid-cols-[1fr_380px]">
@@ -79,8 +79,7 @@ export default function ActivationStartPage() {
                 ))}
               </ol>
               <p className="mt-8 border-t border-[#1f1f1f] pt-6 text-sm text-[#8a8a8a]">
-                Your system is live by session three, or we keep working at no
-                extra cost until it is.
+                The Live-or-Free Guarantee: everything we promised is live by session three, or we keep working at no extra cost until it is.
               </p>
             </aside>
           </div>
