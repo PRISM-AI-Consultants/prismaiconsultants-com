@@ -153,10 +153,10 @@ const INSTALLS = [
   },
   {
     lane: "Trades and service",
-    what: "Where do I stand",
+    what: "Your AI back office",
     detail:
-      "Your AI reads your own books or spreadsheet and tells you where you are against your goal, any day you ask.",
-    proves: "Revenue to date against goal",
+      "AI connected to your own books that tells you where you stand any day you ask, plus agents on a schedule that do the paperwork: the Monday money report, quotes, invoice reminders. Built so you can talk to it and run it yourself.",
+    proves: "Revenue to date against goal, and hours back",
   },
   {
     lane: "Growing your visibility",
