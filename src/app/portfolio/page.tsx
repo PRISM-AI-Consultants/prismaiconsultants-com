@@ -128,10 +128,10 @@ export default function PortfolioPage() {
               </div>
               <div className="text-center">
                 <p className="text-3xl font-extrabold text-accent md:text-4xl">
-                  7-13x
+                  Days
                 </p>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  System Value vs. Price Paid
+                  Not Months to Deploy
                 </p>
               </div>
             </div>

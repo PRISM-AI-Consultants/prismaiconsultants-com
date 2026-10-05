@@ -86,7 +86,7 @@ export default function ResultsPage() {
             stats={[
               { value: "22", label: "Client-Facing Builds" },
               { value: "Under 1 Week", label: "Most Systems Deployed" },
-              { value: "7-13x", label: "System Value vs. Price Paid" },
+              { value: "600+", label: "Members in Our Free AI Community" },
               { value: "750+", label: "Coaching Sessions Delivered" },
             ]}
           />

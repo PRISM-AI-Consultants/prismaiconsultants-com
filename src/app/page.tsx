@@ -56,7 +56,7 @@ const SKOOL_URL = "https://www.skool.com/prism-ai-consultants";
 const stats = [
   { value: "600+", label: "Members in Our Free AI Community" },
   { value: "Days", label: "Not Months to Deploy" },
-  { value: "7-13x", label: "Est. System Value vs. Price Paid" },
+  { value: "25+", label: "Client Builds" },
   { value: "750+", label: "Coaching Sessions Delivered" },
 ];
 

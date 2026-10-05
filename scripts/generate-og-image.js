@@ -221,8 +221,8 @@ async function generateOGImage() {
           <span class="stat-label">Agents Built</span>
         </div>
         <div class="stat">
-          <span class="stat-value">2-5x</span>
-          <span class="stat-label">Client ROI</span>
+          <span class="stat-value">25+</span>
+          <span class="stat-label">Client Builds</span>
         </div>
       </div>
     </div>

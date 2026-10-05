@@ -152,7 +152,7 @@ const organizationSchema = {
     datePublished: "2026-07-27",
     publisher: { "@type": "Organization", name: "Lehigh Valley Business" },
   },
-  priceRange: "$4,500 - $20,000",
+  priceRange: "From $2,500/mo",
   serviceType: [
     "AI Implementation",
     "AI Consulting",
