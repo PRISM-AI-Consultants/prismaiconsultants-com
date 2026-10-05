@@ -465,7 +465,7 @@ def page_cta(c):
     c.drawCentredString(W / 2, y - 22, "34 autonomous agents built.")
     c.setFillColor(TEXT_TERTIARY)
     c.setFont("Helvetica", 11)
-    c.drawCentredString(W / 2, y - 40, "$350K - $700K+ in systems delivered to clients.")
+    c.drawCentredString(W / 2, y - 40, "Production AI systems built for real businesses.")
 
     # CTA Card
     y -= stats_h + 25

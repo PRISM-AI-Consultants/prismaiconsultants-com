@@ -221,10 +221,6 @@ async function generateOGImage() {
           <span class="stat-label">Agents Built</span>
         </div>
         <div class="stat">
-          <span class="stat-value">$350K-$700K+</span>
-          <span class="stat-label">Systems Delivered</span>
-        </div>
-        <div class="stat">
           <span class="stat-value">2-5x</span>
           <span class="stat-label">Client ROI</span>
         </div>

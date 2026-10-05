@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/about" },
   title: "About Dr. Jeff Bullock - AI Systems Architect",
   description:
-    "Pharm.D. turned AI Systems Architect. Founder of 2 AI companies and creator of an estimated $350K to $700K in production AI system value for clients.",
+    "Pharm.D. turned AI Systems Architect. Founder of 2 AI companies, including PRISM AI Consultants, which installs production AI systems inside client businesses and makes them run.",
 };
 
 const communityInvolvements = [
@@ -65,9 +65,8 @@ export default function AboutPage() {
                 </p>
                 <p className="text-lg font-medium text-foreground">
                   &ldquo;I don&rsquo;t talk about AI. I build AI systems that run
-                  my own business. I&rsquo;ve delivered $350K to $700K in AI
-                  system value to clients, most built in days, not
-                  months.&rdquo;
+                  my own business, then build the same systems for clients,
+                  most in days, not months.&rdquo;
                 </p>
                 <p>
                   Every system PRISM delivers was proven internally first. The
@@ -110,7 +109,7 @@ export default function AboutPage() {
             stats={[
               { value: "18", label: "Years in Operations Leadership" },
               { value: "2", label: "AI Companies Founded" },
-              { value: "$350K-$700K+", label: "In Est. Client System Value" },
+              { value: "22", label: "Client-Facing Builds" },
               { value: "750+", label: "Coaching Sessions Delivered" },
             ]}
           />

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/results" },
   title: "Results - Client Transformations & ROI",
   description:
-    "$350K-$700K+ in AI system value delivered to clients. Real transformations, real numbers. Most systems built in days, not months.",
+    "Client transformations from PRISM AI Consultants: production AI systems built and running inside real businesses. Most systems built in days, not months.",
 };
 
 const transformations = [
@@ -84,7 +84,7 @@ export default function ResultsPage() {
         <Container>
           <StatsBar
             stats={[
-              { value: "$350K-$700K+", label: "In System Value Delivered to Clients" },
+              { value: "22", label: "Client-Facing Builds" },
               { value: "Under 1 Week", label: "Most Systems Deployed" },
               { value: "7-13x", label: "System Value vs. Price Paid" },
               { value: "750+", label: "Coaching Sessions Delivered" },
@@ -244,7 +244,7 @@ export default function ResultsPage() {
         <Container size="md">
           <div className="text-center">
             <p className="text-2xl font-bold tracking-tight text-foreground">
-              Clients have received $350K-$700K+ in AI system value.
+              Clients get working AI systems, not slide decks.
             </p>
             <p className="mt-2 text-2xl font-bold tracking-tight text-accent">
               Most deployed in under a week.

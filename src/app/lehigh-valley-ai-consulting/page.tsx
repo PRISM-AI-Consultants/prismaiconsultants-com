@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title:
       "AI Consulting & Systems Architecture in the Lehigh Valley",
     description:
-      "Production AI systems for Lehigh Valley businesses. $350K-$700K+ in estimated system value across 25+ client builds. Based in Allentown, PA.",
+      "Production AI systems for Lehigh Valley businesses, built and run inside your business. 25+ client builds. Based in Allentown, PA.",
   },
 };
 
@@ -77,7 +77,7 @@ const reasons = [
     icon: "\u{2699}\uFE0F",
     title: "Production Systems, Not Slide Decks",
     description:
-      "$350K-$700K+ in estimated AI system value across 25+ client builds. Every engagement produces working software that runs in your business, not a PDF with recommendations.",
+      "25+ client builds. Every engagement produces working software that runs in your business, not a PDF with recommendations.",
   },
   {
     icon: "\u{1F4B0}",
