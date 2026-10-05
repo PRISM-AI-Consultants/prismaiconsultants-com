@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title:
     "PRISM AI Consultants | AI Implementation Partner",
   description:
-    "We don't just talk about AI. We implement it. PRISM installs AI inside your business, builds the systems with you, and makes them run. $350K-$700K+ in estimated system value delivered. 750+ coaching sessions. Allentown, PA.",
+    "PRISM AI Consultants is an AI implementation partner based in Allentown, PA. We install AI inside your business, build the systems with you, and make them run.",
   keywords: [
     "AI implementation",
     "AI implementation partner",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "PRISM AI Consultants | AI Implementation Partner",
     description:
-      "We don't just talk about AI. We implement it. PRISM installs, builds, and runs production AI systems live in your business. $350K-$700K+ in estimated system value across 25+ client builds.",
+      "We don't just talk about AI. We implement it. PRISM installs, builds, and runs production AI systems live in your business.",
     images: [
       {
         url: "https://prismaiconsultants.com/images/og-image.png",

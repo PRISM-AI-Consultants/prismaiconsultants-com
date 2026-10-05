@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | PRISM AI Consultants",
   },
   description:
-    "We don't just talk about AI. We implement it. PRISM installs AI inside your business, builds the systems with you, and makes them run. $350K-$700K+ in estimated system value delivered. Based in Allentown, PA.",
+    "PRISM AI Consultants is an AI implementation partner based in Allentown, PA. We install AI inside your business, build the systems with you, and make them run.",
   keywords: [
     "AI implementation",
     "AI implementation partner",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "PRISM AI Consultants, AI Implementation Partner",
     description:
-      "We implement AI inside your business. Install it, build it, run it. $350K-$700K+ in estimated system value delivered. 750+ coaching sessions.",
+      "We implement AI inside your business. Install it, build it, run it. Based in Allentown, PA.",
     images: ["https://prismaiconsultants.com/images/og-image.png"],
   },
   robots: {
