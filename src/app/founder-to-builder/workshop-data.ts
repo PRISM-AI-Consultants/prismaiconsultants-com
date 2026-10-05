@@ -1,5 +1,5 @@
 /**
- * SINGLE SOURCE OF TRUTH for Founder to Builder Cohort 2.
+ * SINGLE SOURCE OF TRUTH for Founder to Builder (Cohort 3 as of 2026-10-05).
  *
  * Why this file exists: on 2026-08-28 the early bird deadline was extended from
  * Aug 28 to Sep 4, and the date was already baked into two rendered video reels,
@@ -9,42 +9,42 @@
  */
 
 /**
- * ⛔ 2026-09-27: Cohort 2 (Sept 22 and 23) was cancelled. Jeff approved a quiet
- * takedown: the page now runs in "next cohort coming, get notified" mode and
- * reads NONE of the dated fields below. They are kept only as the record of
- * Cohort 2. When Cohort 3 is set, put the new dates, prices and Eventbrite URL
- * here, set COHORT_OPEN to true, and restore the sales sections of page.tsx
- * from git (commit before the 2026-09-27 takedown) or
- * ~/prism/sunday-review/2026-W39/f2b_takedown_backup/page.tsx.
+ * 2026-10-05: COHORT 3 IS OPEN. Jeff ruled the sales page goes live today.
+ * Source for every value below: Jeff's email to JC, Mon 10/5 5:09am ET,
+ * "October update ... your Cohort 3 pay link":
+ *   - $1,500 in-person seat, Stripe link below (verified live in Stripe 10/5,
+ *     metadata cohort=founder-to-builder-cohort-3)
+ *   - Fri 11/13 and Fri 11/20, 9 AM to 1 PM ET, Allentown, PA
+ *   - "List the city only for now." So NO street address until Jeff names one.
+ *   - Guarantee word for word (GUARANTEE below, unchanged).
+ * Not decided anywhere in writing yet (Jamie's ask, Jeff answers by Fri 10/9):
+ * seat count, refund terms, virtual tier. The page states none of them.
+ * Cohort 2 (Sept 22 and 23) was cancelled 2026-09-27; its record is in git
+ * (commit cc1272b and before).
  */
-export const COHORT_OPEN = false;
+export const COHORT_OPEN = true;
 
 export const WORKSHOP = {
   name: "Founder to Builder",
-  cohort: "Cohort 2",
-  dates: "September 22 and 23, 2026",
-  daysOfWeek: "Tuesday and Wednesday",
+  cohort: "Cohort 3",
+  dates: "Friday, November 13 and Friday, November 20, 2026",
+  datesShort: "Nov 13 and Nov 20",
+  dayOneLong: "Friday, November 13",
+  dayTwoLong: "Friday, November 20",
+  daysOfWeek: "Two Fridays",
   hours: "9:00 AM to 1:00 PM ET",
   hoursShort: "9 to 1",
-  venue: "Fusion Workplaces",
-  venueAddress: "1275 Glenlivet Drive, Suite 100, Allentown, PA 18106",
   city: "Allentown, PA",
-  seatsInPerson: 12,
-  seatsVirtual: 25,
-  eventbrite:
-    "https://www.eventbrite.com/e/founder-to-builder-a-prism-two-day-workshop-cohort-2-tickets-1997981895634",
-  refundThrough: "Tuesday, September 8",
+  /** Jeff 10/5: city only for now. Swap in the venue when he names it. */
+  venueNote: "Exact location sent when you register",
+  startISO: "2026-11-13T09:00:00-05:00",
+  endISO: "2026-11-20T13:00:00-05:00",
+  /** Stripe payment link, the "Take a seat" button. Checkout only, never promoted directly. */
+  payLink: "https://buy.stripe.com/6oUaEYejC1uz4KBbXF5AQ1p",
 } as const;
 
 export const PRICING = {
-  earlyBirdEnds: "Friday, September 4",
-  earlyBirdEndsShort: "September 4",
-  /** ISO for the countdown. End of day Sept 4 Eastern. */
-  earlyBirdEndsISO: "2026-09-04T23:59:59-04:00",
-  inPersonEarly: 1500,
-  inPersonStandard: 2000,
-  virtualEarly: 750,
-  virtualStandard: 1000,
+  inPerson: 1500,
 } as const;
 
 /**

@@ -56,7 +56,7 @@ export function RsvpForm({ mode = "session" }: { mode?: "session" | "notify" }) 
         </p>
         <p className="mt-3 text-[15px] leading-relaxed text-[#A3A3A3]">
           {notify
-            ? "We will email you when the next cohort is set. That is the only thing we will send."
+            ? "We will email you about Cohort 3 and when the next cohort is set. That is all we will send."
             : "The Zoom link comes by email before the session. Bring the part of your week that eats the most time. That is what we will work on."}
         </p>
       </div>
@@ -200,7 +200,7 @@ export function RsvpForm({ mode = "session" }: { mode?: "session" | "notify" }) 
           boxShadow: "0 0 40px rgba(255,20,147,0.32)",
         }}
       >
-        {state === "sending" ? "Saving..." : notify ? "Get notified" : "Save my spot on the call"}
+        {state === "sending" ? "Saving..." : notify ? "Keep me posted" : "Save my spot on the call"}
       </button>
 
       {state === "error" && (
@@ -211,7 +211,7 @@ export function RsvpForm({ mode = "session" }: { mode?: "session" | "notify" }) 
 
       <p className="text-[13px] leading-relaxed text-[#6A6A6A]">
         {notify
-          ? "One email when the next cohort is set. We will not add you to anything you did not ask for."
+          ? "Updates on Cohort 3 and the next cohort only. We will not add you to anything you did not ask for."
           : "Free, about 45 minutes, and there is a real Q&A at the end. We will not add you to anything you did not ask for."}
       </p>
     </form>
