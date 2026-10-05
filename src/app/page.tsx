@@ -165,8 +165,7 @@ export default async function HomePage() {
         <Container>
           <StatsBar stats={stats} />
           <p className="mt-6 text-center text-xs text-muted-foreground">
-            System value figures are PRISM estimates of what comparable systems
-            cost to build elsewhere, measured against what the client paid.
+            Client builds counts systems PRISM has built for client businesses.
             Community size is our free Skool group. Session count is drawn from
             our own recorded session log.
           </p>
