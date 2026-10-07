@@ -17,6 +17,14 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async rewrites() {
+    // /events hub + clean event links serve static pages from public/events (built by ~/prism/events-site)
+    return [
+      { source: "/events", destination: "/events/index.html" },
+      { source: "/events/:slug", destination: "/events/:slug/index.html" },
+      { source: "/events/:slug/:page", destination: "/events/:slug/:page/index.html" },
+    ];
+  },
   async redirects() {
     return [
       // ===========================
@@ -197,11 +205,6 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/workshops",
-        destination: "/speaking",
-        permanent: true,
-      },
-      {
-        source: "/events",
         destination: "/speaking",
         permanent: true,
       },
