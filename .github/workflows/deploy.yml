@@ -1,8 +1,11 @@
 name: Deploy to Vercel (Production)
 
+# 2026-10-08: manual-only. Production deploys run from the Mac with the logged-in Vercel CLI
+# (`vercel --prod`). The VERCEL_TOKEN secret here is invalid, so every push failed and emailed
+# a false "Run failed" alarm. To re-enable on push: add a fresh token in Settings > Secrets >
+# Actions (VERCEL_TOKEN), then restore the push trigger below.
 on:
-  push:
-    branches: [main]
+  workflow_dispatch:
 
 concurrency:
   group: vercel-production
