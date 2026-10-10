@@ -23,6 +23,7 @@ const nextConfig: NextConfig = {
       { source: "/events", destination: "/events/index.html" },
       { source: "/events/:slug", destination: "/events/:slug/index.html" },
       { source: "/events/:slug/:page", destination: "/events/:slug/:page/index.html" },
+      { source: "/front-office", destination: "/front-office/index.html" },
     ];
   },
   async redirects() {
