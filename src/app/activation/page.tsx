@@ -126,8 +126,9 @@ const SESSIONS = [
 ];
 
 // Every person here is CLEARED in the consent registry (checked 2026-09-30) and every
-// video was confirmed embeddable via YouTube oEmbed the same day.
-const LEAD_VIDEO = { id: "D98lM6UZGD8", who: "Ryan Shepherd", what: "Did we deliver? Her Activation, in her words." };
+// video was confirmed embeddable via YouTube oEmbed the same day. Lead video swapped 2026-10-14
+// to Ryan's longer testimonial (q-YXdG2e66w, oEmbed checked public that day) at Jeff's request.
+const LEAD_VIDEO = { id: "q-YXdG2e66w", who: "Ryan Shepherd", what: "Her Activation, in her own words." };
 const VIDEOS = [
   { id: "qRvjRX7TliE", who: "Dr. Will Brown", what: "Client testimonial" },
   { id: "EtgQkByad_I", who: "Paula and Bill Harris", what: "Financial advisory, the whole team on AI" },
