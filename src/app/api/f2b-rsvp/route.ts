@@ -23,8 +23,7 @@ type Body = {
 };
 
 const SESSION_LABEL: Record<string, string> = {
-  sep3: "Thu Sep 3, 7:00 PM ET",
-  sep12: "Sat Sep 12, 10:00 AM ET",
+  oct17: "Sat Oct 17, 11:00 AM ET",
   either: "Either session",
   notify: "Next cohort, notify me",
 };

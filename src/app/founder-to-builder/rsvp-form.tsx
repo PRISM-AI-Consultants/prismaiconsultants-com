@@ -9,7 +9,7 @@ export function RsvpForm({ mode = "session" }: { mode?: "session" | "notify" }) 
   const notify = mode === "notify";
   const [state, setState] = useState<"idle" | "sending" | "done" | "error">("idle");
   const [message, setMessage] = useState("");
-  const [session, setSession] = useState(notify ? "notify" : "sep3");
+  const [session, setSession] = useState(notify ? "notify" : "oct17");
   const [attending, setAttending] = useState("in-person");
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {

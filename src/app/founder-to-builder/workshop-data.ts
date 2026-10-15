@@ -17,6 +17,10 @@
  *   - Fri 11/13 and Fri 11/20, 9 AM to 1 PM ET, Allentown, PA
  *   - "List the city only for now." So NO street address until Jeff names one.
  *   - Guarantee word for word (GUARANTEE below, unchanged).
+ * 2026-10-15: Jeff approved moving Cohort 3 from Fri 11/13 + Fri 11/20/2026 to
+ *   Fri 1/22 + Fri 1/29/2027. Same hours, city, price, pay link. Weekdays computed
+ *   in code. Refund cutoff (one week before Day 1) moves from Fri 11/6 to Fri 1/15/2027;
+ *   it is not stated on this page.
  * Not decided anywhere in writing yet (Jamie's ask, Jeff answers by Fri 10/9):
  * seat count, refund terms, virtual tier. The page states none of them.
  * Cohort 2 (Sept 22 and 23) was cancelled 2026-09-27; its record is in git
@@ -27,18 +31,18 @@ export const COHORT_OPEN = true;
 export const WORKSHOP = {
   name: "Founder to Builder",
   cohort: "Cohort 3",
-  dates: "Friday, November 13 and Friday, November 20, 2026",
-  datesShort: "Nov 13 and Nov 20",
-  dayOneLong: "Friday, November 13",
-  dayTwoLong: "Friday, November 20",
+  dates: "Friday, January 22 and Friday, January 29, 2027",
+  datesShort: "Jan 22 and Jan 29, 2027",
+  dayOneLong: "Friday, January 22",
+  dayTwoLong: "Friday, January 29",
   daysOfWeek: "Two Fridays",
   hours: "9:00 AM to 1:00 PM ET",
   hoursShort: "9 to 1",
   city: "Allentown, PA",
   /** Jeff 10/5: city only for now. Swap in the venue when he names it. */
   venueNote: "Exact location sent when you register",
-  startISO: "2026-11-13T09:00:00-05:00",
-  endISO: "2026-11-20T13:00:00-05:00",
+  startISO: "2027-01-22T09:00:00-05:00",
+  endISO: "2027-01-29T13:00:00-05:00",
   /** Stripe payment link, the "Take a seat" button. Checkout only, never promoted directly. */
   payLink: "https://buy.stripe.com/6oUaEYejC1uz4KBbXF5AQ1p",
 } as const;
@@ -96,19 +100,11 @@ export type InfoSession = {
 
 export const INFO_SESSIONS: InfoSession[] = [
   {
-    id: "sep3",
-    label: "Thursday, September 3",
-    dateLine: "Thu, Sep 3",
-    timeLine: "7:00 PM ET",
-    altZone: "4:00 PM Pacific",
-    note: "The night before early pricing ends.",
-  },
-  {
-    id: "sep12",
-    label: "Saturday, September 12",
-    dateLine: "Sat, Sep 12",
-    timeLine: "10:00 AM ET",
-    altZone: "7:00 AM Pacific",
+    id: "oct17",
+    label: "Saturday, October 17",
+    dateLine: "Sat, Oct 17",
+    timeLine: "11:00 AM ET",
+    altZone: "8:00 AM Pacific",
     note: "Saturday, for owners who cannot get away midweek.",
   },
 ];
