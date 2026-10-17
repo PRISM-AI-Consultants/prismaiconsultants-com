@@ -198,6 +198,12 @@ export default function RootLayout({
           data-site="prism"
           data-theme="dark"
         />
+        {/* Analytics: self-hosted Umami (stats.prismaiconsultants.com). Guarded daily by ~/prism/analytics-audit/analytics_watch.py. */}
+        <Script
+          src="https://stats.prismaiconsultants.com/script.js"
+          strategy="afterInteractive"
+          data-website-id="61f44d57-e9e1-4237-ac45-72a3a2abc951"
+        />
       </body>
     </html>
   );
