@@ -22,10 +22,15 @@ const socialLinks = [
     label: "Skool",
     href: "https://www.skool.com/prism-ai-consultants",
   },
-  {
-    label: "Agent World",
-    href: "https://agents.prismaiconsultants.com",
-  },
+];
+
+// One row on every PRISM property so visitors can always get to the others (2026-10-21).
+const familySites = [
+  { label: "Dr. Jeff Bullock", href: "https://drjeffbullock.com" },
+  { label: "VersAssist", href: "https://www.versassists.com" },
+  { label: "PRISM Studios", href: "https://prismstudios.app" },
+  { label: "Build Universe", href: "https://builds.drjeffbullock.com" },
+  { label: "Book a call", href: "https://calendly.com/prismaiconsultants/introductory-call" },
 ];
 
 const linkGroups = [
@@ -115,6 +120,16 @@ export function SiteFooter() {
             </div>
           ))}
         </div>
+
+        {/* Our sites */}
+        <nav aria-label="Our sites" className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 border-t border-border py-6 text-sm text-muted-foreground">
+          <span className="font-semibold text-foreground">Our sites</span>
+          {familySites.map((site) => (
+            <a key={site.href} href={site.href} className="transition-colors hover:text-foreground">
+              {site.label}
+            </a>
+          ))}
+        </nav>
 
         {/* Bottom bar */}
         <div className="flex flex-col items-center gap-4 border-t border-border py-8 text-xs text-muted-foreground md:flex-row md:justify-between">
