@@ -6,6 +6,7 @@ import { Section } from "@/components/ui/section";
 import { Container } from "@/components/ui/container";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { StatsBar } from "@/components/ui/stats-bar";
+import { getFacts } from "@/lib/facts";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { CalendlyEmbed } from "@/components/ui/calendly-embed";
@@ -71,7 +72,8 @@ const transformations = [
   },
 ];
 
-export default function ResultsPage() {
+export default async function ResultsPage() {
+  const facts = await getFacts();
   return (
     <>
       <PageHeader
@@ -84,10 +86,10 @@ export default function ResultsPage() {
         <Container>
           <StatsBar
             stats={[
-              { value: "100+", label: "Client Builds" },
+              { value: facts.client_builds, label: "Client Builds" },
               { value: "Under 1 Week", label: "Most Systems Deployed" },
-              { value: "600+", label: "Members in Our Free AI Community" },
-              { value: "750+", label: "Coaching Sessions Delivered" },
+              { value: facts.community_members, label: "Members in Our Free AI Community" },
+              { value: facts.coaching_sessions, label: "Coaching Sessions Delivered" },
             ]}
           />
         </Container>

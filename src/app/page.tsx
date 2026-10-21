@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 import { Section } from "@/components/ui/section";
 import { Container } from "@/components/ui/container";
 import { StatsBar } from "@/components/ui/stats-bar";
+import { getFacts } from "@/lib/facts";
 import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { VideoTestimonialCarousel } from "@/components/ui/video-testimonial-carousel";
 import { PortfolioCard } from "@/components/content/portfolio-card";
@@ -53,11 +54,11 @@ const CALENDLY_URL =
 const AGENT_INTAKE_URL = "https://agent-intake.prismaiconsultants.com";
 const SKOOL_URL = "https://www.skool.com/prism-ai-consultants";
 
-const stats = [
-  { value: "600+", label: "Members in Our Free AI Community" },
+const statsFor = (f: Record<string, string>) => [
+  { value: f.community_members, label: "Members in Our Free AI Community" },
   { value: "Days", label: "Not Months to Deploy" },
-  { value: "100+", label: "Client Builds" },
-  { value: "750+", label: "Coaching Sessions Delivered" },
+  { value: f.client_builds, label: "Client Builds" },
+  { value: f.coaching_sessions, label: "Coaching Sessions Delivered" },
 ];
 
 const steps = [
@@ -99,6 +100,7 @@ const bniChapters = [
 ];
 
 export default async function HomePage() {
+  const stats = statsFor(await getFacts());
   const events = await getEvents();
   return (
     <>

@@ -7,6 +7,7 @@ import { MISSION, prismValues } from "@/data/values";
 import { Container } from "@/components/ui/container";
 import { Card, CardContent } from "@/components/ui/card";
 import { StatsBar } from "@/components/ui/stats-bar";
+import { getFacts } from "@/lib/facts";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
@@ -36,7 +37,8 @@ const communityInvolvements = [
   },
 ];
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const facts = await getFacts();
   return (
     <>
       <PageHeader
@@ -109,8 +111,8 @@ export default function AboutPage() {
             stats={[
               { value: "18", label: "Years in Operations Leadership" },
               { value: "2", label: "AI Companies Founded" },
-              { value: "100+", label: "Client Builds" },
-              { value: "750+", label: "Coaching Sessions Delivered" },
+              { value: facts.client_builds, label: "Client Builds" },
+              { value: facts.coaching_sessions, label: "Coaching Sessions Delivered" },
             ]}
           />
         </Container>
