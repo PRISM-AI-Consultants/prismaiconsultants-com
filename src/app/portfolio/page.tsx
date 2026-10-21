@@ -98,24 +98,24 @@ export default function PortfolioPage() {
               The Numbers
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-              22 client-facing builds. 3 internal platforms.
+              100+ client builds. 25 of them featured here.
               Most built in days, not months.
             </p>
             <div className="mt-10 grid grid-cols-2 gap-8 md:grid-cols-4">
               <div className="text-center">
                 <p className="text-3xl font-extrabold text-accent md:text-4xl">
-                  25
+                  100+
                 </p>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  Total Builds
+                  Client Builds
                 </p>
               </div>
               <div className="text-center">
                 <p className="text-3xl font-extrabold text-accent md:text-4xl">
-                  22
+                  25
                 </p>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  Client-Facing
+                  Featured Here
                 </p>
               </div>
               <div className="text-center">

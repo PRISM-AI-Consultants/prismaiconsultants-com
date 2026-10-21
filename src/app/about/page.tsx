@@ -109,7 +109,7 @@ export default function AboutPage() {
             stats={[
               { value: "18", label: "Years in Operations Leadership" },
               { value: "2", label: "AI Companies Founded" },
-              { value: "22", label: "Client-Facing Builds" },
+              { value: "100+", label: "Client Builds" },
               { value: "750+", label: "Coaching Sessions Delivered" },
             ]}
           />

@@ -84,7 +84,7 @@ export default function ResultsPage() {
         <Container>
           <StatsBar
             stats={[
-              { value: "22", label: "Client-Facing Builds" },
+              { value: "100+", label: "Client Builds" },
               { value: "Under 1 Week", label: "Most Systems Deployed" },
               { value: "600+", label: "Members in Our Free AI Community" },
               { value: "750+", label: "Coaching Sessions Delivered" },
