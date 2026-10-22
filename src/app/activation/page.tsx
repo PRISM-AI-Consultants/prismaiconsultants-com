@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "PRISM Activation: your AI front office and back office, installed in three sessions",
     description:
-      "Learn to run your business with AI on your own work. We install one system and prove it moved. Starts today. $1,500.",
+      "Learn to run your business with AI on your own work. We install your AI front office and back office and prove they moved. Starts today. $1,500.",
     url: "https://prismaiconsultants.com/activation",
     type: "website",
   },
@@ -111,12 +111,12 @@ const SESSIONS = [
   {
     n: "01",
     t: "Capture and Connect",
-    d: "We write down where your business stands today, connect your AI to your real accounts, and pick the one system we install for you.",
+    d: "We write down where your business stands today, connect your AI to your real accounts, and lock in exactly what your front office and back office will do for you.",
   },
   {
     n: "02",
     t: "Direct",
-    d: "Your hands, your real work. You learn to prompt and talk to it, use it on two live jobs, and your system goes live.",
+    d: "Your hands, your real work. You learn to prompt and talk to it, use it on two live jobs, and your front office and back office go live.",
   },
   {
     n: "03",
@@ -202,7 +202,7 @@ export default function ActivationPage() {
             </div>
             <p className="mt-5 text-sm text-[#8a8a8a]">
               Call the number and our AI front office answers as if it were your
-              business. That is the system you get.
+              business. That is the front office you get.
             </p>
           </div>
         </Container>
@@ -463,7 +463,7 @@ export default function ActivationPage() {
           <div className="mx-auto mt-10 max-w-3xl divide-y divide-[#171717]">
             {[
               { q: "When does it start?", a: "The day you join. After checkout you book your first session on the next screen and we send your access checklist right away." },
-              { q: "Is this a course?", a: "No. It is three working sessions on your own business, with your hands on the keyboard, plus a system our team installs between sessions." },
+              { q: "Is this a course?", a: "No. It is three working sessions on your own business, with your hands on the keyboard, plus the two systems our team installs between sessions." },
               { q: "Do I need to be technical?", a: "No. If you can talk, you can do this. One of the three lessons is literally to talk to the AI instead of typing." },
               { q: "Will it replace my staff?", a: "It will change their job. Your AI front office can take the routine calls: questions, bookings, messages, follow-ups. That frees your front desk to become your customer experience person, taking care of the people standing in front of them. And any caller who wants a person gets one." },
               { q: "What happens after the three sessions?", a: "You keep everything we built. Many owners continue with PRISM as their ongoing AI partner. There is no obligation." },
